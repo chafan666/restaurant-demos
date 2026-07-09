@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Old Keswickian — Traditional Fish &amp; Chips on Market Square, Keswick</title>
+<meta name="description" content="Family-run fish &amp; chip shop on Keswick's Market Square since 1990. Wild Atlantic cod, Lincolnshire potatoes, cooked in 100% vegetable oil. Upstairs restaurant and downstairs takeaway.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        cream: '#FEFCF8',
+        navy: '#1B3A5C',
+        'navy-dark': '#0F2840',
+        gold: '#C8993E',
+        'gold-light': '#D4A94E',
+        'gold-pale': '#F7F0E0',
+        charcoal: '#1A2332',
+      },
+      fontFamily: {
+        serif: ['Libre Baskerville', 'Georgia', 'serif'],
+        sans: ['Source Sans 3', 'system-ui', 'sans-serif'],
+      },
+      boxShadow: {
+        'card': '0 1px 3px rgba(26,35,50,0.05), 0 1px 2px rgba(26,35,50,0.03)',
+        'card-hover': '0 4px 20px rgba(200,153,62,0.12), 0 2px 6px rgba(26,35,50,0.05)',
+        'nav': '0 1px 3px rgba(26,35,50,0.06)',
+      },
+    }
+  }
+}
+</script>
+<style>
+@media (max-width: 767px) {
+  #mobile-menu { display: none; }
+  #mobile-menu.open { display: block; }
+}
+::selection { background: rgba(27,58,92,0.10); color: #1A2332; }
+</style>
+</head>
+<body class="bg-cream text-charcoal font-sans antialiased">
+
+<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-navy focus:text-white focus:px-5 focus:py-3 focus:rounded-lg focus:shadow-lg focus:outline-none">Skip to main content</a>
+
+<header id="navbar" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 lg:h-20">
+      <a href="index.html" class="font-serif font-bold text-lg sm:text-xl tracking-tight text-white lg:text-navy transition-colors duration-300" id="brand-name">The Old Keswickian</a>
+      <nav class="hidden md:flex items-center gap-1" aria-label="Main navigation">
+        <a href="index.html" class="px-4 py-2 text-sm font-semibold tracking-wide text-navy border-b-2 border-gold" aria-current="page">Home</a>
+        <a href="menu.html" class="px-4 py-2 text-sm font-semibold tracking-wide text-charcoal/70 hover:text-navy transition-colors">Menu</a>
+        <a href="about.html" class="px-4 py-2 text-sm font-semibold tracking-wide text-charcoal/70 hover:text-navy transition-colors">About</a>
+        <a href="contact.html" class="px-4 py-2 text-sm font-semibold tracking-wide text-charcoal/70 hover:text-navy transition-colors">Contact</a>
+      </nav>
+      <button id="menu-toggle" class="md:hidden flex items-center justify-center w-11 h-11 rounded-lg text-white transition-colors" aria-label="Toggle menu" aria-expanded="false">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="md:hidden bg-white/98 backdrop-blur border-t border-gold-pale shadow-card-hover">
+    <a href="index.html" class="block px-6 py-4 text-sm font-semibold text-navy bg-gold-pale/30 border-b border-gold-pale/50">Home</a>
+    <a href="menu.html" class="block px-6 py-4 text-sm font-semibold text-charcoal hover:text-navy hover:bg-cream border-b border-gold-pale/50 transition-colors">Menu</a>
+    <a href="about.html" class="block px-6 py-4 text-sm font-semibold text-charcoal hover:text-navy hover:bg-cream border-b border-gold-pale/50 transition-colors">About</a>
+    <a href="contact.html" class="block px-6 py-4 text-sm font-semibold text-charcoal hover:text-navy hover:bg-cream transition-colors">Contact</a>
+  </div>
+</header>
+
+<main id="main-content">
+
+<!-- Hero -->
+<section class="relative min-h-screen flex items-center justify-center">
+  <div class="absolute inset-0">
+    <img src="https://images.unsplash.com/photo-1579208030886-b1f1119b3c5c?w=1600" alt="Golden battered fish and chips on a plate" class="w-full h-full object-cover" loading="eager">
+    <div class="absolute inset-0 bg-gradient-to-b from-navy/65 via-navy/40 to-navy/75"></div>
+  </div>
+  <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center py-20">
+    <p class="font-sans text-gold-light text-xs sm:text-sm tracking-[0.22em] uppercase font-semibold mb-4">Est. 1990 &middot; Market Square, Keswick</p>
+    <h1 class="font-serif text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight mb-6">The Old<br class="sm:hidden"> Keswickian</h1>
+    <p class="text-lg sm:text-xl lg:text-2xl text-white/85 font-light mb-10 max-w-2xl mx-auto leading-relaxed">Traditional Fish &amp; Chips on Market Square. Wild Atlantic cod, proper Lincolnshire potatoes, and thirty years of family pride.</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="menu.html" class="inline-flex items-center justify-center px-8 py-3.5 bg-gold text-white font-semibold text-sm tracking-wide rounded-lg hover:bg-gold-light transition-colors shadow-lg shadow-gold/20">View Our Menu</a>
+      <a href="contact.html" class="inline-flex items-center justify-center px-8 py-3.5 border-2 border-white/55 text-white font-semibold text-sm tracking-wide rounded-lg hover:border-white hover:bg-white/10 transition-all">Find Us</a>
+    </div>
+  </div>
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+    <svg class="w-5 h-5 text-white/45" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+  </div>
+</section>
+
+<!-- About Blurb -->
+<section class="py-16 lg:py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div>
+        <p class="text-gold text-xs tracking-[0.2em] uppercase font-semibold mb-3">A Keswick Institution</p>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-navy leading-tight mb-6">30 Years on Market Square</h2>
+        <p class="text-charcoal/75 leading-relaxed mb-4">For over three decades, the same family has stood behind the counter at 5&ndash;7 Market Square, serving proper fish and chips to locals and Lake District visitors alike. Upstairs, our oak-beamed restaurant looks out over the square; downstairs, the takeaway counter hums with the crackle of fresh batter and the warm scent of vinegar.</p>
+        <p class="text-charcoal/75 leading-relaxed mb-6">We source wild Atlantic cod, cook in 100% vegetable oil, and use proper Lincolnshire potatoes &mdash; the kind that turn golden and floury when fried. No additives. No shortcuts. Just honest food, done right.</p>
+        <a href="about.html" class="inline-flex items-center gap-2 text-navy font-semibold text-sm tracking-wide hover:text-gold transition-colors group">
+          Read our story
+          <svg class="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div class="relative">
+        <div class="absolute -top-4 -left-4 w-full h-full border-2 border-gold/25 rounded-lg hidden lg:block"></div>
+        <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=1200" alt="Warm restaurant interior with wooden beams and ambient lighting" class="relative w-full h-72 sm:h-96 object-cover rounded-lg shadow-card-hover" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Specialties -->
+<section class="py-16 lg:py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12 lg:mb-16">
+      <p class="text-gold text-xs tracking-[0.2em] uppercase font-semibold mb-3">What We're Known For</p>
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold text-navy">House Specialties</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      <div class="bg-cream rounded-xl p-6 sm:p-8 shadow-card hover:shadow-card-hover transition-shadow group">
+        <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-gold-pale mb-5 group-hover:bg-gold/12 transition-colors">
+          <svg class="w-6 h-6 text-gold" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zm0 16c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7z"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <h3 class="font-serif text-xl font-bold text-navy mb-2">Wild Cod &amp; Chips</h3>
+        <p class="text-gold font-semibold text-sm mb-2">&pound;10.00</p>
+        <p class="text-charcoal/65 leading-relaxed text-sm">Wild Atlantic cod in our signature crisp batter, served with thick-cut Lincolnshire chips. The taste of a Lake District summer.</p>
+      </div>
+      <div class="bg-cream rounded-xl p-6 sm:p-8 shadow-card hover:shadow-card-hover transition-shadow group">
+        <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-gold-pale mb-5 group-hover:bg-gold/12 transition-colors">
+          <svg class="w-6 h-6 text-gold" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9V6a2 2 0 00-2-2H7a2 2 0 00-2 2v3m0 0v7a2 2 0 002 2h10a2 2 0 002-2V9m-5 0H8m8 0v3"/></svg>
+        </div>
+        <h3 class="font-serif text-xl font-bold text-navy mb-2">Cumberland Sausage</h3>
+        <p class="text-gold font-semibold text-sm mb-2">&pound;9.00</p>
+        <p class="text-charcoal/65 leading-relaxed text-sm">A proper Cumbrian classic. Locally made coiled Cumberland sausage, served with chips and your choice of side. Rich, peppery, full of flavour.</p>
+      </div>
+      <div class="bg-cream rounded-xl p-6 sm:p-8 shadow-card hover:shadow-card-hover transition-shadow sm:col-span-2 lg:col-span-1 group">
+        <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-gold-pale mb-5 group-hover:bg-gold/12 transition-colors">
+          <svg class="w-6 h-6 text-gold" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 15.5a3.5 3.5 0 01-7 0V12H7v3.5a3.5 3.5 0 01-7 0V9a2 2 0 012-2h12a2 2 0 012 2v6.5z"/></svg>
+        </div>
+        <h3 class="font-serif text-xl font-bold text-navy mb-2">Steak &amp; Ale Pie</h3>
+        <p class="text-gold font-semibold text-sm mb-2">&pound;11.00</p>
+        <p class="text-charcoal/65 leading-relaxed text-sm">Made with Jennings Cumberland Ale from Cockermouth. Tender beef slow-cooked in rich gravy, encased in buttery shortcrust pastry. A Lake District classic.</p>
+      </div>
+    </div>
+    <div class="text-center mt-10">
+      <a href="menu.html" class="inline-flex items-center gap-2 text-navy font-semibold text-sm tracking-wide hover:text-gold transition-colors group">
+        See the full menu
+        <svg class="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-16 lg:py-20 bg-navy">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mb-4">Ready for Proper Fish &amp; Chips?</h2>
+    <p class="text-white/65 text-lg leading-relaxed mb-8 max-w-xl mx-auto">We're on Market Square, right in the heart of Keswick. Upstairs for a sit-down meal, or grab a takeaway and eat by the lake.</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="contact.html" class="inline-flex items-center justify-center px-8 py-3.5 bg-gold text-white font-semibold text-sm tracking-wide rounded-lg hover:bg-gold-light transition-colors shadow-lg shadow-gold/15">Find Us on Market Square</a>
+      <a href="menu.html" class="inline-flex items-center justify-center px-8 py-3.5 border-2 border-white/35 text-white font-semibold text-sm tracking-wide rounded-lg hover:border-white hover:bg-white/10 transition-all">View Our Menu</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="bg-navy-dark text-white/75 py-12 lg:py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12">
+      <div>
+        <h3 class="font-serif text-lg font-bold text-white mb-3">The Old Keswickian</h3>
+        <p class="text-sm leading-relaxed text-white/55">A family-run fish &amp; chip shop on Keswick's Market Square since 1990. Upstairs restaurant, downstairs takeaway. Wild Atlantic cod, Lincolnshire potatoes, 100% vegetable oil.</p>
+      </div>
+      <div>
+        <h3 class="font-serif text-lg font-bold text-white mb-3">Quick Links</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="index.html" class="text-white/55 hover:text-gold transition-colors">Home</a></li>
+          <li><a href="menu.html" class="text-white/55 hover:text-gold transition-colors">Menu</a></li>
+          <li><a href="about.html" class="text-white/55 hover:text-gold transition-colors">About</a></li>
+          <li><a href="contact.html" class="text-white/55 hover:text-gold transition-colors">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-serif text-lg font-bold text-white mb-3">Opening Hours</h3>
+        <ul class="space-y-1.5 text-sm text-white/55">
+          <li class="flex justify-between"><span>Mon&ndash;Thu</span><span>11am &ndash; 7:30pm</span></li>
+          <li class="flex justify-between"><span>Fri&ndash;Sat</span><span>11am &ndash; 8pm</span></li>
+          <li class="flex justify-between"><span>Sun</span><span>11am &ndash; 7pm</span></li>
+        </ul>
+        <p class="text-sm text-white/45 mt-4">5&ndash;7 Market Square, Keswick, CA12 5BD</p>
+      </div>
+    </div>
+    <div class="border-t border-white/8 mt-10 pt-6 text-center text-xs text-white/35">
+      <p>&copy; 2024 The Old Keswickian. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var navbar = document.getElementById('navbar');
+  var brand = document.getElementById('brand-name');
+  var toggle = document.getElementById('menu-toggle');
+  var menu = document.getElementById('mobile-menu');
+
+  function updateNav(){
+    if(window.scrollY > 20){
+      navbar.classList.add('bg-cream/95','backdrop-blur','shadow-nav');
+      brand.classList.add('text-navy');
+      brand.classList.remove('text-white');
+      toggle.classList.add('text-navy');
+      toggle.classList.remove('text-white');
+    } else {
+      navbar.classList.remove('bg-cream/95','backdrop-blur','shadow-nav');
+      brand.classList.remove('text-navy');
+      brand.classList.add('text-white');
+      toggle.classList.remove('text-navy');
+      toggle.classList.add('text-white');
+    }
+  }
+  updateNav();
+  window.addEventListener('scroll', updateNav);
+
+  toggle.addEventListener('click', function(){
+    var open = menu.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+  menu.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click', function(){
+      menu.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+})();
+</script>
+</body>
+</html>

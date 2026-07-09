@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rusty Shears — Whitby</title>
+<meta name="description" content="A vintage tea shop with 150 gins and a giant fig tree, tucked down a side street in Whitby. Breakfast by morning, loose-leaf tea by afternoon, candlelit gin by night.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  body { font-family: 'Inter', sans-serif; font-weight: 300; }
+  .serif { font-family: 'Cormorant Garamond', serif; }
+</style>
+</head>
+<body class="bg-white text-[#1A1A1A] antialiased">
+
+<!-- ============================================
+  HERO — The homepage. One giant full-bleed photo.
+  All essential info right here.
+  ============================================ -->
+<section class="relative min-h-screen flex flex-col justify-end">
+  <img src="assets/hero.jpg" alt="Rusty Shears" class="absolute inset-0 w-full h-full object-cover">
+
+  <!-- Subtle overlay: from bottom, fading up ~40%. Enough for text, not darkening the photo. -->
+  <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
+
+  <!-- Content pinned to bottom -->
+  <div class="relative z-10 px-6 md:px-12 pb-12 md:pb-16 w-full max-w-6xl mx-auto">
+    <div class="grid md:grid-cols-3 gap-8 md:gap-12 items-end">
+
+      <!-- LEFT: Name + tagline -->
+      <div class="md:col-span-2">
+        <h1 class="serif text-5xl md:text-6xl lg:text-7xl text-white font-light tracking-tight leading-none">Rusty Shears</h1>
+        <p class="text-white/60 text-sm md:text-base font-light tracking-[0.2em] uppercase mt-3">A Hidden Garden in Whitby</p>
+      </div>
+
+      <!-- RIGHT: Essential info + CTAs -->
+      <div class="text-white/80 text-sm font-light space-y-5">
+        <div>
+          <p class="text-white/40 text-xs tracking-[0.2em] uppercase mb-1">Location</p>
+          <p>4 Silver Street, Whitby<br>YO21 3BU</p>
+        </div>
+        <div>
+          <p class="text-white/40 text-xs tracking-[0.2em] uppercase mb-1">Hours</p>
+          <p>Mon&ndash;Sat 9:00 &ndash; 17:00<br>Sun 10:00 &ndash; 16:00</p>
+        </div>
+        <div>
+          <p class="text-white/40 text-xs tracking-[0.2em] uppercase mb-1">Contact</p>
+          <p>01947 825111</p>
+        </div>
+        <div class="flex gap-3 pt-2">
+          <a href="#menu" class="inline-block border border-white/30 hover:border-white/70 text-white px-5 py-2.5 text-xs tracking-[0.2em] uppercase transition-colors duration-300">Menu &darr;</a>
+          <a href="#find-us" class="inline-block border border-white/30 hover:border-white/70 text-white px-5 py-2.5 text-xs tracking-[0.2em] uppercase transition-colors duration-300">Visit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="relative z-10 text-center pb-6">
+    <span class="text-white/30 text-xs tracking-[0.2em] uppercase">About</span>
+    <div class="w-px h-10 bg-white/20 mx-auto mt-2"></div>
+  </div>
+</section>
+
+<!-- ============================================
+  ABOUT — One short paragraph. Generous whitespace.
+  ============================================ -->
+<section class="py-32 md:py-40 px-6 md:px-12">
+  <div class="max-w-2xl mx-auto text-center">
+    <p class="serif text-2xl md:text-3xl text-[#1A1A1A] font-light leading-relaxed">
+      A vintage tea shop with 150 gins and a giant fig tree, tucked down a side street in Whitby. Breakfast by morning, loose-leaf tea by afternoon, candlelit gin by night. Not fast food &mdash; a place to linger.
+    </p>
+    <div class="w-12 h-px bg-neutral-300 mx-auto mt-10"></div>
+  </div>
+</section>
+
+<!-- ============================================
+  FOOD PHOTO — Single striking image, full-width.
+  No caption. Let the image speak.
+  ============================================ -->
+<section class="w-full">
+  <img src="assets/food-1.png" alt="Rusty Shears — Food" class="w-full h-auto max-h-screen object-cover" loading="lazy">
+</section>
+
+<!-- ============================================
+  MENU — 4 highlight items. Minimal, clean.
+  ============================================ -->
+<section id="menu" class="py-32 md:py-40 px-6 md:px-12">
+  <div class="max-w-2xl mx-auto">
+    <h2 class="serif text-3xl md:text-4xl font-light text-center mb-16 tracking-wide">What We Serve</h2>
+
+    <div class="space-y-10">
+      <!-- Full English Breakfast -->
+      <div class="flex justify-between items-baseline gap-6">
+        <div>
+          <h3 class="serif text-xl font-light">Full English Breakfast</h3>
+          <p class="text-[#999999] text-sm font-light mt-1 max-w-md">Locally sourced bacon, sausage, eggs, beans, mushrooms, tomato, and toast.</p>
+        </div>
+        <span class="serif text-lg font-light text-[#999999] whitespace-nowrap">&pound;12</span>
+      </div>
+
+      <!-- Avocado Salmon Salad -->
+      <div class="flex justify-between items-baseline gap-6">
+        <div>
+          <h3 class="serif text-xl font-light">Avocado Salmon Salad</h3>
+          <p class="text-[#999999] text-sm font-light mt-1 max-w-md">Smoked salmon, ripe avocado, mixed leaves, and a lemon dressing.</p>
+        </div>
+        <span class="serif text-lg font-light text-[#999999] whitespace-nowrap">&pound;14</span>
+      </div>
+
+      <!-- Homemade Carrot Cake -->
+      <div class="flex justify-between items-baseline gap-6">
+        <div>
+          <h3 class="serif text-xl font-light">Homemade Carrot Cake</h3>
+          <p class="text-[#999999] text-sm font-light mt-1 max-w-md">Our legendary carrot cake with cream cheese frosting. A house favourite.</p>
+        </div>
+        <span class="serif text-lg font-light text-[#999999] whitespace-nowrap">&pound;5</span>
+      </div>
+
+      <!-- Gin Tasting Flight -->
+      <div class="flex justify-between items-baseline gap-6">
+        <div>
+          <h3 class="serif text-xl font-light">Gin Tasting Flight</h3>
+          <p class="text-[#999999] text-sm font-light mt-1 max-w-md">Three pours from our collection of over 150 gins, with tasting notes.</p>
+        </div>
+        <span class="serif text-lg font-light text-[#999999] whitespace-nowrap">&pound;15</span>
+      </div>
+    </div>
+
+    <div class="text-center mt-14">
+      <a href="#find-us" class="inline-block text-[#999999] hover:text-[#1A1A1A] text-sm font-light tracking-[0.2em] uppercase border-b border-neutral-300 hover:border-[#1A1A1A] pb-1 transition-colors duration-300">Contact us for the full menu &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+  COURTYARD PHOTO — Full-width. The fig tree.
+  ============================================ -->
+<section class="w-full">
+  <img src="assets/courtyard.png" alt="Rusty Shears — Courtyard with fig tree" class="w-full h-auto max-h-screen object-cover" loading="lazy">
+</section>
+
+<!-- ============================================
+  INFO — Find Us. Clean layout, no cards.
+  ============================================ -->
+<section id="find-us" class="py-32 md:py-40 px-6 md:px-12">
+  <div class="max-w-2xl mx-auto text-center">
+    <h2 class="serif text-3xl md:text-4xl font-light mb-14 tracking-wide">Find Us</h2>
+
+    <div class="space-y-6 text-sm font-light text-[#1A1A1A]">
+      <div>
+        <p class="text-[#999999] text-xs tracking-[0.2em] uppercase mb-1">Address</p>
+        <p>4 Silver Street<br>Whitby<br>YO21 3BU</p>
+      </div>
+      <div>
+        <p class="text-[#999999] text-xs tracking-[0.2em] uppercase mb-1">Phone</p>
+        <p>01947 825111</p>
+      </div>
+      <div>
+        <p class="text-[#999999] text-xs tracking-[0.2em] uppercase mb-1">Hours</p>
+        <p>Monday to Saturday 9:00 &ndash; 17:00<br>Sunday 10:00 &ndash; 16:00</p>
+      </div>
+      <div class="pt-4">
+        <a href="https://www.openstreetmap.org/search?query=4+Silver+Street%2C+Whitby" target="_blank" rel="noopener" class="inline-block text-[#999999] hover:text-[#1A1A1A] text-sm font-light tracking-[0.2em] uppercase border-b border-neutral-300 hover:border-[#1A1A1A] pb-1 transition-colors duration-300">View on map &rarr;</a>
+      </div>
+    </div>
+
+    <p class="text-[#999999] text-sm font-light mt-12">Dogs welcome &mdash; we&rsquo;ll bring out a sausage.</p>
+  </div>
+</section>
+
+<!-- ============================================
+  FOOTER — One line. Done.
+  ============================================ -->
+<footer class="py-10 px-6 md:px-12 border-t border-neutral-100">
+  <div class="max-w-5xl mx-auto text-center">
+    <p class="text-xs text-[#999999] font-light tracking-[0.15em] uppercase whitespace-nowrap overflow-hidden text-ellipsis">Rusty Shears &middot; 4 Silver Street, Whitby &middot; 01947 825111</p>
+  </div>
+</footer>
+
+</body>
+</html>

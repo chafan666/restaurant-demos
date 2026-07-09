@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu — Cuchullin Restaurant, Portree</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        display: ['Cormorant Garamond', 'Georgia', 'serif'],
+        body: ['Inter', 'system-ui', 'sans-serif'],
+      },
+      colors: {
+        oatmeal: '#F5F0E8',
+        cream: '#FAF7F2',
+        sea: '#2C5F6B',
+        'sea-dark': '#1E424B',
+        coral: '#C4745C',
+        'coral-light': '#D9907D',
+        slate: '#3D3D3D',
+        mussel: '#4A5568',
+        driftwood: '#D4C5B9',
+      }
+    }
+  }
+}
+</script>
+<style>
+  .text-balance { text-wrap: balance; }
+  .bg-pattern { background-image: radial-gradient(circle, rgba(44,95,107,0.04) 1px, transparent 1px); background-size: 20px 20px; }
+  .line-decoration::after { content: ''; display: block; width: 50px; height: 2px; background: #C4745C; margin-top: 0.5rem; }
+  .nav-blur { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+  .menu-item { border-bottom: 1px dotted rgba(196,116,92,0.2); }
+  .menu-item:last-child { border-bottom: none; }
+</style>
+</head>
+<body class="bg-oatmeal text-slate font-body antialiased">
+
+<!-- Navigation -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-oatmeal/85 nav-blur border-b border-driftwood/30">
+  <div class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between">
+    <a href="index.html" class="font-display text-2xl font-semibold text-sea tracking-tight">Cuchullin</a>
+    <div class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide uppercase text-mussel">
+      <a href="index.html" class="hover:text-sea transition-colors">Home</a>
+      <a href="menu.html" class="text-coral hover:text-sea transition-colors">Menu</a>
+      <a href="about.html" class="hover:text-sea transition-colors">About</a>
+      <a href="contact.html" class="hover:text-sea transition-colors">Contact</a>
+    </div>
+    <button class="md:hidden text-mussel" aria-label="Menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- Page Header -->
+<section class="pt-28 pb-12 md:pt-36 md:pb-16 bg-sea text-white">
+  <div class="max-w-6xl mx-auto px-5 text-center">
+    <p class="text-coral-light font-body text-sm tracking-[0.2em] uppercase mb-3 font-medium">Fresh from the Minch</p>
+    <h1 class="font-display text-4xl md:text-6xl font-semibold mb-4">Our Menu</h1>
+    <p class="text-white/70 max-w-xl mx-auto text-base leading-relaxed">The best of Scottish seafood, served simply and honestly. Gluten-free options available. Please ask your server about dietary requirements.</p>
+  </div>
+</section>
+
+<!-- Menu Content -->
+<section class="py-16 md:py-24 bg-oatmeal bg-pattern">
+  <div class="max-w-4xl mx-auto px-5">
+
+    <!-- Seafood Platters -->
+    <div class="mb-16">
+      <div class="flex items-center gap-4 mb-8">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C4745C" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        <h2 class="font-display text-3xl md:text-4xl font-semibold text-sea">Seafood Platters</h2>
+      </div>
+      <div class="bg-white rounded-sm shadow-sm overflow-hidden">
+        <div class="aspect-[16/7] overflow-hidden">
+          <img src="assets/屏幕截图 2026-07-08 205529.png" alt="Seafood Platter" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6 md:p-8 space-y-5">
+          <div class="menu-item pb-5 flex justify-between items-baseline gap-4">
+            <div>
+              <h3 class="font-display text-xl font-semibold text-slate">The Cuchullin Platter <span class="text-sm font-body text-coral font-medium">for One</span></h3>
+              <p class="text-mussel text-sm mt-1">Scallops, mussels, salmon, langoustines, dressed crab &amp; brown bread</p>
+            </div>
+            <span class="font-display text-xl font-semibold text-coral whitespace-nowrap">&pound;38</span>
+          </div>
+          <div class="menu-item pb-5 flex justify-between items-baseline gap-4">
+            <div>
+              <h3 class="font-display text-xl font-semibold text-slate">The Cuchullin Platter <span class="text-sm font-body text-coral font-medium">to Share</span></h3>
+              <p class="text-mussel text-sm mt-1">A generous spread for two. Double the shellfish, double the joy.</p>
+            </div>
+            <span class="font-display text-xl font-semibold text-coral whitespace-nowrap">&pound;80</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Starters -->
+    <div class="mb-16">
+      <div class="flex items-center gap-4 mb-8">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C4745C" stroke-width="1.8"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+        <h2 class="font-display text-3xl md:text-4xl font-semibold text-sea">Starters</h2>
+      </div>
+      <div class="bg-white rounded-sm shadow-sm p-6 md:p-8 space-y-5">
+        <div class="menu-item pb-5 flex justify-between items-baseline gap-4">
+          <div>
+            <h3 class="font-display text-xl font-semibold text-slate">Steamed Mussels in White Wine</h3>
+            <p class="text-mussel text-sm mt-1">Shetland mussels, garlic, cream, white wine, fresh herbs. Served with crusty bread.</p>
+          </div>
+          <span class="font-display text-xl font-semibold text-coral whitespace-nowrap">&pound;12</span>
+        </div>
+        <div class="menu-item pb-5 flex justify-between items-baseline gap-4">
+          <div>
+            <h3 class="font-display text-xl font-semibold text-slate">Seared Scallops with Black Pudding</h3>
+            <p class="text-mussel text-sm mt-1">Hand-dived scallops, Stornoway black pudding, pea pur&eacute;e, crispy bacon crumb.</p>
+          </div>
+          <span class="font-display text-xl font-semibold text-coral whitespace-nowrap">&pound;14</span>
+        </div>
+        <div class="menu-item pb-5 flex justify-between items-baseline gap-4">
+          <div>
+            <h3 class="font-display text-xl font-semibold text-slate">Cullen Skink</h3>
+            <p class="text-mussel text-sm mt-1">Traditional Scottish smoked haddock chowder with potatoes and leeks. A Highland classic.</p>
+          </div>
+          <span class="font-display text-xl font-semibold text-coral whitespace-nowrap">&pound;9</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mains -->
+    <div class="mb-16">
+      <div class="flex items-center gap-4 mb-8">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C4745C" stroke-width="1.8"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 002-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 00-5 5v6c0 1.1.9 2 2 2h3zm0 0v5c0 1.1-.9 2-2 2h-1"/><path d="M13 15V2v0a5 5 0 00-5 5v6c0 1.1.9 2 2 2h3z"/></svg>
+        <h2 class="font-display text-3xl md:text-4xl font-semibold text-sea">Mains</h2>
+      </div>
+      <div class="bg-white rounded-sm shadow-sm p-6 md:p-8 space-y-5">
+        <div class="menu-item pb-5 flex justify-between items-baseline gap-4">
+          <div>
+            <h3 class="font-display text-xl font-semibold text-slate">Fish &amp; Chips</h3>
+            <p class="text-mussel text-sm mt-1">Beer-battered haddock, triple-cooked chips, mushy peas, tartare sauce. The gold standard.</p>
+          </div>
+          <span class="font-display text-xl font-semibold text-coral whitespace-nowrap">&pound;18</span>
+        </div>
+        <div class="menu-item pb-5 flex justify-between items-baseline gap-4">
+          <div>
+            <h3 class="font-display text-xl font-semibold text-slate">Salmon Fillet</h3>
+            <p class="text-mussel text-sm mt-1">Pan-seared Scottish salmon, crushed new potatoes, samphire, lemon butter sauce.</p>
+          </div>
+          <span class="font-display text-xl font-semibold text-coral whitespace-nowrap">&pound;22</span>
+        </div>
+        <div class="menu-item pb-5 flex justify-between items-baseline gap-4">
+          <div>
+            <h3 class="font-display text-xl font-semibold text-slate">Scallop Risotto</h3>
+            <p class="text-mussel text-sm mt-1">Creamy Arborio rice, seared king scallops, Parmesan, lemon, fresh chives.</p>
+          </div>
+          <span class="font-display text-xl font-semibold text-coral whitespace-nowrap">&pound;24</span>
+        </div>
+        <div class="menu-item pb-5 flex justify-between items-baseline gap-4">
+          <div>
+            <h3 class="font-display text-xl font-semibold text-slate">Venison Burger</h3>
+            <p class="text-mussel text-sm mt-1">Highland venison patty, red onion marmalade, melted brie, brioche bun, hand-cut chips.</p>
+          </div>
+          <span class="font-display text-xl font-semibold text-coral whitespace-nowrap">&pound;19</span>
+        </div>
+        <div class="menu-item pb-5 flex justify-between items-baseline gap-4">
+          <div>
+            <h3 class="font-display text-xl font-semibold text-slate">Braised Beef Cheeks</h3>
+            <p class="text-mussel text-sm mt-1">Slow-braised in Scottish ale, creamy mash, roasted root vegetables, rich gravy.</p>
+          </div>
+          <span class="font-display text-xl font-semibold text-coral whitespace-nowrap">&pound;22</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Desserts -->
+    <div class="mb-8">
+      <div class="flex items-center gap-4 mb-8">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C4745C" stroke-width="1.8"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <h2 class="font-display text-3xl md:text-4xl font-semibold text-sea">Desserts</h2>
+      </div>
+      <div class="bg-white rounded-sm shadow-sm p-6 md:p-8 space-y-5">
+        <div class="menu-item pb-5 flex justify-between items-baseline gap-4">
+          <div>
+            <h3 class="font-display text-xl font-semibold text-slate">Sticky Toffee Pudding</h3>
+            <p class="text-mussel text-sm mt-1">The legendary one. Warm date sponge, butterscotch sauce, vanilla ice cream. An absolute miracle.</p>
+          </div>
+          <span class="font-display text-xl font-semibold text-coral whitespace-nowrap">&pound;9</span>
+        </div>
+      </div>
+      <!-- Dessert photo -->
+      <div class="mt-6 aspect-[16/7] rounded-sm overflow-hidden shadow-sm">
+        <img src="assets/屏幕截图 2026-07-08 205549.png" alt="Sticky Toffee Pudding" class="w-full h-full object-cover" loading="lazy">
+      </div>
+    </div>
+
+    <!-- Dietary Notes -->
+    <div class="mt-16 p-6 bg-driftwood/20 rounded-sm border border-driftwood/30">
+      <div class="flex items-start gap-3">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2C5F6B" stroke-width="2" class="mt-0.5 flex-shrink-0"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        <div>
+          <h4 class="font-body text-sm font-semibold text-sea uppercase tracking-wide mb-2">Dietary Information</h4>
+          <p class="text-mussel text-sm leading-relaxed">Gluten-free options are available for most dishes &mdash; please inform your server of any dietary requirements. Our menu is seafood-focused and vegetarian options are limited. All our seafood is sustainably sourced from Scottish waters.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-sea-dark text-white/70 py-16">
+  <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-3 gap-10">
+    <div>
+      <h3 class="font-display text-2xl text-white font-semibold mb-4">Cuchullin</h3>
+      <p class="text-sm leading-relaxed text-white/60">A proper Scottish seafood house on the Isle of Skye. No reservations &mdash; just turn up hungry.</p>
+    </div>
+    <div>
+      <h4 class="font-body text-sm font-semibold uppercase tracking-wider text-white/90 mb-4">Contact</h4>
+      <p class="text-sm leading-relaxed text-white/60">8 Somerled Square, Portree<br>Isle of Skye, IV51 9EH<br>01478 612750</p>
+    </div>
+    <div>
+      <h4 class="font-body text-sm font-semibold uppercase tracking-wider text-white/90 mb-4">Hours</h4>
+      <p class="text-sm leading-relaxed text-white/60">Monday &ndash; Saturday<br>12:00 &ndash; 14:00 &amp; 17:30 &ndash; 21:00<br>Closed Sunday</p>
+    </div>
+  </div>
+  <div class="max-w-6xl mx-auto px-5 mt-12 pt-8 border-t border-white/10 text-center text-xs text-white/40">
+    <p>Travelers' Choice 2025 &middot; Cuchullin Restaurant &middot; Portree, Isle of Skye</p>
+  </div>
+</footer>
+
+</body>
+</html>

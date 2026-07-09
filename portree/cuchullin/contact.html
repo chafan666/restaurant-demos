@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Cuchullin Restaurant, Portree</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        display: ['Cormorant Garamond', 'Georgia', 'serif'],
+        body: ['Inter', 'system-ui', 'sans-serif'],
+      },
+      colors: {
+        oatmeal: '#F5F0E8',
+        cream: '#FAF7F2',
+        sea: '#2C5F6B',
+        'sea-dark': '#1E424B',
+        coral: '#C4745C',
+        'coral-light': '#D9907D',
+        slate: '#3D3D3D',
+        mussel: '#4A5568',
+        driftwood: '#D4C5B9',
+      }
+    }
+  }
+}
+</script>
+<style>
+  .text-balance { text-wrap: balance; }
+  .bg-pattern { background-image: radial-gradient(circle, rgba(44,95,107,0.04) 1px, transparent 1px); background-size: 20px 20px; }
+  .line-decoration::after { content: ''; display: block; width: 50px; height: 2px; background: #C4745C; margin-top: 0.5rem; }
+  .nav-blur { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+  .icon-circle { width: 44px; height: 44px; border-radius: 50%; background: rgba(196,116,92,0.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .map-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 2px; }
+  .map-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+</style>
+</head>
+<body class="bg-oatmeal text-slate font-body antialiased">
+
+<!-- Navigation -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-oatmeal/85 nav-blur border-b border-driftwood/30">
+  <div class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between">
+    <a href="index.html" class="font-display text-2xl font-semibold text-sea tracking-tight">Cuchullin</a>
+    <div class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide uppercase text-mussel">
+      <a href="index.html" class="hover:text-sea transition-colors">Home</a>
+      <a href="menu.html" class="hover:text-sea transition-colors">Menu</a>
+      <a href="about.html" class="hover:text-sea transition-colors">About</a>
+      <a href="contact.html" class="text-coral hover:text-sea transition-colors">Contact</a>
+    </div>
+    <button class="md:hidden text-mussel" aria-label="Menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- Page Header -->
+<section class="pt-28 pb-12 md:pt-36 md:pb-16 bg-sea text-white">
+  <div class="max-w-6xl mx-auto px-5 text-center">
+    <p class="text-coral-light font-body text-sm tracking-[0.2em] uppercase mb-3 font-medium">Portree, Isle of Skye</p>
+    <h1 class="font-display text-4xl md:text-6xl font-semibold mb-4">Find Us</h1>
+    <p class="text-white/70 max-w-xl mx-auto text-base leading-relaxed">Walk-in only. No reservations. Queue forms before opening. Dress for Skye weather.</p>
+  </div>
+</section>
+
+<!-- Contact Cards -->
+<section class="py-16 md:py-24 bg-oatmeal bg-pattern">
+  <div class="max-w-5xl mx-auto px-5">
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- Address Card -->
+      <div class="bg-white rounded-sm p-7 shadow-sm">
+        <div class="icon-circle mb-5">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C4745C" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3 class="font-display text-xl font-semibold text-sea mb-3">Address</h3>
+        <p class="text-mussel text-sm leading-relaxed">
+          8 Somerled Square<br>
+          Portree<br>
+          Isle of Skye<br>
+          IV51 9EH
+        </p>
+        <p class="text-mussel text-xs mt-4">Right on Somerled Square in the centre of Portree. Look for the queue.</p>
+      </div>
+      <!-- Phone Card -->
+      <div class="bg-white rounded-sm p-7 shadow-sm">
+        <div class="icon-circle mb-5">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C4745C" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <h3 class="font-display text-xl font-semibold text-sea mb-3">Phone</h3>
+        <p class="text-mussel text-sm leading-relaxed">01478 612750</p>
+        <p class="text-mussel text-xs mt-4">For general enquiries only. We cannot take bookings or reservations by phone.</p>
+      </div>
+      <!-- Walk-in Card -->
+      <div class="bg-white rounded-sm p-7 shadow-sm">
+        <div class="icon-circle mb-5">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C4745C" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3 class="font-display text-xl font-semibold text-sea mb-3">Walk-in Only</h3>
+        <p class="text-mussel text-sm leading-relaxed">We do not take reservations. Queue forms 15&ndash;20 minutes before opening. First come, first served.</p>
+        <p class="text-mussel text-xs mt-4">Large groups may face a longer wait. Please be patient.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Hours Table -->
+<section class="py-16 md:py-24 bg-cream">
+  <div class="max-w-2xl mx-auto px-5">
+    <h2 class="font-display text-3xl md:text-4xl font-semibold text-sea text-center mb-3">Opening Hours</h2>
+    <p class="text-mussel text-center mb-10">We serve lunch and dinner six days a week. Closed Sunday.</p>
+    <div class="bg-white rounded-sm shadow-sm overflow-hidden">
+      <table class="w-full text-left">
+        <thead>
+          <tr class="border-b border-driftwood/30">
+            <th class="px-6 py-4 font-body text-xs font-semibold text-mussel uppercase tracking-wider">Day</th>
+            <th class="px-6 py-4 font-body text-xs font-semibold text-mussel uppercase tracking-wider">Lunch</th>
+            <th class="px-6 py-4 font-body text-xs font-semibold text-mussel uppercase tracking-wider">Dinner</th>
+          </tr>
+        </thead>
+        <tbody class="text-sm">
+          <tr class="border-b border-driftwood/20">
+            <td class="px-6 py-4 font-medium text-slate">Monday</td>
+            <td class="px-6 py-4 text-mussel">12:00 &ndash; 14:00</td>
+            <td class="px-6 py-4 text-mussel">17:30 &ndash; 21:00</td>
+          </tr>
+          <tr class="border-b border-driftwood/20">
+            <td class="px-6 py-4 font-medium text-slate">Tuesday</td>
+            <td class="px-6 py-4 text-mussel">12:00 &ndash; 14:00</td>
+            <td class="px-6 py-4 text-mussel">17:30 &ndash; 21:00</td>
+          </tr>
+          <tr class="border-b border-driftwood/20">
+            <td class="px-6 py-4 font-medium text-slate">Wednesday</td>
+            <td class="px-6 py-4 text-mussel">12:00 &ndash; 14:00</td>
+            <td class="px-6 py-4 text-mussel">17:30 &ndash; 21:00</td>
+          </tr>
+          <tr class="border-b border-driftwood/20">
+            <td class="px-6 py-4 font-medium text-slate">Thursday</td>
+            <td class="px-6 py-4 text-mussel">12:00 &ndash; 14:00</td>
+            <td class="px-6 py-4 text-mussel">17:30 &ndash; 21:00</td>
+          </tr>
+          <tr class="border-b border-driftwood/20">
+            <td class="px-6 py-4 font-medium text-slate">Friday</td>
+            <td class="px-6 py-4 text-mussel">12:00 &ndash; 14:00</td>
+            <td class="px-6 py-4 text-mussel">17:30 &ndash; 21:00</td>
+          </tr>
+          <tr class="border-b border-driftwood/20">
+            <td class="px-6 py-4 font-medium text-slate">Saturday</td>
+            <td class="px-6 py-4 text-mussel">12:00 &ndash; 14:00</td>
+            <td class="px-6 py-4 text-mussel">17:30 &ndash; 21:00</td>
+          </tr>
+          <tr>
+            <td class="px-6 py-4 font-medium text-coral">Sunday</td>
+            <td class="px-6 py-4 text-coral" colspan="2">Closed</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- Map -->
+<section class="py-4 md:py-8 bg-oatmeal">
+  <div class="max-w-5xl mx-auto px-5">
+    <h2 class="font-display text-3xl md:text-4xl font-semibold text-sea text-center mb-8">How to Find Us</h2>
+    <div class="map-container shadow-sm">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2150.618319456789!2d-6.1950!3d57.4125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x488f0b1e8c1f1a0b%3A0x8e1a1c1e1a1a1a1a!2s8%20Somerled%20Square%2C%20Portree!5e0!3m2!1sen!2suk!4v1620000000000!5m2!1sen!2suk"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Cuchullin Restaurant location on Google Maps">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- Queue Tips -->
+<section class="py-16 md:py-24 bg-cream bg-pattern">
+  <div class="max-w-3xl mx-auto px-5">
+    <h2 class="font-display text-3xl md:text-4xl font-semibold text-sea text-center mb-3">Queue Tips</h2>
+    <p class="text-mussel text-center mb-10">The queue is part of the experience. Here is how to do it right.</p>
+    <div class="space-y-5">
+      <div class="bg-white rounded-sm p-6 shadow-sm flex items-start gap-4">
+        <div class="icon-circle mt-0.5">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C4745C" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div>
+          <h3 class="font-display text-lg font-semibold text-sea mb-1">Arrive Early</h3>
+          <p class="text-mussel text-sm leading-relaxed">Queue starts forming 15&ndash;20 minutes before opening. For lunch, aim for 11:45. For dinner, 17:15. Earlier on weekends and during summer.</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-sm p-6 shadow-sm flex items-start gap-4">
+        <div class="icon-circle mt-0.5">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C4745C" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+        </div>
+        <div>
+          <h3 class="font-display text-lg font-semibold text-sea mb-1">Dress for Skye</h3>
+          <p class="text-mussel text-sm leading-relaxed">Skye weather changes by the minute. Bring a waterproof jacket even if the sun is shining when you leave your B&amp;B. You will likely queue outside.</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-sm p-6 shadow-sm flex items-start gap-4">
+        <div class="icon-circle mt-0.5">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C4745C" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <div>
+          <h3 class="font-display text-lg font-semibold text-sea mb-1">Large Groups</h3>
+          <p class="text-mussel text-sm leading-relaxed">Groups of 6 or more may have a longer wait as we seat smaller parties first when tables become available. Splitting into smaller groups can help, though we cannot guarantee tables together.</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-sm p-6 shadow-sm flex items-start gap-4">
+        <div class="icon-circle mt-0.5">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C4745C" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div>
+          <h3 class="font-display text-lg font-semibold text-sea mb-1">Be Patient, Be Kind</h3>
+          <p class="text-mussel text-sm leading-relaxed">Our team works hard to get everyone seated as quickly as possible. A smile and a bit of patience go a long way. The food is worth the wait, we promise.</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-sm p-6 shadow-sm flex items-start gap-4">
+        <div class="icon-circle mt-0.5">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C4745C" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+        </div>
+        <div>
+          <h3 class="font-display text-lg font-semibold text-sea mb-1">Bring Cash for a Dram</h3>
+          <p class="text-mussel text-sm leading-relaxed">We have a small but well-chosen selection of Scotch whisky. Ask your server for a recommendation. A wee dram of Talisker &mdash; distilled just down the road &mdash; is the perfect companion to our seafood.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Photo -->
+<section class="py-8 md:py-12 bg-oatmeal">
+  <div class="max-w-5xl mx-auto px-5">
+    <div class="aspect-[21/9] rounded-sm overflow-hidden shadow-sm">
+      <img src="assets/屏幕截图 2026-07-08 205637.png" alt="Portree harbour" class="w-full h-full object-cover" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-sea-dark text-white/70 py-16">
+  <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-3 gap-10">
+    <div>
+      <h3 class="font-display text-2xl text-white font-semibold mb-4">Cuchullin</h3>
+      <p class="text-sm leading-relaxed text-white/60">A proper Scottish seafood house on the Isle of Skye. No reservations &mdash; just turn up hungry.</p>
+    </div>
+    <div>
+      <h4 class="font-body text-sm font-semibold uppercase tracking-wider text-white/90 mb-4">Contact</h4>
+      <p class="text-sm leading-relaxed text-white/60">8 Somerled Square, Portree<br>Isle of Skye, IV51 9EH<br>01478 612750</p>
+    </div>
+    <div>
+      <h4 class="font-body text-sm font-semibold uppercase tracking-wider text-white/90 mb-4">Hours</h4>
+      <p class="text-sm leading-relaxed text-white/60">Monday &ndash; Saturday<br>12:00 &ndash; 14:00 &amp; 17:30 &ndash; 21:00<br>Closed Sunday</p>
+    </div>
+  </div>
+  <div class="max-w-6xl mx-auto px-5 mt-12 pt-8 border-t border-white/10 text-center text-xs text-white/40">
+    <p>Travelers' Choice 2025 &middot; Cuchullin Restaurant &middot; Portree, Isle of Skye</p>
+  </div>
+</footer>
+
+</body>
+</html>

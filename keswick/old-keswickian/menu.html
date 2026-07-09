@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu | The Old Keswickian — Fish &amp; Chips, Pies &amp; More</title>
+<meta name="description" content="Our full menu: wild cod and chips, homemade pies, Cumberland sausage, sides, and desserts. No additives, no preservatives — just proper fish and chips, honestly made since 1990.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        cream: '#FEFCF8',
+        navy: '#1B3A5C',
+        'navy-dark': '#0F2840',
+        gold: '#C8993E',
+        'gold-light': '#D4A94E',
+        'gold-pale': '#F7F0E0',
+        charcoal: '#1A2332',
+      },
+      fontFamily: {
+        serif: ['Libre Baskerville', 'Georgia', 'serif'],
+        sans: ['Source Sans 3', 'system-ui', 'sans-serif'],
+      },
+      boxShadow: {
+        'card': '0 1px 3px rgba(26,35,50,0.05), 0 1px 2px rgba(26,35,50,0.03)',
+        'card-hover': '0 4px 20px rgba(200,153,62,0.12), 0 2px 6px rgba(26,35,50,0.05)',
+        'nav': '0 1px 3px rgba(26,35,50,0.06)',
+      },
+    }
+  }
+}
+</script>
+<style>
+@media (max-width: 767px) {
+  #mobile-menu { display: none; }
+  #mobile-menu.open { display: block; }
+}
+::selection { background: rgba(27,58,92,0.10); color: #1A2332; }
+.badge { display: inline-flex; align-items: center; font-size: 0.625rem; font-weight: 700; letter-spacing: 0.04em; padding: 0.125rem 0.5rem; border-radius: 9999px; text-transform: uppercase; line-height: 1.4; }
+.badge-v { background: #dcfce7; color: #166534; }
+.badge-vg { background: #fef3c7; color: #92400e; }
+.badge-gf { background: #dbeafe; color: #1e40af; }
+.menu-divider { border-bottom: 1px solid #f0ebe0; }
+</style>
+</head>
+<body class="bg-cream text-charcoal font-sans antialiased">
+
+<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-navy focus:text-white focus:px-5 focus:py-3 focus:rounded-lg focus:shadow-lg focus:outline-none">Skip to main content</a>
+
+<header class="fixed top-0 left-0 right-0 z-40 bg-cream/95 backdrop-blur shadow-nav transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 lg:h-20">
+      <a href="index.html" class="font-serif font-bold text-lg sm:text-xl tracking-tight text-navy hover:text-gold transition-colors">The Old Keswickian</a>
+      <nav class="hidden md:flex items-center gap-1" aria-label="Main navigation">
+        <a href="index.html" class="px-4 py-2 text-sm font-semibold tracking-wide text-charcoal/70 hover:text-navy transition-colors">Home</a>
+        <a href="menu.html" class="px-4 py-2 text-sm font-semibold tracking-wide text-navy border-b-2 border-gold" aria-current="page">Menu</a>
+        <a href="about.html" class="px-4 py-2 text-sm font-semibold tracking-wide text-charcoal/70 hover:text-navy transition-colors">About</a>
+        <a href="contact.html" class="px-4 py-2 text-sm font-semibold tracking-wide text-charcoal/70 hover:text-navy transition-colors">Contact</a>
+      </nav>
+      <button id="menu-toggle" class="md:hidden flex items-center justify-center w-11 h-11 rounded-lg text-navy hover:bg-gold-pale transition-colors" aria-label="Toggle menu" aria-expanded="false">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="md:hidden bg-white/98 backdrop-blur border-t border-gold-pale shadow-card-hover">
+    <a href="index.html" class="block px-6 py-4 text-sm font-semibold text-charcoal hover:text-navy hover:bg-cream border-b border-gold-pale/50 transition-colors">Home</a>
+    <a href="menu.html" class="block px-6 py-4 text-sm font-semibold text-navy bg-gold-pale/30 border-b border-gold-pale/50">Menu</a>
+    <a href="about.html" class="block px-6 py-4 text-sm font-semibold text-charcoal hover:text-navy hover:bg-cream border-b border-gold-pale/50 transition-colors">About</a>
+    <a href="contact.html" class="block px-6 py-4 text-sm font-semibold text-charcoal hover:text-navy hover:bg-cream transition-colors">Contact</a>
+  </div>
+</header>
+
+<main id="main-content" class="pt-16 lg:pt-20">
+
+<!-- Page Header -->
+<section class="py-14 md:py-20 bg-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+    <p class="text-gold text-xs tracking-[0.2em] uppercase font-semibold mb-3">Honestly Made Since 1990</p>
+    <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-navy mb-4">Our Menu</h1>
+    <p class="text-charcoal/65 text-lg max-w-xl mx-auto leading-relaxed">Traditional fish &amp; chips made with the finest ingredients, no additives, and three decades of family pride.</p>
+    <div class="flex flex-wrap justify-center gap-3 mt-8">
+      <span class="badge badge-v">V Vegetarian</span>
+      <span class="badge badge-vg">VG Vegan</span>
+      <span class="badge badge-gf">GF Gluten-Free Available</span>
+    </div>
+  </div>
+</section>
+
+<!-- Menu Content -->
+<section class="py-14 md:py-20">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 space-y-16 md:space-y-20">
+
+    <!-- Fish & Chips -->
+    <div>
+      <h2 class="font-serif text-2xl md:text-3xl font-bold text-navy mb-1">Fish &amp; Chips</h2>
+      <p class="text-charcoal/50 text-sm mb-8">Wild Atlantic fish in our signature light, crispy batter &mdash; served with thick-cut Lincolnshire chips</p>
+      <div class="space-y-0">
+        <div class="flex justify-between items-start gap-4 py-4 menu-divider hover:bg-gold-pale/30 rounded-lg px-3 -mx-3 transition-colors">
+          <div class="min-w-0">
+            <div class="flex flex-wrap items-center gap-2 mb-1">
+              <h3 class="font-semibold text-charcoal">Cod &amp; Chips</h3>
+              <span class="badge badge-gf">GF</span>
+            </div>
+            <p class="text-charcoal/55 text-sm">Wild Atlantic cod in our signature crisp batter with thick-cut chips</p>
+          </div>
+          <span class="text-navy font-semibold whitespace-nowrap tabular-nums">&pound;10.00</span>
+        </div>
+        <div class="flex justify-between items-start gap-4 py-4 menu-divider hover:bg-gold-pale/30 rounded-lg px-3 -mx-3 transition-colors">
+          <div class="min-w-0">
+            <div class="flex flex-wrap items-center gap-2 mb-1">
+              <h3 class="font-semibold text-charcoal">Haddock &amp; Chips</h3>
+              <span class="badge badge-gf">GF</span>
+            </div>
+            <p class="text-charcoal/55 text-sm">Succulent North Atlantic haddock in golden batter with thick-cut chips</p>
+          </div>
+          <span class="text-navy font-semibold whitespace-nowrap tabular-nums">&pound;10.50</span>
+        </div>
+        <div class="flex justify-between items-start gap-4 py-4 menu-divider hover:bg-gold-pale/30 rounded-lg px-3 -mx-3 transition-colors">
+          <div class="min-w-0">
+            <h3 class="font-semibold text-charcoal mb-1">Fish Cake &amp; Chips</h3>
+            <p class="text-charcoal/55 text-sm">Homemade fish cakes, golden-fried, served with thick-cut chips</p>
+          </div>
+          <span class="text-navy font-semibold whitespace-nowrap tabular-nums">&pound;11.00</span>
+        </div>
+        <div class="flex justify-between items-start gap-4 py-4 hover:bg-gold-pale/30 rounded-lg px-3 -mx-3 transition-colors">
+          <div class="min-w-0">
+            <div class="flex flex-wrap items-center gap-2 mb-1">
+              <h3 class="font-semibold text-charcoal">Scampi &amp; Chips</h3>
+              <span class="badge badge-gf">GF</span>
+            </div>
+            <p class="text-charcoal/55 text-sm">Whole-tail scampi in breadcrumbs with thick-cut chips and lemon wedge</p>
+          </div>
+          <span class="text-navy font-semibold whitespace-nowrap tabular-nums">&pound;10.00</span>
+        </div>
+      </div>
+      <p class="mt-4 text-charcoal/45 text-xs">Fish cooked in 100% non-hydrogenated vegetable oil. No additives, colours, or preservatives. Gluten-free batter available on request.</p>
+    </div>
+
+    <!-- Pies & Sausages -->
+    <div>
+      <h2 class="font-serif text-2xl md:text-3xl font-bold text-navy mb-1">Pies &amp; Sausages</h2>
+      <p class="text-charcoal/50 text-sm mb-8">Homemade favourites and Cumbrian classics &mdash; served with chips and your choice of side</p>
+      <div class="space-y-0">
+        <div class="flex justify-between items-start gap-4 py-4 menu-divider hover:bg-gold-pale/30 rounded-lg px-3 -mx-3 transition-colors">
+          <div class="min-w-0">
+            <h3 class="font-semibold text-charcoal mb-1">Steak &amp; Ale Pie</h3>
+            <p class="text-charcoal/55 text-sm">Tender Lakeland beef slow-cooked in Jennings Cumberland Ale, encased in buttery shortcrust pastry</p>
+          </div>
+          <span class="text-navy font-semibold whitespace-nowrap tabular-nums">&pound;11.00</span>
+        </div>
+        <div class="flex justify-between items-start gap-4 py-4 menu-divider hover:bg-gold-pale/30 rounded-lg px-3 -mx-3 transition-colors">
+          <div class="min-w-0">
+            <h3 class="font-semibold text-charcoal mb-1">Cumberland Sausage</h3>
+            <p class="text-charcoal/55 text-sm">Locally made coiled Cumberland sausage &mdash; rich, peppery, and full of flavour</p>
+          </div>
+          <span class="text-navy font-semibold whitespace-nowrap tabular-nums">&pound;9.00</span>
+        </div>
+        <div class="flex justify-between items-start gap-4 py-4 menu-divider hover:bg-gold-pale/30 rounded-lg px-3 -mx-3 transition-colors">
+          <div class="min-w-0">
+            <div class="flex flex-wrap items-center gap-2 mb-1">
+              <h3 class="font-semibold text-charcoal">Cheese &amp; Onion Pie</h3>
+              <span class="badge badge-v">V</span>
+            </div>
+            <p class="text-charcoal/55 text-sm">Mature Cheddar and caramelised onion in a crisp shortcrust pastry case</p>
+          </div>
+          <span class="text-navy font-semibold whitespace-nowrap tabular-nums">&pound;9.00</span>
+        </div>
+        <div class="flex justify-between items-start gap-4 py-4 hover:bg-gold-pale/30 rounded-lg px-3 -mx-3 transition-colors">
+          <div class="min-w-0">
+            <h3 class="font-semibold text-charcoal mb-1">Chicken &amp; Mushroom Pie</h3>
+            <p class="text-charcoal/55 text-sm">Free-range chicken and field mushrooms in a creamy sauce, wrapped in shortcrust pastry</p>
+          </div>
+          <span class="text-navy font-semibold whitespace-nowrap tabular-nums">&pound;10.00</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sides & Desserts -->
+    <div>
+      <h2 class="font-serif text-2xl md:text-3xl font-bold text-navy mb-1">Sides &amp; Desserts</h2>
+      <p class="text-charcoal/50 text-sm mb-8">The perfect companions to your meal &mdash; and a proper pud to finish</p>
+
+      <h3 class="font-sans text-xs tracking-[0.2em] uppercase font-semibold text-gold mb-4 mt-8">Sides</h3>
+      <div class="space-y-0 mb-10">
+        <div class="flex justify-between items-start gap-4 py-4 menu-divider hover:bg-gold-pale/30 rounded-lg px-3 -mx-3 transition-colors">
+          <div class="min-w-0">
+            <div class="flex flex-wrap items-center gap-2 mb-1">
+              <h3 class="font-semibold text-charcoal">Mushy Peas</h3>
+              <span class="badge badge-v">V</span>
+              <span class="badge badge-gf">GF</span>
+            </div>
+            <p class="text-charcoal/55 text-sm">The classic chip shop side &mdash; green, glorious, and essential</p>
+          </div>
+          <span class="text-navy font-semibold whitespace-nowrap tabular-nums">&pound;2.00</span>
+        </div>
+        <div class="flex justify-between items-start gap-4 py-4 menu-divider hover:bg-gold-pale/30 rounded-lg px-3 -mx-3 transition-colors">
+          <div class="min-w-0">
+            <div class="flex flex-wrap items-center gap-2 mb-1">
+              <h3 class="font-semibold text-charcoal">Curry Sauce</h3>
+              <span class="badge badge-v">V</span>
+              <span class="badge badge-gf">GF</span>
+            </div>
+            <p class="text-charcoal/55 text-sm">Rich, warming chip shop curry sauce &mdash; a British institution</p>
+          </div>
+          <span class="text-navy font-semibold whitespace-nowrap tabular-nums">&pound;2.00</span>
+        </div>
+        <div class="flex justify-between items-start gap-4 py-4 menu-divider hover:bg-gold-pale/30 rounded-lg px-3 -mx-3 transition-colors">
+          <div class="min-w-0">
+            <div class="flex flex-wrap items-center gap-2 mb-1">
+              <h3 class="font-semibold text-charcoal">Gravy</h3>
+              <span class="badge badge-gf">GF</span>
+            </div>
+            <p class="text-charcoal/55 text-sm">Proper rich meat gravy, the way it should be</p>
+          </div>
+          <span class="text-navy font-semibold whitespace-nowrap tabular-nums">&pound;2.00</span>
+        </div>
+        <div class="flex justify-between items-start gap-4 py-4 hover:bg-gold-pale/30 rounded-lg px-3 -mx-3 transition-colors">
+          <div class="min-w-0">
+            <div class="flex flex-wrap items-center gap-2 mb-1">
+              <h3 class="font-semibold text-charcoal">Baked Beans</h3>
+              <span class="badge badge-v">V</span>
+              <span class="badge badge-gf">GF</span>
+            </div>
+            <p class="text-charcoal/55 text-sm">Classic baked beans in a rich tomato sauce</p>
+          </div>
+          <span class="text-navy font-semibold whitespace-nowrap tabular-nums">&pound;2.00</span>
+        </div>
+      </div>
+
+      <h3 class="font-sans text-xs tracking-[0.2em] uppercase font-semibold text-gold mb-4">Desserts</h3>
+      <div class="space-y-0">
+        <div class="flex justify-between items-start gap-4 py-4 menu-divider hover:bg-gold-pale/30 rounded-lg px-3 -mx-3 transition-colors">
+          <div class="min-w-0">
+            <div class="flex flex-wrap items-center gap-2 mb-1">
+              <h3 class="font-semibold text-charcoal">Sticky Ginger Pudding</h3>
+              <span class="badge badge-v">V</span>
+            </div>
+            <p class="text-charcoal/55 text-sm">Warm ginger sponge with sticky toffee sauce &mdash; a proper British pud</p>
+          </div>
+          <span class="text-navy font-semibold whitespace-nowrap tabular-nums">&pound;5.50</span>
+        </div>
+        <div class="flex justify-between items-start gap-4 py-4 hover:bg-gold-pale/30 rounded-lg px-3 -mx-3 transition-colors">
+          <div class="min-w-0">
+            <div class="flex flex-wrap items-center gap-2 mb-1">
+              <h3 class="font-semibold text-charcoal">Apple Crumble</h3>
+              <span class="badge badge-v">V</span>
+            </div>
+            <p class="text-charcoal/55 text-sm">Warm baked apples under a buttery crumble topping, served with custard</p>
+          </div>
+          <span class="text-navy font-semibold whitespace-nowrap tabular-nums">&pound;5.00</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 mt-16 text-center">
+    <p class="text-charcoal/40 text-xs leading-relaxed">
+      All prices include VAT. Menu items and prices are subject to change.<br>
+      Downstairs takeaway also available &mdash; come in or call ahead at <a href="tel:+441768773861" class="text-navy/60 hover:text-navy transition-colors">017687 73861</a>.<br>
+      Please inform your server of any dietary requirements or allergies.
+    </p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-14 md:py-18 bg-navy">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mb-4">Hungry Yet?</h2>
+    <p class="text-white/65 text-lg leading-relaxed mb-8 max-w-xl mx-auto">Dine in upstairs or grab a takeaway from downstairs. We'll have the fryer ready.</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="contact.html" class="inline-flex items-center justify-center px-8 py-3.5 bg-gold text-white font-semibold text-sm tracking-wide rounded-lg hover:bg-gold-light transition-colors shadow-lg shadow-gold/15">Find Us on Market Square</a>
+      <a href="about.html" class="inline-flex items-center justify-center px-8 py-3.5 border-2 border-white/35 text-white font-semibold text-sm tracking-wide rounded-lg hover:border-white hover:bg-white/10 transition-all">Our Story</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="bg-navy-dark text-white/75 py-12 lg:py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12">
+      <div>
+        <h3 class="font-serif text-lg font-bold text-white mb-3">The Old Keswickian</h3>
+        <p class="text-sm leading-relaxed text-white/55">A family-run fish &amp; chip shop on Keswick's Market Square since 1990. Upstairs restaurant, downstairs takeaway. Wild Atlantic cod, Lincolnshire potatoes, 100% vegetable oil.</p>
+      </div>
+      <div>
+        <h3 class="font-serif text-lg font-bold text-white mb-3">Quick Links</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="index.html" class="text-white/55 hover:text-gold transition-colors">Home</a></li>
+          <li><a href="menu.html" class="text-white/55 hover:text-gold transition-colors">Menu</a></li>
+          <li><a href="about.html" class="text-white/55 hover:text-gold transition-colors">About</a></li>
+          <li><a href="contact.html" class="text-white/55 hover:text-gold transition-colors">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-serif text-lg font-bold text-white mb-3">Opening Hours</h3>
+        <ul class="space-y-1.5 text-sm text-white/55">
+          <li class="flex justify-between"><span>Mon&ndash;Thu</span><span>11am &ndash; 7:30pm</span></li>
+          <li class="flex justify-between"><span>Fri&ndash;Sat</span><span>11am &ndash; 8pm</span></li>
+          <li class="flex justify-between"><span>Sun</span><span>11am &ndash; 7pm</span></li>
+        </ul>
+        <p class="text-sm text-white/45 mt-4">5&ndash;7 Market Square, Keswick, CA12 5BD</p>
+      </div>
+    </div>
+    <div class="border-t border-white/8 mt-10 pt-6 text-center text-xs text-white/35">
+      <p>&copy; 2024 The Old Keswickian. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var toggle = document.getElementById('menu-toggle');
+  var menu = document.getElementById('mobile-menu');
+  toggle.addEventListener('click', function(){
+    var open = menu.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+  menu.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click', function(){
+      menu.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+})();
+</script>
+</body>
+</html>

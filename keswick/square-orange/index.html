@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Square Orange | Stone-Baked Pizza, Tapas &amp; Cocktails &middot; Keswick</title>
+  <meta name="description" content="Stone-baked Roman-style pizzas, European tapas, and craft cocktails in the heart of Keswick. Open daily from 10:30am. A Keswick institution since 1998.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: '#FDF8F0',
+            terracotta: '#C2693C',
+            'terracotta-dark': '#9E4F2C',
+            'terracotta-light': '#F2E0D3',
+            espresso: '#2C1810',
+            'warm-gray': '#6B5D55',
+            card: '#FFFDFB',
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    .text-balance { text-wrap: balance; }
+    .hero-overlay { background: linear-gradient(180deg,rgba(44,24,16,0.08) 0%,rgba(44,24,16,0.04) 30%,rgba(253,248,240,0.7) 65%,rgba(253,248,240,0.95) 85%,#FDF8F0 100%); }
+    .card-shadow { box-shadow: 0 1px 3px rgba(44,24,16,0.05),0 1px 2px rgba(44,24,16,0.03); }
+    .card-shadow:hover { box-shadow: 0 4px 14px rgba(44,24,16,0.08),0 2px 4px rgba(44,24,16,0.03); }
+    .btn-glow { box-shadow: 0 2px 12px rgba(194,105,60,0.22); }
+    .btn-glow:hover { box-shadow: 0 4px 20px rgba(194,105,60,0.32); }
+    ::selection { background: rgba(194,105,60,0.18); color: #2C1810; }
+    .focus-ring:focus-visible { outline: 2px solid #C2693C; outline-offset: 3px; border-radius: 4px; }
+    .texture-dots { background-image: radial-gradient(circle,rgba(194,105,60,0.06) 1px,transparent 1px); background-size: 20px 20px; }
+  </style>
+</head>
+<body class="bg-cream text-espresso font-sans antialiased">
+
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-terracotta focus:text-white focus:px-4 focus:py-2 focus:rounded-lg">Skip to main content</a>
+
+  <header class="fixed w-full z-50 transition-all duration-300" id="navbar">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <a href="./index.html" class="font-serif text-xl md:text-2xl font-bold text-terracotta tracking-tight transition-colors duration-200 hover:text-terracotta-dark">The Square Orange</a>
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-warm-gray" aria-label="Main navigation">
+          <a href="./index.html" class="text-terracotta transition-colors duration-200 focus-ring" aria-current="page">Home</a>
+          <a href="./menu.html" class="hover:text-terracotta transition-colors duration-200 focus-ring">Menu</a>
+          <a href="./about.html" class="hover:text-terracotta transition-colors duration-200 focus-ring">About</a>
+          <a href="./contact.html" class="hover:text-terracotta transition-colors duration-200 focus-ring">Contact</a>
+        </nav>
+        <button id="mobile-menu-btn" class="md:hidden p-2 text-warm-gray hover:text-terracotta transition-colors duration-200 focus-ring rounded-lg min-h-[44px] min-w-[44px]" aria-label="Open menu" aria-expanded="false">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-cream/98 backdrop-blur-md border-t border-terracotta-light">
+      <nav class="px-4 py-4 space-y-1" aria-label="Mobile navigation">
+        <a href="./index.html" class="block px-3 py-3 rounded-lg text-terracotta font-medium transition-colors duration-200 focus-ring">Home</a>
+        <a href="./menu.html" class="block px-3 py-3 rounded-lg text-warm-gray hover:text-terracotta hover:bg-terracotta-light/40 transition-colors duration-200 focus-ring">Menu</a>
+        <a href="./about.html" class="block px-3 py-3 rounded-lg text-warm-gray hover:text-terracotta hover:bg-terracotta-light/40 transition-colors duration-200 focus-ring">About</a>
+        <a href="./contact.html" class="block px-3 py-3 rounded-lg text-warm-gray hover:text-terracotta hover:bg-terracotta-light/40 transition-colors duration-200 focus-ring">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero -->
+    <section class="relative h-[93vh] min-h-[580px] overflow-hidden">
+      <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=1600" alt="Stone pizza oven with roaring flames in a rustic Italian kitchen" class="absolute inset-0 w-full h-full object-cover" loading="eager">
+      <div class="absolute inset-0 hero-overlay"></div>
+      <div class="absolute inset-0 flex items-end">
+        <div class="w-full max-w-6xl mx-auto px-4 sm:px-6 pb-14 md:pb-24">
+          <div class="max-w-3xl">
+            <p class="text-terracotta text-sm md:text-base font-medium tracking-[0.2em] uppercase mb-3">Est. 1998 &middot; Keswick, Lake District</p>
+            <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-espresso leading-[1.08] text-balance mb-5">Stone-Baked Pizza,<br>Tapas &amp; Cocktails</h1>
+            <p class="text-warm-gray text-lg md:text-xl max-w-xl mb-8 leading-relaxed">A candlelit hideaway of Roman-style pizzas and European tapas, baked in a single stone oven behind the bar. By day, specialty coffee. By night, craft cocktails and live music.</p>
+            <div class="flex flex-wrap gap-4">
+              <a href="./menu.html" class="inline-flex items-center justify-center px-8 py-3.5 bg-terracotta text-white font-semibold rounded-lg hover:bg-terracotta-dark transition-colors duration-200 btn-glow focus-ring min-h-[44px]">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg>View Our Menu
+              </a>
+              <a href="./contact.html" class="inline-flex items-center justify-center px-8 py-3.5 border-2 border-terracotta/25 text-espresso font-semibold rounded-lg hover:bg-terracotta hover:text-white hover:border-terracotta transition-colors duration-200 focus-ring min-h-[44px]">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>Find Us
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce">
+        <svg class="w-5 h-5 text-terracotta/35" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+      </div>
+    </section>
+
+    <!-- About Summary -->
+    <section class="py-20 md:py-28">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+          <div>
+            <p class="text-terracotta text-sm font-medium tracking-[0.2em] uppercase mb-3">Welcome to The Squorange</p>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-espresso mb-6 text-balance">A Keswick Institution Since 1998</h2>
+            <p class="text-warm-gray leading-relaxed mb-5">Affectionately known as 'The Squorange', we've been a Keswick fixture for over 25 years. Our single hot-stone oven sits behind the bar, firing Roman-style pizzas while you watch. By day: Cumbrian-roasted coffee. By night: candles, cocktails, and live music in our exposed-brick room.</p>
+            <ul class="space-y-3 mb-8 text-warm-gray">
+              <li class="flex items-start gap-3"><svg class="w-5 h-5 text-terracotta mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>25+ year Keswick institution</span></li>
+              <li class="flex items-start gap-3"><svg class="w-5 h-5 text-terracotta mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Stone pizza oven &mdash; watch the magic</span></li>
+              <li class="flex items-start gap-3"><svg class="w-5 h-5 text-terracotta mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Live music &amp; board game nights</span></li>
+            </ul>
+            <a href="./about.html" class="inline-flex items-center text-terracotta font-semibold hover:text-terracotta-dark transition-colors duration-200 focus-ring group">Learn our story<svg class="w-4 h-4 ml-2 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg></a>
+          </div>
+          <div class="relative">
+            <div class="aspect-[4/3] rounded-xl overflow-hidden"><img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1200" alt="Warm bar interior with exposed brick walls and candlelight" class="w-full h-full object-cover" loading="lazy"></div>
+            <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-terracotta-light rounded-xl -z-10 hidden md:block"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Specialties -->
+    <section class="py-20 md:py-28 bg-terracotta-light/30 texture-dots">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-14">
+          <p class="text-terracotta text-sm font-medium tracking-[0.2em] uppercase mb-3">What We're Known For</p>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-espresso mb-4">Our Specialties</h2>
+          <p class="text-warm-gray max-w-lg mx-auto">From the stone oven to your table &mdash; every dish made with care</p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          <div class="bg-card rounded-xl p-8 card-shadow border border-terracotta-light/60 transition-all duration-300 hover:-translate-y-1">
+            <div class="w-12 h-12 bg-terracotta-light rounded-lg flex items-center justify-center mb-5">
+              <svg class="w-6 h-6 text-terracotta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 2L2 22h20L12 2z"/><circle cx="12" cy="14" r="4" stroke-width="1.5"/></svg>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-espresso mb-3">Stone-Baked Pizza</h3>
+            <p class="text-warm-gray text-sm leading-relaxed">Roman-style thin crust fired in our hot-stone oven. Honey Chorizo, BBQ Pulled Pork, N'duja &amp; Burrata, or four vegan varieties.</p>
+          </div>
+          <div class="bg-card rounded-xl p-8 card-shadow border border-terracotta-light/60 transition-all duration-300 hover:-translate-y-1">
+            <div class="w-12 h-12 bg-terracotta-light rounded-lg flex items-center justify-center mb-5">
+              <svg class="w-6 h-6 text-terracotta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/><circle cx="8" cy="6" r="1.2" fill="currentColor"/><circle cx="8" cy="12" r="1.2" fill="currentColor"/><circle cx="8" cy="18" r="1.2" fill="currentColor"/></svg>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-espresso mb-3">European Tapas</h3>
+            <p class="text-warm-gray text-sm leading-relaxed">Patatas Bravas, Spanish meatballs, Padron peppers, stuffed mozzarella, burrata with figs, and pulled jackfruit nachos &mdash; perfect for sharing.</p>
+          </div>
+          <div class="bg-card rounded-xl p-8 card-shadow border border-terracotta-light/60 transition-all duration-300 hover:-translate-y-1 sm:col-span-2 lg:col-span-1">
+            <div class="w-12 h-12 bg-terracotta-light rounded-lg flex items-center justify-center mb-5">
+              <svg class="w-6 h-6 text-terracotta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 3.75L6 21h12l-3.75-17.25"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 3.75h4.5"/><line x1="8" y1="12" x2="16" y2="12" stroke-width="1.5"/></svg>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-espresso mb-3">Craft Cocktails</h3>
+            <p class="text-warm-gray text-sm leading-relaxed">Espresso Martinis are our signature. By day, Cumbrian-roasted specialty coffee. By night, a full cocktail list, wines, and craft beers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 md:py-28 relative overflow-hidden">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(194,105,60,0.07)_0%,transparent_70%)]"></div>
+      <div class="relative max-w-2xl mx-auto px-4 sm:px-6 text-center">
+        <p class="text-terracotta text-sm font-medium tracking-[0.2em] uppercase mb-3">Walk-ins Welcome</p>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-espresso mb-4">Ready to Join Us?</h2>
+        <p class="text-warm-gray text-lg mb-8">No reservations &mdash; just come by, grab a seat, and enjoy. Food served 12pm&ndash;9pm daily.</p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="./menu.html" class="inline-flex items-center px-10 py-4 bg-terracotta text-white font-semibold rounded-lg hover:bg-terracotta-dark transition-colors duration-200 btn-glow focus-ring min-h-[44px] text-lg">Explore the Menu</a>
+          <a href="./contact.html" class="inline-flex items-center px-10 py-4 border-2 border-terracotta/25 text-espresso font-semibold rounded-lg hover:bg-terracotta hover:text-white hover:border-terracotta transition-colors duration-200 focus-ring min-h-[44px] text-lg">Get Directions</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-terracotta-light/40 border-t border-terracotta-light py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
+        <div><h3 class="font-serif text-lg font-bold text-espresso mb-3">The Square Orange</h3><address class="text-warm-gray text-sm not-italic leading-relaxed">20 St. John's Street<br>Keswick, CA12 5AS<br>United Kingdom</address></div>
+        <div><h3 class="font-serif text-lg font-bold text-espresso mb-3">Opening Hours</h3><p class="text-warm-gray text-sm leading-relaxed">Open daily 10:30am &ndash; 10:30pm<br>Food served 12:00pm &ndash; 9:00pm</p></div>
+        <div><h3 class="font-serif text-lg font-bold text-espresso mb-3">Contact</h3><p class="text-warm-gray text-sm leading-relaxed"><a href="tel:+441768773888" class="hover:text-terracotta transition-colors duration-200 focus-ring">017687 73888</a><br><a href="mailto:hello@thesquareorange.co.uk" class="hover:text-terracotta transition-colors duration-200 focus-ring">hello@thesquareorange.co.uk</a></p></div>
+      </div>
+      <div class="border-t border-terracotta-light pt-8 text-center text-warm-gray text-xs">&copy; 2026 The Square Orange. All rights reserved. Est. 1998 &mdash; a Keswick institution.</div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      var b=document.getElementById('mobile-menu-btn'),m=document.getElementById('mobile-menu');
+      if(b&&m){b.addEventListener('click',function(){var o=m.classList.toggle('hidden');b.setAttribute('aria-expanded',!o);});}
+      var n=document.getElementById('navbar');
+      if(n){window.addEventListener('scroll',function(){if(window.scrollY>20){n.classList.add('bg-cream/95','backdrop-blur-md','border-b','border-terracotta-light');}else{n.classList.remove('bg-cream/95','backdrop-blur-md','border-b','border-terracotta-light');}});
+      if(window.scrollY>20){n.classList.add('bg-cream/95','backdrop-blur-md','border-b','border-terracotta-light');}}
+    })();
+  </script>
+</body>
+</html>

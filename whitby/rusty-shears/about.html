@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Rusty Shears | Whitby</title>
+<meta name="description" content="The story of Rusty Shears — a vintage tea shop & gin bar in Whitby. 150+ gins, a giant fig tree, mismatched china, and new management for 2024.">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{colors:{cream:'#FEFCF7',sage:'#7A9A7E',moss:'#3D4F3C',elderflower:'#C4A6C4',terracotta:'#D4856B',gold:'#C8A45C',card:'#FFFFFF'},fontFamily:{display:['Playfair Display','Georgia','serif'],body:['Inter','system-ui','sans-serif']}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  .gold-line{height:1px;background:linear-gradient(90deg,transparent,#C8A45C 20%,#C8A45C 80%,transparent);border:none;margin:2rem 0}
+  .gold-line-short{height:1px;background:linear-gradient(90deg,transparent,#C8A45C,#C8A45C,transparent);border:none;width:120px;margin:1rem auto}
+  .gold-line-left{height:1px;background:linear-gradient(90deg,#C8A45C,transparent);border:none;width:80px;margin:0.75rem 0}
+  .quote-block{border-left:3px solid #C8A45C;padding-left:1.5rem}
+  #menu-toggle:checked~.mobile-menu{display:flex}
+  .page-header{background:linear-gradient(135deg,rgba(61,79,60,.75),rgba(122,154,126,.55)),url('assets/屏幕截图 2026-07-09 175704.png') center/cover no-repeat}
+</style>
+</head>
+<body class="bg-cream font-body text-moss">
+
+<!-- Navigation -->
+<header class="sticky top-0 z-50 bg-cream/95 backdrop-blur-sm border-b border-sage/15">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="index.html" class="font-display text-xl font-bold text-sage tracking-tight flex items-center gap-2">
+      <svg viewBox="0 0 24 24" class="w-6 h-6 text-sage" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8 8 4 12 4 16c0 4.4 3.6 8 8 8s8-3.6 8-8c0-4-4-8-8-14z"/><path d="M12 22V10" stroke-width="1"/></svg>
+      Rusty Shears
+    </a>
+    <input type="checkbox" id="menu-toggle" class="hidden peer">
+    <label for="menu-toggle" class="md:hidden cursor-pointer p-1" aria-label="Toggle menu">
+      <svg viewBox="0 0 24 24" class="w-6 h-6 text-sage" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </label>
+    <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+      <a href="index.html" class="text-moss/60 hover:text-sage transition-colors">Home</a>
+      <a href="menu.html" class="text-moss/60 hover:text-sage transition-colors">Menu</a>
+      <a href="about.html" class="text-sage border-b-2 border-sage pb-1">About</a>
+      <a href="contact.html" class="text-moss/60 hover:text-sage transition-colors">Contact</a>
+    </nav>
+  </div>
+  <div class="mobile-menu hidden flex-col md:hidden bg-cream border-t border-sage/15 px-4 py-3 gap-3 text-sm font-medium">
+    <a href="index.html" class="text-moss/60">Home</a>
+    <a href="menu.html" class="text-moss/60">Menu</a>
+    <a href="about.html" class="text-sage">About</a>
+    <a href="contact.html" class="text-moss/60">Contact</a>
+  </div>
+</header>
+
+<!-- Page Header -->
+<section class="page-header py-16 md:py-24 text-center px-4">
+  <hr class="gold-line-short mb-6">
+  <h1 class="font-display text-4xl md:text-5xl font-bold text-white mb-4">Our Story</h1>
+  <p class="font-display italic text-white/85 text-lg md:text-xl">A hidden garden on a Whitby side street</p>
+</section>
+
+<!-- Story Section -->
+<section class="max-w-4xl mx-auto px-4 py-12 md:py-20">
+  <div class="grid md:grid-cols-5 gap-8 items-start">
+    <div class="md:col-span-3">
+      <p class="font-display italic text-sage text-lg mb-3">A Slice of Whitby History</p>
+      <h2 class="font-display text-3xl md:text-4xl font-bold text-sage mb-2">The Parlour That Time Forgot</h2>
+      <hr class="gold-line-left mb-6">
+      <p class="text-moss/75 leading-relaxed mb-4">
+        Rusty Shears sits at 4 Silver Street, a narrow side street just off the bustle of Whitby's main thoroughfare. From the outside, you might walk past it. But step through the door, and you enter a world of mismatched china, curiosity cabinets, and the warm glow of a parlour that time forgot.
+      </p>
+      <p class="text-moss/75 leading-relaxed mb-4">
+        The name? It comes from the rusty old shears found buried in the courtyard during renovation — now hanging proudly on the wall, a nod to the building's past lives and the layers of history that make Whitby what it is.
+      </p>
+      <p class="text-moss/75 leading-relaxed mb-4">
+        By day, sunlight filters through old windows onto tables set with china teapots and vintage saucers. The smell of fresh cake drifts from the kitchen. Regulars chat over full English breakfasts while first-timers gaze around at the curiosity cabinets, trying to take it all in.
+      </p>
+    </div>
+    <div class="md:col-span-2">
+      <img src="assets/屏幕截图 2026-07-09 175813.png" alt="Interior detail" class="w-full h-64 md:h-80 object-cover shadow-sm" loading="lazy">
+      <img src="assets/屏幕截图 2026-07-09 175820.png" alt="China and decor" class="w-full h-48 object-cover shadow-sm mt-4" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<hr class="gold-line max-w-3xl mx-auto">
+
+<!-- Courtyard & Fig Tree — the star section -->
+<section class="max-w-4xl mx-auto px-4 py-12 md:py-20">
+  <div class="grid md:grid-cols-2 gap-10 items-center">
+    <img src="assets/屏幕截图 2026-07-09 175704.png" alt="The courtyard with fig tree" class="w-full h-72 md:h-96 object-cover shadow-sm order-2 md:order-1" loading="lazy">
+    <div class="order-1 md:order-2">
+      <p class="font-display italic text-sage text-lg mb-3">The Heart of Rusty Shears</p>
+      <h2 class="font-display text-3xl md:text-4xl font-bold text-sage mb-2">The Courtyard &amp; The Fig Tree</h2>
+      <hr class="gold-line-left mb-6">
+      <p class="text-moss/75 leading-relaxed mb-4">
+        Tucked behind the tea rooms, sheltered from the North Sea breeze, is our courtyard garden. And in the centre of it all, an enormous fig tree — old, gnarled, and utterly magnificent. In summer, its broad leaves create a dappled canopy. In autumn, if you are lucky, you might arrive when the figs are ripe.
+      </p>
+      <p class="text-moss/75 leading-relaxed mb-4">
+        It is the perfect spot for a pot of tea on a sunny afternoon, or a gin and tonic as the evening cools. There is nowhere quite like it in Whitby.
+      </p>
+      <div class="flex items-center gap-3 mt-4">
+        <svg viewBox="0 0 24 24" class="w-8 h-8 text-sage" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2C8 8 4 12 4 16c0 4.4 3.6 8 8 8s8-3.6 8-8c0-4-4-8-8-14z"/><path d="M12 22V10"/><path d="M8 14c1-1 2.5-1.5 4-1.5s3 .5 4 1.5"/></svg>
+        <span class="text-sm text-sage italic">Sheltered, sunny, and utterly charming</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="gold-line max-w-3xl mx-auto">
+
+<!-- 150 Gins Stat -->
+<section class="py-12 md:py-20 bg-card border-y border-sage/10 text-center px-4">
+  <div class="max-w-3xl mx-auto">
+    <div class="font-display text-6xl md:text-8xl font-bold text-sage mb-4">150+</div>
+    <h2 class="font-display text-2xl md:text-3xl font-bold text-sage mb-4">Gins. Yes, Really.</h2>
+    <hr class="gold-line-short mb-6">
+    <p class="text-moss/65 leading-relaxed max-w-xl mx-auto">
+      When the sun sets on weekends, Rusty Shears transforms. Candles flicker on every table. The china cups make way for copa glasses. And from behind the bar, our collection of over one hundred and fifty gins — from classic London Dry to small-batch Yorkshire craft spirits — comes to life.
+    </p>
+    <p class="text-moss/65 leading-relaxed max-w-xl mx-auto mt-4">
+      It is, quite possibly, the most charming place in Whitby to drink gin.
+    </p>
+    <a href="menu.html#gin" class="inline-block mt-6 text-terracotta font-medium text-sm tracking-wide border-b border-terracotta pb-1 hover:text-sage transition-colors">Explore gin &amp; drinks &rarr;</a>
+  </div>
+</section>
+
+<!-- Dog-Friendly -->
+<section class="max-w-4xl mx-auto px-4 py-12 md:py-20">
+  <div class="grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <p class="font-display italic text-sage text-lg mb-3">Four-Legged Friends</p>
+      <h2 class="font-display text-3xl md:text-4xl font-bold text-sage mb-2">Dogs Welcome</h2>
+      <hr class="gold-line-left mb-6">
+      <p class="text-moss/75 leading-relaxed mb-4">
+        We are dog-friendly through and through. Well-behaved dogs are welcome inside the tea rooms and in the courtyard. In fact, every dog that visits gets a complimentary sausage — it has become something of a tradition, and the local dogs know it.
+      </p>
+      <p class="text-moss/75 leading-relaxed">
+        Whitby is a town for walkers, and we think a good walk deserves a good tea shop at the end of it — for both ends of the lead.
+      </p>
+      <div class="mt-4 inline-flex items-center gap-2 text-sm text-terracotta font-medium">
+        <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="16" r="2"/><circle cx="6" cy="16" r="2"/><circle cx="18" cy="16" r="2"/><path d="M4 12c0-2 1-3 3-3h10c2 0 3 1 3 3"/></svg>
+        Free sausage for every dog
+      </div>
+    </div>
+    <img src="assets/屏幕截图 2026-07-09 175806.png" alt="Dog-friendly tea shop" class="w-full h-72 md:h-80 object-cover shadow-sm" loading="lazy">
+  </div>
+</section>
+
+<hr class="gold-line max-w-3xl mx-auto">
+
+<!-- New Management 2024 -->
+<section class="max-w-4xl mx-auto px-4 py-12 md:py-20">
+  <div class="bg-card border border-sage/15 p-6 md:p-10 text-center shadow-sm">
+    <p class="font-display italic text-sage text-lg mb-3">A New Chapter</p>
+    <h2 class="font-display text-3xl md:text-4xl font-bold text-sage mb-4">New Management 2024</h2>
+    <hr class="gold-line-short mb-6">
+    <p class="text-moss/75 leading-relaxed max-w-xl mx-auto mb-4">
+      In 2024, Rusty Shears welcomed new management — a fresh team with a deep love for what this quirky, beloved little spot has always been. The mismatched china stays. The fig tree stays. The unhurried, slightly eccentric charm stays.
+    </p>
+    <p class="text-moss/75 leading-relaxed max-w-xl mx-auto">
+      What is new? A reinvigorated menu, an even more ambitious gin selection, weekend bistro evenings, and a determination to make Rusty Shears the most memorable stop on any visit to Whitby.
+    </p>
+    <blockquote class="quote-block mt-6 max-w-lg mx-auto text-left">
+      <p class="font-display italic text-sage text-lg leading-relaxed">"We are not fast food. We are a relaxed, unhurried experience — and we would not have it any other way."</p>
+    </blockquote>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-moss text-cream/70 py-10 border-t border-gold/20">
+  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-8 text-sm">
+    <div>
+      <h4 class="font-display text-lg font-bold text-gold mb-3">Rusty Shears</h4>
+      <p>4 Silver Street, Whitby, YO21 3BU</p>
+      <p class="mt-2">01947 825111</p>
+    </div>
+    <div>
+      <h4 class="font-display text-lg font-bold text-gold mb-3">Hours</h4>
+      <p>Mon&ndash;Sat: 9:00 &ndash; 17:00<br>Sun: 10:00 &ndash; 16:00<br><span class="text-gold/80">Weekend bistro evenings</span></p>
+    </div>
+    <div>
+      <h4 class="font-display text-lg font-bold text-gold mb-3">Links</h4>
+      <a href="menu.html" class="block hover:text-gold transition-colors">Menu</a>
+      <a href="about.html" class="block hover:text-gold transition-colors">About</a>
+      <a href="contact.html" class="block hover:text-gold transition-colors">Contact</a>
+    </div>
+  </div>
+  <div class="text-center mt-8 pt-6 border-t border-gold/10 text-xs text-cream/35">
+    &copy; 2024 Rusty Shears, Whitby. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>

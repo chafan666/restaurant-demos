@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu — Rusty Shears | Whitby</title>
+<meta name="description" content="Full English breakfasts, afternoon teas, homemade cakes, and 150+ gins. Breakfast until 11:30, weekend bistro evenings in our Whitby courtyard garden.">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{colors:{cream:'#FEFCF7',sage:'#7A9A7E',moss:'#3D4F3C',elderflower:'#C4A6C4',terracotta:'#D4856B',gold:'#C8A45C',card:'#FFFFFF'},fontFamily:{display:['Playfair Display','Georgia','serif'],body:['Inter','system-ui','sans-serif']}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  .gold-line{height:1px;background:linear-gradient(90deg,transparent,#C8A45C 20%,#C8A45C 80%,transparent);border:none;margin:2rem 0}
+  .gold-line-short{height:1px;background:linear-gradient(90deg,transparent,#C8A45C,#C8A45C,transparent);border:none;width:120px;margin:1rem auto}
+  .gold-line-left{height:1px;background:linear-gradient(90deg,#C8A45C,transparent);border:none;width:80px;margin:0.75rem 0}
+  .badge{display:inline-block;font-size:0.65rem;font-weight:600;padding:1px 6px;border-radius:3px;letter-spacing:.05em}
+  .badge-v{background:#e8f0e3;color:#5a8a4a}
+  .badge-vg{background:#d4e8d0;color:#3a6a2a}
+  .menu-section{scroll-margin-top:80px}
+  #menu-toggle:checked~.mobile-menu{display:flex}
+  .page-header{background:linear-gradient(135deg,rgba(61,79,60,.75),rgba(122,154,126,.55)),url('assets/屏幕截图 2026-07-09 175743.png') center/cover no-repeat}
+</style>
+</head>
+<body class="bg-cream font-body text-moss">
+
+<!-- Navigation -->
+<header class="sticky top-0 z-50 bg-cream/95 backdrop-blur-sm border-b border-sage/15">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="index.html" class="font-display text-xl font-bold text-sage tracking-tight flex items-center gap-2">
+      <svg viewBox="0 0 24 24" class="w-6 h-6 text-sage" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8 8 4 12 4 16c0 4.4 3.6 8 8 8s8-3.6 8-8c0-4-4-8-8-14z"/><path d="M12 22V10" stroke-width="1"/></svg>
+      Rusty Shears
+    </a>
+    <input type="checkbox" id="menu-toggle" class="hidden peer">
+    <label for="menu-toggle" class="md:hidden cursor-pointer p-1" aria-label="Toggle menu">
+      <svg viewBox="0 0 24 24" class="w-6 h-6 text-sage" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </label>
+    <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+      <a href="index.html" class="text-moss/60 hover:text-sage transition-colors">Home</a>
+      <a href="menu.html" class="text-sage border-b-2 border-sage pb-1">Menu</a>
+      <a href="about.html" class="text-moss/60 hover:text-sage transition-colors">About</a>
+      <a href="contact.html" class="text-moss/60 hover:text-sage transition-colors">Contact</a>
+    </nav>
+  </div>
+  <div class="mobile-menu hidden flex-col md:hidden bg-cream border-t border-sage/15 px-4 py-3 gap-3 text-sm font-medium">
+    <a href="index.html" class="text-moss/60">Home</a>
+    <a href="menu.html" class="text-sage">Menu</a>
+    <a href="about.html" class="text-moss/60">About</a>
+    <a href="contact.html" class="text-moss/60">Contact</a>
+  </div>
+</header>
+
+<!-- Page Header -->
+<section class="page-header py-16 md:py-24 text-center px-4">
+  <hr class="gold-line-short mb-6">
+  <h1 class="font-display text-4xl md:text-5xl font-bold text-white mb-4">Our Menu</h1>
+  <p class="font-display italic text-white/85 text-lg md:text-xl">From breakfast to bedtime gins, under the fig tree</p>
+</section>
+
+<!-- Quick Nav -->
+<div class="sticky top-14 z-40 bg-card border-b border-sage/15">
+  <div class="max-w-6xl mx-auto px-4 py-2 flex gap-4 md:gap-8 text-xs md:text-sm font-medium overflow-x-auto">
+    <a href="#breakfast" class="text-sage hover:text-moss transition-colors whitespace-nowrap">Breakfast</a>
+    <a href="#lunch" class="text-moss/50 hover:text-sage transition-colors whitespace-nowrap">Lunch</a>
+    <a href="#afternoon" class="text-moss/50 hover:text-sage transition-colors whitespace-nowrap">Afternoon Tea</a>
+    <a href="#gin" class="text-moss/50 hover:text-sage transition-colors whitespace-nowrap">Gin &amp; Drinks</a>
+  </div>
+</div>
+
+<!-- Breakfast -->
+<section id="breakfast" class="menu-section max-w-4xl mx-auto px-4 py-12 md:py-16">
+  <div class="flex items-center gap-4 mb-2">
+    <svg viewBox="0 0 24 24" class="w-6 h-6 text-terracotta flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>
+    <h2 class="font-display text-2xl md:text-3xl font-bold text-sage">Breakfast</h2>
+    <span class="text-xs text-terracotta font-medium tracking-wide bg-terracotta/8 px-2 py-0.5">Until 11:30</span>
+  </div>
+  <hr class="gold-line-left">
+  <p class="text-sm text-moss/50 mb-8">Served Monday to Saturday from 9:00, Sunday from 10:00.</p>
+
+  <div class="space-y-4">
+    <div class="flex justify-between items-start bg-card p-4 border-l-2 border-sage/25 shadow-sm">
+      <div><h3 class="font-medium text-moss">Full English Breakfast</h3><p class="text-xs text-moss/45 mt-0.5">Two sausages, bacon, black pudding, egg, mushrooms, tomato, beans, toast</p></div>
+      <span class="text-gold font-medium text-sm whitespace-nowrap ml-4">&pound;12</span>
+    </div>
+    <div class="flex justify-between items-start bg-card p-4 border-l-2 border-sage/25 shadow-sm">
+      <div><h3 class="font-medium text-moss">Eggs Benedict</h3><p class="text-xs text-moss/45 mt-0.5">Poached eggs, ham, hollandaise on toasted muffin</p></div>
+      <span class="text-gold font-medium text-sm whitespace-nowrap ml-4">&pound;10</span>
+    </div>
+    <div class="flex justify-between items-start bg-card p-4 border-l-2 border-sage/25 shadow-sm">
+      <div><h3 class="font-medium text-moss">Eggs Royale</h3><p class="text-xs text-moss/45 mt-0.5">Poached eggs, smoked salmon, hollandaise on toasted muffin</p></div>
+      <span class="text-gold font-medium text-sm whitespace-nowrap ml-4">&pound;11</span>
+    </div>
+    <div class="flex justify-between items-start bg-card p-4 border-l-2 border-sage/25 shadow-sm">
+      <div><h3 class="font-medium text-moss">Rusty's Veggie Snack <span class="badge badge-v">V</span></h3><p class="text-xs text-moss/45 mt-0.5">Vegetarian breakfast with halloumi, avocado, roasted tomatoes, toast</p></div>
+      <span class="text-gold font-medium text-sm whitespace-nowrap ml-4">&pound;9</span>
+    </div>
+    <div class="flex justify-between items-start bg-card p-4 border-l-2 border-sage/25 shadow-sm">
+      <div><h3 class="font-medium text-moss">Bacon Butty</h3><p class="text-xs text-moss/45 mt-0.5">Thick-cut bacon in a buttered bap</p></div>
+      <span class="text-gold font-medium text-sm whitespace-nowrap ml-4">&pound;7</span>
+    </div>
+  </div>
+</section>
+
+<hr class="gold-line max-w-3xl mx-auto">
+
+<!-- Lunch -->
+<section id="lunch" class="menu-section max-w-4xl mx-auto px-4 py-12 md:py-16">
+  <div class="flex items-center gap-4 mb-2">
+    <svg viewBox="0 0 24 24" class="w-6 h-6 text-terracotta flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8 8 4 12 4 16c0 4.4 3.6 8 8 8s8-3.6 8-8c0-4-4-8-8-14z"/></svg>
+    <h2 class="font-display text-2xl md:text-3xl font-bold text-sage">Lunch</h2>
+  </div>
+  <hr class="gold-line-left">
+  <p class="text-sm text-moss/50 mb-8">Served from 11:30. Light lunches, salads, and baguettes.</p>
+
+  <div class="grid md:grid-cols-2 gap-6 mb-8">
+    <img src="assets/屏幕截图 2026-07-09 175730.png" alt="Lunch at Rusty Shears" class="w-full h-48 object-cover shadow-sm" loading="lazy">
+    <img src="assets/屏幕截图 2026-07-09 175806.png" alt="Courtyard dining" class="w-full h-48 object-cover shadow-sm" loading="lazy">
+  </div>
+
+  <div class="space-y-4">
+    <div class="flex justify-between items-start bg-card p-4 border-l-2 border-sage/25 shadow-sm">
+      <div><h3 class="font-medium text-moss">Smashed Avocado on Sourdough <span class="badge badge-vg">VG</span></h3><p class="text-xs text-moss/45 mt-0.5">With cherry tomatoes, chilli flakes, and a drizzle of olive oil</p></div>
+      <span class="text-gold font-medium text-sm whitespace-nowrap ml-4">&pound;10</span>
+    </div>
+    <div class="flex justify-between items-start bg-card p-4 border-l-2 border-sage/25 shadow-sm">
+      <div><h3 class="font-medium text-moss">Avocado &amp; Salmon Salad</h3><p class="text-xs text-moss/45 mt-0.5">Fresh salad leaves with avocado, smoked salmon, lemon dressing</p></div>
+      <span class="text-gold font-medium text-sm whitespace-nowrap ml-4">&pound;14</span>
+    </div>
+    <div class="flex justify-between items-start bg-card p-4 border-l-2 border-sage/25 shadow-sm">
+      <div><h3 class="font-medium text-moss">Soup of the Day <span class="badge badge-v">V</span></h3><p class="text-xs text-moss/45 mt-0.5">Homemade, served with crusty bread. Ask for today's flavour.</p></div>
+      <span class="text-gold font-medium text-sm whitespace-nowrap ml-4">&pound;8</span>
+    </div>
+    <div class="flex justify-between items-start bg-card p-4 border-l-2 border-sage/25 shadow-sm">
+      <div><h3 class="font-medium text-moss">Baguette with Salad &amp; Chips</h3><p class="text-xs text-moss/45 mt-0.5">Choice of fillings: ham &amp; cheese, tuna mayo, or cheese &amp; pickle</p></div>
+      <span class="text-gold font-medium text-sm whitespace-nowrap ml-4">&pound;11</span>
+    </div>
+  </div>
+</section>
+
+<hr class="gold-line max-w-3xl mx-auto">
+
+<!-- Afternoon Tea -->
+<section id="afternoon" class="menu-section max-w-4xl mx-auto px-4 py-12 md:py-16">
+  <div class="flex items-center gap-4 mb-2">
+    <svg viewBox="0 0 24 24" class="w-6 h-6 text-terracotta flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8h1a4 4 0 010 8h-1"/><rect x="6" y="6" width="12" height="14" rx="2"/><line x1="9" y1="2" x2="9" y2="4"/><line x1="15" y1="2" x2="15" y2="4"/></svg>
+    <h2 class="font-display text-2xl md:text-3xl font-bold text-sage">Afternoon Tea &amp; Cakes</h2>
+  </div>
+  <hr class="gold-line-left">
+  <p class="text-sm text-moss/50 mb-8">All day. Twenty loose-leaf teas served in china pots. Cakes baked fresh daily.</p>
+
+  <div class="space-y-4">
+    <div class="flex justify-between items-start bg-card p-4 border-l-2 border-sage/25 shadow-sm">
+      <div><h3 class="font-medium text-moss">Carrot Cake <span class="badge badge-v">V</span></h3><p class="text-xs text-moss/45 mt-0.5">Our legendary carrot cake — moist, spiced, with cream cheese frosting</p></div>
+      <span class="text-gold font-medium text-sm whitespace-nowrap ml-4">&pound;5</span>
+    </div>
+    <div class="flex justify-between items-start bg-card p-4 border-l-2 border-sage/25 shadow-sm">
+      <div><h3 class="font-medium text-moss">Homemade Scones <span class="badge badge-v">V</span></h3><p class="text-xs text-moss/45 mt-0.5">Served warm with clotted cream and strawberry jam</p></div>
+      <span class="text-gold font-medium text-sm whitespace-nowrap ml-4">&pound;6</span>
+    </div>
+    <div class="flex justify-between items-start bg-card p-4 border-l-2 border-sage/25 shadow-sm">
+      <div><h3 class="font-medium text-moss">20+ Loose-Leaf Teas</h3><p class="text-xs text-moss/45 mt-0.5">Darjeeling, Earl Grey, English Breakfast, chamomile, peppermint, rooibos, and many more</p></div>
+      <span class="text-gold font-medium text-sm whitespace-nowrap ml-4">from &pound;3.30</span>
+    </div>
+    <div class="flex justify-between items-start bg-card p-4 border-l-2 border-sage/25 shadow-sm">
+      <div><h3 class="font-medium text-moss">Selection of Homemade Cakes <span class="badge badge-v">V</span></h3><p class="text-xs text-moss/45 mt-0.5">Victoria sponge, lemon drizzle, chocolate fudge — ask for today's selection</p></div>
+      <span class="text-gold font-medium text-sm whitespace-nowrap ml-4">from &pound;4.50</span>
+    </div>
+  </div>
+</section>
+
+<hr class="gold-line max-w-3xl mx-auto">
+
+<!-- Gin & Drinks -->
+<section id="gin" class="menu-section max-w-4xl mx-auto px-4 py-12 md:py-16">
+  <div class="flex items-center gap-4 mb-2">
+    <svg viewBox="0 0 24 24" class="w-6 h-6 text-terracotta flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 22h8"/><path d="M12 22V12"/><path d="M8 6h8l2 6H6l2-6z"/><line x1="8" y1="2" x2="16" y2="2"/></svg>
+    <h2 class="font-display text-2xl md:text-3xl font-bold text-sage">Gin &amp; Drinks</h2>
+    <span class="text-xs text-terracotta font-medium tracking-wide bg-terracotta/8 px-2 py-0.5">Weekend Evenings</span>
+  </div>
+  <hr class="gold-line-left">
+  <p class="text-sm text-moss/50 mb-8">Weekend bistro evenings. Candlelit gin bar with over one hundred and fifty gins from around the world.</p>
+
+  <div class="bg-card border border-sage/20 p-6 md:p-8 mb-8 text-center shadow-sm">
+    <div class="font-display text-5xl md:text-6xl font-bold text-sage mb-2">150+</div>
+    <p class="font-display italic text-lg text-moss/70">Gins Available</p>
+    <p class="text-sm text-moss/50 mt-2 max-w-md mx-auto">From classic London Dry to small-batch craft gins, flavoured gins, and rare finds. Our staff will help you discover your perfect pour.</p>
+  </div>
+
+  <div class="space-y-4">
+    <div class="flex justify-between items-start bg-card p-4 border-l-2 border-sage/25 shadow-sm">
+      <div><h3 class="font-medium text-moss">Gin Tasting Flight</h3><p class="text-xs text-moss/45 mt-0.5">Three hand-picked gins with paired tonics and garnishes</p></div>
+      <span class="text-gold font-medium text-sm whitespace-nowrap ml-4">&pound;15</span>
+    </div>
+    <div class="flex justify-between items-start bg-card p-4 border-l-2 border-sage/25 shadow-sm">
+      <div><h3 class="font-medium text-moss">Single Gin &amp; Tonic</h3><p class="text-xs text-moss/45 mt-0.5">Your choice from our 150+ collection, with premium tonic and garnish</p></div>
+      <span class="text-gold font-medium text-sm whitespace-nowrap ml-4">from &pound;7</span>
+    </div>
+    <div class="flex justify-between items-start bg-card p-4 border-l-2 border-sage/25 shadow-sm">
+      <div><h3 class="font-medium text-moss">Weekend Bistro Supper</h3><p class="text-xs text-moss/45 mt-0.5">Seasonal evening menu. Book ahead — limited tables available.</p></div>
+      <span class="text-gold font-medium text-sm whitespace-nowrap ml-4">See specials</span>
+    </div>
+    <div class="flex justify-between items-start bg-card p-4 border-l-2 border-sage/25 shadow-sm">
+      <div><h3 class="font-medium text-moss">Wine, Beer &amp; Soft Drinks</h3><p class="text-xs text-moss/45 mt-0.5">Curated wine list, local ales, and a range of soft drinks also available</p></div>
+      <span class="text-gold font-medium text-sm whitespace-nowrap ml-4">Ask at bar</span>
+    </div>
+  </div>
+
+  <div class="mt-8 bg-card p-5 border border-sage/15 text-center shadow-sm">
+    <p class="text-sm text-moss/50"><span class="badge badge-v mr-1">V</span> Vegetarian &nbsp; <span class="badge badge-vg mx-1">VG</span> Vegan &nbsp; | &nbsp; Dietary requirements? Just ask our team.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-12 md:py-16 text-center px-4 bg-cream">
+  <p class="font-display italic text-sage text-lg mb-3">Not fast food. A relaxed, unhurried experience.</p>
+  <a href="contact.html" class="inline-block bg-terracotta text-white px-8 py-3 font-medium text-sm tracking-wide hover:bg-terracotta/90 transition-colors">Book a Table</a>
+</section>
+
+<!-- Footer -->
+<footer class="bg-moss text-cream/70 py-10 border-t border-gold/20">
+  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-8 text-sm">
+    <div>
+      <h4 class="font-display text-lg font-bold text-gold mb-3">Rusty Shears</h4>
+      <p>4 Silver Street, Whitby, YO21 3BU</p>
+      <p class="mt-2">01947 825111</p>
+    </div>
+    <div>
+      <h4 class="font-display text-lg font-bold text-gold mb-3">Hours</h4>
+      <p>Mon&ndash;Sat: 9:00 &ndash; 17:00<br>Sun: 10:00 &ndash; 16:00<br><span class="text-gold/80">Weekend bistro evenings</span></p>
+    </div>
+    <div>
+      <h4 class="font-display text-lg font-bold text-gold mb-3">Links</h4>
+      <a href="menu.html" class="block hover:text-gold transition-colors">Menu</a>
+      <a href="about.html" class="block hover:text-gold transition-colors">About</a>
+      <a href="contact.html" class="block hover:text-gold transition-colors">Contact</a>
+    </div>
+  </div>
+  <div class="text-center mt-8 pt-6 border-t border-gold/10 text-xs text-cream/35">
+    &copy; 2024 Rusty Shears, Whitby. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>

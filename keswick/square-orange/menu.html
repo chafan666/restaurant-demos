@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu | The Square Orange &mdash; Pizza, Tapas &amp; Cocktails</title>
+  <meta name="description" content="Our full menu: stone-baked Roman-style pizzas, European tapas, desserts, and craft cocktails. Vegan and gluten-free options available. The Square Orange, Keswick.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: '#FDF8F0',
+            terracotta: '#C2693C',
+            'terracotta-dark': '#9E4F2C',
+            'terracotta-light': '#F2E0D3',
+            espresso: '#2C1810',
+            'warm-gray': '#6B5D55',
+            card: '#FFFDFB',
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    .badge { display: inline-flex; align-items: center; font-size: 0.625rem; font-weight: 700; letter-spacing: 0.05em; padding: 0.125rem 0.5rem; border-radius: 9999px; text-transform: uppercase; line-height: 1.4; }
+    .badge-v { background: #dcfce7; color: #16a34a; border: 1px solid #bbf7d0; }
+    .badge-vg { background: #d1fae5; color: #065f46; border: 1px solid #a7f3d0; }
+    .badge-gf { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+    .menu-section-title { position: relative; display: inline-block; }
+    .menu-section-title::after { content: ''; position: absolute; bottom: -0.25rem; left: 0; right: 0; height: 2px; background: #C2693C; border-radius: 1px; }
+    ::selection { background: rgba(194,105,60,0.18); color: #2C1810; }
+    .focus-ring:focus-visible { outline: 2px solid #C2693C; outline-offset: 3px; border-radius: 4px; }
+  </style>
+</head>
+<body class="bg-cream text-espresso font-sans antialiased">
+
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-terracotta focus:text-white focus:px-4 focus:py-2 focus:rounded-lg">Skip to main content</a>
+
+  <header class="fixed w-full z-50 bg-cream/95 backdrop-blur-md border-b border-terracotta-light transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <a href="./index.html" class="font-serif text-xl md:text-2xl font-bold text-terracotta tracking-tight transition-colors duration-200 hover:text-terracotta-dark">The Square Orange</a>
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-warm-gray" aria-label="Main navigation">
+          <a href="./index.html" class="hover:text-terracotta transition-colors duration-200 focus-ring">Home</a>
+          <a href="./menu.html" class="text-terracotta transition-colors duration-200 focus-ring" aria-current="page">Menu</a>
+          <a href="./about.html" class="hover:text-terracotta transition-colors duration-200 focus-ring">About</a>
+          <a href="./contact.html" class="hover:text-terracotta transition-colors duration-200 focus-ring">Contact</a>
+        </nav>
+        <button id="mobile-menu-btn" class="md:hidden p-2 text-warm-gray hover:text-terracotta transition-colors duration-200 focus-ring rounded-lg min-h-[44px] min-w-[44px]" aria-label="Open menu" aria-expanded="false">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-cream/98 backdrop-blur-md border-t border-terracotta-light">
+      <nav class="px-4 py-4 space-y-1" aria-label="Mobile navigation">
+        <a href="./index.html" class="block px-3 py-3 rounded-lg text-warm-gray hover:text-terracotta hover:bg-terracotta-light/40 transition-colors duration-200 focus-ring">Home</a>
+        <a href="./menu.html" class="block px-3 py-3 rounded-lg text-terracotta font-medium transition-colors duration-200 focus-ring">Menu</a>
+        <a href="./about.html" class="block px-3 py-3 rounded-lg text-warm-gray hover:text-terracotta hover:bg-terracotta-light/40 transition-colors duration-200 focus-ring">About</a>
+        <a href="./contact.html" class="block px-3 py-3 rounded-lg text-warm-gray hover:text-terracotta hover:bg-terracotta-light/40 transition-colors duration-200 focus-ring">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="pt-16 md:pt-20">
+    <section class="py-16 md:py-24 bg-terracotta-light/30">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+        <p class="text-terracotta text-sm font-medium tracking-[0.2em] uppercase mb-3">Fresh from the Stone Oven</p>
+        <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-espresso mb-4">Our Menu</h1>
+        <p class="text-warm-gray text-lg max-w-xl mx-auto">Stone-baked Roman-style pizzas, European tapas, desserts, and craft cocktails &mdash; all made with care in the heart of Keswick.</p>
+        <div class="flex flex-wrap justify-center gap-3 mt-8">
+          <span class="badge badge-v">V = Vegetarian</span>
+          <span class="badge badge-vg">VG = Vegan</span>
+          <span class="badge badge-gf">GF = Gluten Free</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 md:py-24">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 space-y-16 md:space-y-20">
+
+        <!-- Pizzas -->
+        <div>
+          <h2 class="font-serif text-2xl md:text-3xl font-bold text-espresso mb-2 menu-section-title pb-1">Stone-Baked Pizzas</h2>
+          <p class="text-warm-gray text-sm mb-8">Roman-style thin crust, stone-baked to perfection</p>
+          <div class="space-y-1">
+            <div class="flex justify-between items-start gap-4 py-4 border-b border-terracotta-light/50 hover:bg-card transition-colors duration-200 rounded-lg px-3 -mx-3">
+              <div class="min-w-0"><h3 class="font-semibold text-espresso mb-1">Honey Chorizo</h3><p class="text-warm-gray text-sm">Spicy honey-glazed chorizo on our signature thin crust</p></div>
+              <span class="text-terracotta font-semibold whitespace-nowrap tabular-nums">&pound;13</span>
+            </div>
+            <div class="flex justify-between items-start gap-4 py-4 border-b border-terracotta-light/50 hover:bg-card transition-colors duration-200 rounded-lg px-3 -mx-3">
+              <div class="min-w-0"><h3 class="font-semibold text-espresso mb-1">BBQ Pulled Pork &amp; Red Onion</h3><p class="text-warm-gray text-sm">Slow-cooked BBQ pulled pork with caramelised red onion</p></div>
+              <span class="text-terracotta font-semibold whitespace-nowrap tabular-nums">&pound;13</span>
+            </div>
+            <div class="flex justify-between items-start gap-4 py-4 border-b border-terracotta-light/50 hover:bg-card transition-colors duration-200 rounded-lg px-3 -mx-3">
+              <div class="min-w-0"><h3 class="font-semibold text-espresso mb-1">N'duja with Rocket &amp; Burrata</h3><p class="text-warm-gray text-sm">Spicy Calabrian N'duja sausage with fresh rocket and creamy burrata</p></div>
+              <span class="text-terracotta font-semibold whitespace-nowrap tabular-nums">&pound;14</span>
+            </div>
+            <div class="flex justify-between items-start gap-4 py-4 border-b border-terracotta-light/50 hover:bg-card transition-colors duration-200 rounded-lg px-3 -mx-3">
+              <div class="min-w-0"><div class="flex flex-wrap items-center gap-2 mb-1"><h3 class="font-semibold text-espresso">Vegan Pizza (4 varieties)</h3><span class="badge badge-vg">VG</span></div><p class="text-warm-gray text-sm">Stone-baked thin crust with vegan cheese and seasonal toppings</p></div>
+              <span class="text-terracotta font-semibold whitespace-nowrap tabular-nums">&pound;12</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tapas -->
+        <div>
+          <h2 class="font-serif text-2xl md:text-3xl font-bold text-espresso mb-2 menu-section-title pb-1">European Tapas</h2>
+          <p class="text-warm-gray text-sm mb-8">Small plates inspired by Barcelona, Rome, and San Sebastian</p>
+          <div class="space-y-1">
+            <div class="flex justify-between items-start gap-4 py-4 border-b border-terracotta-light/50 hover:bg-card transition-colors duration-200 rounded-lg px-3 -mx-3">
+              <div class="min-w-0"><div class="flex flex-wrap items-center gap-2 mb-1"><h3 class="font-semibold text-espresso">Patatas Bravas</h3><span class="badge badge-vg">VG</span></div><p class="text-warm-gray text-sm">Crispy potatoes with spicy tomato sauce and garlic aioli</p></div>
+              <span class="text-terracotta font-semibold whitespace-nowrap tabular-nums">&pound;6.50</span>
+            </div>
+            <div class="flex justify-between items-start gap-4 py-4 border-b border-terracotta-light/50 hover:bg-card transition-colors duration-200 rounded-lg px-3 -mx-3">
+              <div class="min-w-0"><h3 class="font-semibold text-espresso mb-1">Spanish Meatballs in Tomato Sauce</h3><p class="text-warm-gray text-sm">Tender handmade meatballs in a rich tomato and herb sauce</p></div>
+              <span class="text-terracotta font-semibold whitespace-nowrap tabular-nums">&pound;7.50</span>
+            </div>
+            <div class="flex justify-between items-start gap-4 py-4 border-b border-terracotta-light/50 hover:bg-card transition-colors duration-200 rounded-lg px-3 -mx-3">
+              <div class="min-w-0"><div class="flex flex-wrap items-center gap-2 mb-1"><h3 class="font-semibold text-espresso">Padron Peppers</h3><span class="badge badge-vg">VG</span><span class="badge badge-gf">GF</span></div><p class="text-warm-gray text-sm">Blistered Spanish peppers with flaky sea salt</p></div>
+              <span class="text-terracotta font-semibold whitespace-nowrap tabular-nums">&pound;5.50</span>
+            </div>
+            <div class="flex justify-between items-start gap-4 py-4 border-b border-terracotta-light/50 hover:bg-card transition-colors duration-200 rounded-lg px-3 -mx-3">
+              <div class="min-w-0"><div class="flex flex-wrap items-center gap-2 mb-1"><h3 class="font-semibold text-espresso">Stuffed Mozzarella</h3><span class="badge badge-v">V</span></div><p class="text-warm-gray text-sm">Baked mozzarella stuffed with fresh herbs and garlic butter</p></div>
+              <span class="text-terracotta font-semibold whitespace-nowrap tabular-nums">&pound;7</span>
+            </div>
+            <div class="flex justify-between items-start gap-4 py-4 border-b border-terracotta-light/50 hover:bg-card transition-colors duration-200 rounded-lg px-3 -mx-3">
+              <div class="min-w-0"><div class="flex flex-wrap items-center gap-2 mb-1"><h3 class="font-semibold text-espresso">Burrata with Figs &amp; Honey</h3><span class="badge badge-v">V</span><span class="badge badge-gf">GF</span></div><p class="text-warm-gray text-sm">Creamy burrata with sweet figs, honey drizzle, and toasted bread</p></div>
+              <span class="text-terracotta font-semibold whitespace-nowrap tabular-nums">&pound;8.50</span>
+            </div>
+            <div class="flex justify-between items-start gap-4 py-4 border-b border-terracotta-light/50 hover:bg-card transition-colors duration-200 rounded-lg px-3 -mx-3">
+              <div class="min-w-0"><div class="flex flex-wrap items-center gap-2 mb-1"><h3 class="font-semibold text-espresso">Pulled Jackfruit Nachos</h3><span class="badge badge-vg">VG</span></div><p class="text-warm-gray text-sm">Loaded tortilla chips with pulled jackfruit, salsa, and vegan toppings</p></div>
+              <span class="text-terracotta font-semibold whitespace-nowrap tabular-nums">&pound;9</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Desserts -->
+        <div>
+          <h2 class="font-serif text-2xl md:text-3xl font-bold text-espresso mb-2 menu-section-title pb-1">Desserts</h2>
+          <p class="text-warm-gray text-sm mb-8">Sweet endings to your meal</p>
+          <div class="space-y-1">
+            <div class="flex justify-between items-start gap-4 py-4 border-b border-terracotta-light/50 hover:bg-card transition-colors duration-200 rounded-lg px-3 -mx-3">
+              <div class="min-w-0"><h3 class="font-semibold text-espresso mb-1">Chocolate Orange Cake</h3><p class="text-warm-gray text-sm">Rich chocolate sponge layered with orange zest and dark chocolate ganache</p></div>
+              <span class="text-terracotta font-semibold whitespace-nowrap tabular-nums">&pound;6</span>
+            </div>
+            <div class="flex justify-between items-start gap-4 py-4 border-b border-terracotta-light/50 hover:bg-card transition-colors duration-200 rounded-lg px-3 -mx-3">
+              <div class="min-w-0"><div class="flex flex-wrap items-center gap-2 mb-1"><h3 class="font-semibold text-espresso">Cappuccino Cake</h3><span class="badge badge-v">V</span></div><p class="text-warm-gray text-sm">Coffee-infused sponge with creamy mascarpone frosting</p></div>
+              <span class="text-terracotta font-semibold whitespace-nowrap tabular-nums">&pound;5.50</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cocktails & Coffee -->
+        <div>
+          <h2 class="font-serif text-2xl md:text-3xl font-bold text-espresso mb-2 menu-section-title pb-1">Cocktails &amp; Coffee</h2>
+          <p class="text-warm-gray text-sm mb-8">From morning coffee to late-night cocktails</p>
+          <div class="space-y-1">
+            <div class="flex justify-between items-start gap-4 py-4 border-b border-terracotta-light/50 hover:bg-card transition-colors duration-200 rounded-lg px-3 -mx-3">
+              <div class="min-w-0"><h3 class="font-semibold text-espresso mb-1">Espresso Martini</h3><p class="text-warm-gray text-sm">Our signature &mdash; vodka, coffee liqueur, and fresh Cumbrian espresso</p></div>
+              <span class="text-terracotta font-semibold whitespace-nowrap tabular-nums">&pound;9</span>
+            </div>
+            <div class="flex justify-between items-start gap-4 py-4 border-b border-terracotta-light/50 hover:bg-card transition-colors duration-200 rounded-lg px-3 -mx-3">
+              <div class="min-w-0"><h3 class="font-semibold text-espresso mb-1">Cumbrian Speciality Coffee</h3><p class="text-warm-gray text-sm">Locally roasted speciality coffee from Cumbria's finest roasters</p></div>
+              <span class="text-terracotta font-semibold whitespace-nowrap tabular-nums">&pound;3.50</span>
+            </div>
+          </div>
+          <p class="mt-6 text-warm-gray text-sm leading-relaxed">Also available: a full cocktail list, craft beers, and a curated wine selection. Ask your server for today's specials and seasonal offerings.</p>
+        </div>
+
+      </div>
+
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 mt-16 text-center">
+        <p class="text-warm-gray text-xs leading-relaxed">Prices include VAT. Menu items and prices are subject to change.<br>An extensive vegan menu is available &mdash; ask for our vegan page.<br>Most items available gluten-free &mdash; please inform your server of any dietary requirements.</p>
+      </div>
+    </section>
+
+    <section class="py-16 bg-terracotta-light/30">
+      <div class="max-w-2xl mx-auto px-4 sm:px-6 text-center">
+        <h2 class="font-serif text-2xl md:text-3xl font-bold text-espresso mb-3">Hungry Yet?</h2>
+        <p class="text-warm-gray mb-8">Walk-ins welcome. Come early, stay late. No reservations needed.</p>
+        <a href="./contact.html" class="inline-flex items-center px-8 py-3.5 bg-terracotta text-white font-semibold rounded-lg hover:bg-terracotta-dark transition-colors duration-200 focus-ring min-h-[44px]" style="box-shadow: 0 2px 12px rgba(194,105,60,0.22);">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>Find Us
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-terracotta-light/40 border-t border-terracotta-light py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
+        <div><h3 class="font-serif text-lg font-bold text-espresso mb-3">The Square Orange</h3><address class="text-warm-gray text-sm not-italic leading-relaxed">20 St. John's Street<br>Keswick, CA12 5AS<br>United Kingdom</address></div>
+        <div><h3 class="font-serif text-lg font-bold text-espresso mb-3">Opening Hours</h3><p class="text-warm-gray text-sm leading-relaxed">Open daily 10:30am &ndash; 10:30pm<br>Food served 12:00pm &ndash; 9:00pm</p></div>
+        <div><h3 class="font-serif text-lg font-bold text-espresso mb-3">Contact</h3><p class="text-warm-gray text-sm leading-relaxed"><a href="tel:+441768773888" class="hover:text-terracotta transition-colors duration-200 focus-ring">017687 73888</a><br><a href="mailto:hello@thesquareorange.co.uk" class="hover:text-terracotta transition-colors duration-200 focus-ring">hello@thesquareorange.co.uk</a></p></div>
+      </div>
+      <div class="border-t border-terracotta-light pt-8 text-center text-warm-gray text-xs">&copy; 2026 The Square Orange. All rights reserved. Est. 1998 &mdash; a Keswick institution.</div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      var b=document.getElementById('mobile-menu-btn'),m=document.getElementById('mobile-menu');
+      if(b&&m){b.addEventListener('click',function(){var o=m.classList.toggle('hidden');b.setAttribute('aria-expanded',!o);});}
+    })();
+  </script>
+</body>
+</html>

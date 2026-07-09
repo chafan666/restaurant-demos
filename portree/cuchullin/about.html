@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Cuchullin Restaurant, Portree</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        display: ['Cormorant Garamond', 'Georgia', 'serif'],
+        body: ['Inter', 'system-ui', 'sans-serif'],
+      },
+      colors: {
+        oatmeal: '#F5F0E8',
+        cream: '#FAF7F2',
+        sea: '#2C5F6B',
+        'sea-dark': '#1E424B',
+        coral: '#C4745C',
+        'coral-light': '#D9907D',
+        slate: '#3D3D3D',
+        mussel: '#4A5568',
+        driftwood: '#D4C5B9',
+      }
+    }
+  }
+}
+</script>
+<style>
+  .text-balance { text-wrap: balance; }
+  .bg-pattern { background-image: radial-gradient(circle, rgba(44,95,107,0.04) 1px, transparent 1px); background-size: 20px 20px; }
+  .line-decoration::after { content: ''; display: block; width: 50px; height: 2px; background: #C4745C; margin-top: 0.5rem; }
+  .nav-blur { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+  .quote-mark { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 5rem; line-height: 0; color: #C4745C; opacity: 0.3; }
+  blockquote { quotes: none; }
+</style>
+</head>
+<body class="bg-oatmeal text-slate font-body antialiased">
+
+<!-- Navigation -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-oatmeal/85 nav-blur border-b border-driftwood/30">
+  <div class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between">
+    <a href="index.html" class="font-display text-2xl font-semibold text-sea tracking-tight">Cuchullin</a>
+    <div class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide uppercase text-mussel">
+      <a href="index.html" class="hover:text-sea transition-colors">Home</a>
+      <a href="menu.html" class="hover:text-sea transition-colors">Menu</a>
+      <a href="about.html" class="text-coral hover:text-sea transition-colors">About</a>
+      <a href="contact.html" class="hover:text-sea transition-colors">Contact</a>
+    </div>
+    <button class="md:hidden text-mussel" aria-label="Menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- Page Header -->
+<section class="pt-28 pb-12 md:pt-36 md:pb-16 bg-sea text-white">
+  <div class="max-w-6xl mx-auto px-5 text-center">
+    <p class="text-coral-light font-body text-sm tracking-[0.2em] uppercase mb-3 font-medium">Our Story</p>
+    <h1 class="font-display text-4xl md:text-6xl font-semibold mb-4">About Cuchullin</h1>
+    <p class="text-white/70 max-w-xl mx-auto text-base leading-relaxed">A restaurant named after a legend. A reputation built on shellfish.</p>
+  </div>
+</section>
+
+<!-- The Legend -->
+<section class="py-16 md:py-24 bg-oatmeal bg-pattern">
+  <div class="max-w-4xl mx-auto px-5">
+    <div class="grid md:grid-cols-5 gap-10 items-center">
+      <div class="md:col-span-3">
+        <p class="font-body text-sm tracking-[0.2em] uppercase text-coral font-medium mb-3">The Name</p>
+        <h2 class="font-display text-3xl md:text-4xl font-semibold text-sea mb-6 line-decoration inline-block">C&uacute; Chulainn</h2>
+        <p class="text-mussel leading-relaxed mb-4">The restaurant takes its name from C&uacute; Chulainn, the great hero of Irish and Scottish mythology. Known as the Hound of Ulster, he was a warrior of impossible strength, fierce loyalty, and legendary appetite.</p>
+        <p class="text-mussel leading-relaxed mb-4">Born S&eacute;tanta on the shores of what is now the Irish Sea, he earned his name after slaying the ferocious guard dog of Culann the smith and offering to take its place until a replacement could be reared. Thus he became C&uacute; Chulainn &mdash; the Hound of Culann.</p>
+        <p class="text-mussel leading-relaxed">The connection between Ireland and Scotland runs deep through the Gaelic seaways, and the name Cuchullin resonates across the Hebrides. On Skye, the Cuillin mountains bear his name. In Portree, his spirit lives on in a seafood house that values strength of character, warmth of welcome, and a warrior's appetite for a proper feast.</p>
+      </div>
+      <div class="md:col-span-2">
+        <div class="aspect-[3/4] rounded-sm overflow-hidden shadow-sm">
+          <img src="assets/屏幕截图 2026-07-08 205622.png" alt="Cuchullin interior" class="w-full h-full object-cover" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Our Story -->
+<section class="py-16 md:py-24 bg-cream">
+  <div class="max-w-4xl mx-auto px-5">
+    <div class="grid md:grid-cols-5 gap-10 items-center">
+      <div class="md:col-span-2 order-2 md:order-1">
+        <div class="aspect-[3/4] rounded-sm overflow-hidden shadow-sm">
+          <img src="assets/屏幕截图 2026-07-08 205631.png" alt="Cuchullin Restaurant" class="w-full h-full object-cover" loading="lazy">
+        </div>
+      </div>
+      <div class="md:col-span-3 order-1 md:order-2">
+        <p class="font-body text-sm tracking-[0.2em] uppercase text-coral font-medium mb-3">The Restaurant</p>
+        <h2 class="font-display text-3xl md:text-4xl font-semibold text-sea mb-6 line-decoration inline-block">A Seafood House on Skye</h2>
+        <p class="text-mussel leading-relaxed mb-4">Cuchullin sits in the heart of Portree, overlooking Somerled Square. It is part of the island's seafood dynasty &mdash; sister restaurant to Sea Breezes, the beloved harbourside institution that has drawn visitors to Skye for decades.</p>
+        <p class="text-mussel leading-relaxed mb-4">What we do is simple: we serve the best seafood the cold, clean waters around Skye have to offer, cooked with respect and served without fuss. Our mussels come from Shetland. Our scallops are hand-dived. Our salmon is Scottish. Everything arrives fresh each morning.</p>
+        <p class="text-mussel leading-relaxed">There is no pretence here. The dining room is warm and cosy, the welcome is genuine, and the portions are generous. This is food that tastes of where it comes from &mdash; the salt, the peat, the rain, the heather. This is Skye on a plate.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Ethos -->
+<section class="py-16 md:py-24 bg-oatmeal bg-pattern">
+  <div class="max-w-3xl mx-auto px-5 text-center">
+    <p class="font-body text-sm tracking-[0.2em] uppercase text-coral font-medium mb-3">How We Work</p>
+    <h2 class="font-display text-3xl md:text-4xl font-semibold text-sea mb-6 line-decoration inline-block">Walk-in Only</h2>
+    <p class="text-mussel leading-relaxed mb-4 text-lg">We do not take reservations. Never have, never will.</p>
+    <p class="text-mussel leading-relaxed mb-8">This is not stubbornness &mdash; it is philosophy. A walk-in restaurant is a democratic one. Everyone waits in the same queue. A couple on their first date stands behind a family of five from Glasgow. A solo traveller from Tokyo chats with a hillwalker just off the Cuillin Ridge. The queue is part of the experience. It builds anticipation. It builds community.</p>
+    <div class="inline-flex items-center gap-3 bg-white px-6 py-3 rounded-sm shadow-sm">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C4745C" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      <span class="font-body text-sm font-semibold text-sea uppercase tracking-wide">Travelers' Choice 2025</span>
+    </div>
+    <p class="text-mussel text-sm mt-4">Ranked #9 of 51 restaurants in Portree</p>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section class="py-16 md:py-24 bg-cream">
+  <div class="max-w-4xl mx-auto px-5">
+    <h2 class="font-display text-3xl md:text-4xl font-semibold text-sea text-center mb-4">What Our Guests Say</h2>
+    <p class="text-mussel text-center mb-12">Stories from the queue, and from the table.</p>
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Review 1 -->
+      <div class="bg-white rounded-sm p-7 shadow-sm relative">
+        <div class="quote-mark absolute top-3 left-4">&ldquo;</div>
+        <div class="relative z-10 pt-4">
+          <p class="text-mussel leading-relaxed italic mb-5">The mussels were the best I have ever eaten in my life. We queued in the rain for 40 minutes. I would do it again tomorrow. The sticky toffee pudding is an actual miracle.</p>
+          <div class="flex items-center gap-1 mb-2">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#C4745C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#C4745C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#C4745C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#C4745C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#C4745C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="font-body text-xs text-mussel font-medium">TripAdvisor, October 2025</p>
+        </div>
+      </div>
+      <!-- Review 2 -->
+      <div class="bg-white rounded-sm p-7 shadow-sm relative">
+        <div class="quote-mark absolute top-3 left-4">&ldquo;</div>
+        <div class="relative z-10 pt-4">
+          <p class="text-mussel leading-relaxed italic mb-5">The seafood platter for two was enormous and every single thing on it was perfectly cooked. This is not fancy food. It is honest food done properly. Exactly what you want after a day walking on Skye.</p>
+          <div class="flex items-center gap-1 mb-2">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#C4745C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#C4745C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#C4745C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#C4745C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#C4745C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="font-body text-xs text-mussel font-medium">TripAdvisor, August 2025</p>
+        </div>
+      </div>
+      <!-- Review 3 -->
+      <div class="bg-white rounded-sm p-7 shadow-sm relative">
+        <div class="quote-mark absolute top-3 left-4">&ldquo;</div>
+        <div class="relative z-10 pt-4">
+          <p class="text-mussel leading-relaxed italic mb-5">Cullen Skink to start, scallops with black pudding, and sticky toffee pudding to finish. Three courses of pure joy. The queue system means you meet people. We shared a table and made friends.</p>
+          <div class="flex items-center gap-1 mb-2">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#C4745C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#C4745C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#C4745C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#C4745C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#C4745C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="font-body text-xs text-mussel font-medium">Google Reviews, September 2025</p>
+        </div>
+      </div>
+      <!-- Review 4 -->
+      <div class="bg-white rounded-sm p-7 shadow-sm relative">
+        <div class="quote-mark absolute top-3 left-4">&ldquo;</div>
+        <div class="relative z-10 pt-4">
+          <p class="text-mussel leading-relaxed italic mb-5">Get there before opening. The queue forms fast. By 12:15 there were 20 people behind us. Worth every minute standing in the Skye drizzle. The venison burger is a sleeper hit &mdash; do not overlook it.</p>
+          <div class="flex items-center gap-1 mb-2">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#C4745C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#C4745C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#C4745C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#C4745C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#C4745C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="font-body text-xs text-mussel font-medium">TripAdvisor, July 2025</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-sea-dark text-white/70 py-16">
+  <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-3 gap-10">
+    <div>
+      <h3 class="font-display text-2xl text-white font-semibold mb-4">Cuchullin</h3>
+      <p class="text-sm leading-relaxed text-white/60">A proper Scottish seafood house on the Isle of Skye. No reservations &mdash; just turn up hungry.</p>
+    </div>
+    <div>
+      <h4 class="font-body text-sm font-semibold uppercase tracking-wider text-white/90 mb-4">Contact</h4>
+      <p class="text-sm leading-relaxed text-white/60">8 Somerled Square, Portree<br>Isle of Skye, IV51 9EH<br>01478 612750</p>
+    </div>
+    <div>
+      <h4 class="font-body text-sm font-semibold uppercase tracking-wider text-white/90 mb-4">Hours</h4>
+      <p class="text-sm leading-relaxed text-white/60">Monday &ndash; Saturday<br>12:00 &ndash; 14:00 &amp; 17:30 &ndash; 21:00<br>Closed Sunday</p>
+    </div>
+  </div>
+  <div class="max-w-6xl mx-auto px-5 mt-12 pt-8 border-t border-white/10 text-center text-xs text-white/40">
+    <p>Travelers' Choice 2025 &middot; Cuchullin Restaurant &middot; Portree, Isle of Skye</p>
+  </div>
+</footer>
+
+</body>
+</html>
