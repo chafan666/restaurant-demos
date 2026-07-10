@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>High Coffee Bar — Ukrainian Speciality Coffee, Chester</title>
+<meta name="description" content="The UK's first Ukrainian speciality coffee bar. Hidden in Rufus Court, Chester. Hand-brewed coffee, Ukrainian sweets, and a story of refuge. By Vlad and Albina.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#FCFAF4;--wht:#FFFEFA;--ink:#1C1915;--navy:#0A1F44;--blue:#0057B7;--gold:#E8B830;--stone:#5E5850;--oat:#F3EFE6;--line:#E6DFD2;--yel:#FFD700}
+*,:before,:after{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;font-size:16px;-webkit-text-size-adjust:100%}
+body{font-family:'DM Sans',-apple-system,sans-serif;font-weight:300;font-size:1rem;line-height:1.65;color:var(--ink);background:var(--cream);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--blue);transition:color .2s}
+a:hover,a:focus-visible{color:var(--navy)}
+:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif}
+h1{font-size:clamp(2.75rem,7vw,4.25rem);line-height:1.02;font-weight:700}
+h2{font-size:clamp(1.75rem,4vw,2.5rem);line-height:1.12;font-weight:500}
+h3{font-size:clamp(1.125rem,2.5vw,1.375rem);line-height:1.22}
+.label{font-size:.6875rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);display:inline-block}
+.skip-link{position:fixed;top:-100%;left:1rem;z-index:1000;background:var(--navy);color:var(--wht);padding:.75rem 1.25rem;font-size:.875rem;border-radius:0 0 4px 4px;text-decoration:none;transition:top .15s}
+.skip-link:focus{top:0}
+
+.nav{position:fixed;top:0;left:0;right:0;z-index:99;padding:.875rem 1.25rem;transition:background .35s,backdrop-filter .35s,box-shadow .35s}
+.nav.scrolled{background:rgba(252,250,244,.86);backdrop-filter:blur(16px);box-shadow:0 1px 0 var(--line)}
+.nav-inner{max-width:72rem;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font:500 1.125rem/1 'Playfair Display',Georgia,serif;color:var(--wht);text-decoration:none;letter-spacing:.02em;transition:color .35s}
+.nav.scrolled .nav-logo{color:var(--ink)}
+.nav-links{display:flex;gap:1.5rem;list-style:none;padding:0}
+@media(max-width:47.99rem){.nav-links{gap:.875rem}}
+.nav-links a{color:rgba(255,254,250,.78);text-decoration:none;font-size:.75rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;transition:color .35s}
+.nav.scrolled .nav-links a{color:var(--stone)}
+.nav-links a:hover{color:var(--gold)}
+
+.container{max-width:72rem;margin:0 auto;padding:0 1.25rem}
+@media(min-width:48rem){.container{padding:0 2.5rem}}
+@media(min-width:64rem){.container{padding:0 3rem}}
+.pad{padding:4rem 0}
+@media(min-width:48rem){.pad{padding:6rem 0}}
+@media(min-width:64rem){.pad{padding:7rem 0}}
+
+.hero{position:relative;min-height:100dvh;display:flex;align-items:flex-end;overflow:hidden}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(5,14,35,.88) 0%,rgba(5,14,35,.22) 45%,rgba(5,14,35,.04) 100%)}
+.hero-stripe{position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--blue),var(--blue) 50%,var(--yel) 50%,var(--yel));z-index:3}
+.hero-body{position:relative;z-index:2;width:100%;padding:0 1.25rem 2.5rem}
+@media(min-width:48rem){.hero-body{padding:0 2.5rem 3.5rem}}
+@media(min-width:64rem){.hero-body{padding:0 3rem 4.5rem}}
+.hero-inner{max-width:72rem;margin:0 auto;display:grid;gap:2rem}
+@media(min-width:48rem){.hero-inner{grid-template-columns:1.1fr .9fr;align-items:end;gap:3rem}}
+.hero h1{color:var(--wht);margin-bottom:.5rem}
+.hero h1 span{display:block;font-size:clamp(.875rem,1.5vw,1rem);font-weight:400;font-family:'DM Sans',-apple-system,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--yel);margin-bottom:.375rem}
+.hero-sub{font:italic 500 clamp(1rem,2vw,1.25rem)/1.5 'Playfair Display',Georgia,serif;color:rgba(255,254,250,.78);max-width:30rem}
+.hero-meta{display:flex;flex-direction:column;gap:.75rem}
+.hero-meta-row{display:flex;align-items:flex-start;gap:.625rem;font-size:.875rem;color:rgba(255,254,250,.82);line-height:1.45}
+.hero-meta-row svg{flex-shrink:0;margin-top:1px;color:var(--gold)}
+.hero-rating{display:inline-flex;align-items:center;gap:.375rem;margin-top:.25rem}
+.hero-rating .stars{color:var(--gold);font-family:'Playfair Display',Georgia,serif;font-size:1rem;letter-spacing:.05em}
+.hero-rating .count{font-size:.8125rem;color:rgba(255,254,250,.7)}
+.hero-cta{display:inline-flex;align-items:center;gap:.5rem;min-height:44px;padding:.75rem 1.5rem;background:var(--blue);color:var(--wht);font-family:'DM Sans',-apple-system,sans-serif;font-size:.8125rem;font-weight:500;text-decoration:none;border-radius:3px;transition:background .2s,transform .2s,box-shadow .2s;align-self:flex-start;margin-top:.5rem;letter-spacing:.02em}
+.hero-cta:hover{background:var(--navy);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,87,183,.35)}
+.hero-cta:focus-visible{outline-color:var(--wht)}
+.hero-scroll{position:absolute;bottom:1.25rem;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:.375rem;animation:bob 2.5s ease-in-out infinite}
+.hero-scroll span{font-size:.625rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,254,250,.4);font-weight:500}
+.hero-scroll svg{opacity:.3}
+@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
+@media(max-width:47.99rem){.hero-scroll{display:none}}
+
+.story-grid{display:grid;gap:2.5rem;align-items:center}
+@media(min-width:48rem){.story-grid{grid-template-columns:1fr 1fr;gap:3rem}}
+@media(min-width:64rem){.story-grid{gap:5rem}}
+.story-img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:5px;box-shadow:0 2px 18px rgba(28,25,21,.06);transition:transform .5s,filter .5s}
+.story-img:hover{transform:scale(1.03);filter:brightness(1.05)}
+.story-text .label{margin-bottom:.625rem}
+.story-text h2{margin-bottom:1rem;color:var(--ink)}
+.story-text p{font-size:clamp(1rem,1.4vw,1.125rem);color:var(--stone);margin-bottom:1rem;line-height:1.7}
+.story-signature{font:italic 500 1.125rem/1 'Playfair Display',Georgia,serif;color:var(--blue);margin-top:.25rem}
+
+.photo-strip{display:flex;overflow-x:auto;gap:.5rem;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:0 .5rem}
+.photo-strip::-webkit-scrollbar{display:none}
+@media(min-width:48rem){.photo-strip{gap:.75rem;padding:0 1rem}}
+.photo-strip img{flex:0 0 auto;width:82vw;max-width:420px;aspect-ratio:4/3;object-fit:cover;border-radius:5px;scroll-snap-align:start;transition:transform .4s,filter .4s}
+@media(min-width:48rem){.photo-strip img{width:44vw;max-width:500px}}
+@media(min-width:64rem){.photo-strip img{width:30vw;max-width:540px}}
+.photo-strip img:hover{transform:scale(1.04);filter:brightness(1.05)}
+
+.qsec{background:var(--navy);border-top:3px solid var(--gold);border-bottom:3px solid var(--gold)}
+.qblock{max-width:36rem;margin:0 auto;text-align:center}
+.qblock blockquote{font:italic 500 clamp(1.25rem,2.5vw,1.75rem)/1.5 'Playfair Display',Georgia,serif;color:var(--wht);margin-bottom:.75rem}
+.qblock cite{font-size:.75rem;font-style:normal;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.qblock .stars{color:var(--gold);font-size:1.25rem;letter-spacing:.06em;margin-bottom:.75rem;font-family:'Playfair Display',Georgia,serif}
+
+.full-photo-wrap{overflow:hidden}
+.full-photo-wrap img{width:100%;max-height:75vh;object-fit:cover;transition:filter .45s}
+.full-photo-wrap img:hover{filter:brightness(1.05)}
+
+.menu-sec{background:var(--wht)}
+.menu-head{text-align:center;margin-bottom:3rem}
+.menu-head .label{margin-bottom:.5rem}
+.menu-head h2{margin-bottom:.5rem}
+.menu-head p{color:var(--stone);font-size:1rem;max-width:28rem;margin:0 auto}
+.menu-grid{max-width:44rem;margin:0 auto 2.5rem}
+.menu-row{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:.85rem 1rem;border-bottom:1px solid var(--line);min-height:48px;border-left:3px solid transparent;transition:background .25s,border-color .25s,padding-left .25s;border-radius:0 5px 5px 0}
+.menu-row:last-child{border-bottom:none}
+.menu-row:hover{background:var(--oat);border-left-color:var(--blue);padding-left:1.1rem}
+.menu-row h3{font-size:1.125rem;color:var(--ink);margin-bottom:.2rem}
+.menu-row .desc{font-size:.8125rem;color:var(--stone)}
+.menu-row .price{font:500 1.125rem/1 'Playfair Display',Georgia,serif;color:var(--blue);white-space:nowrap;flex-shrink:0;min-width:3.5rem;text-align:right}
+
+.impact-grid{display:grid;gap:2.5rem;align-items:center}
+@media(min-width:48rem){.impact-grid{grid-template-columns:1fr 1.2fr;gap:3rem}}
+@media(min-width:64rem){.impact-grid{gap:5rem}}
+.impact-text .label{margin-bottom:.625rem}
+.impact-text h2{margin-bottom:1rem}
+.impact-text p{font-size:clamp(1rem,1.4vw,1.125rem);color:var(--stone);margin-bottom:1rem;line-height:1.7}
+.impact-card{background:var(--oat);border-left:3px solid var(--gold);border-radius:0 5px 5px 0;padding:1.25rem 1.5rem;margin-top:1rem;transition:transform .3s,box-shadow .3s}
+.impact-card:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(28,25,21,.07)}
+.impact-card .t{font-size:1rem;color:var(--ink);font-weight:500;margin-bottom:.25rem}
+.impact-card .d{font-size:.875rem;color:var(--stone)}
+.impact-img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:5px;box-shadow:0 2px 18px rgba(28,25,21,.06);transition:transform .5s,filter .5s}
+.impact-img:hover{transform:scale(1.03);filter:brightness(1.05)}
+
+.visit-sec{background:var(--ink);color:rgba(255,254,250,.7);position:relative;overflow:hidden}
+.visit-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.1}
+.visit-body{position:relative;z-index:1}
+.visit-grid{display:grid;gap:2.5rem;align-items:start}
+@media(min-width:48rem){.visit-grid{grid-template-columns:1fr 1fr;gap:3rem}}
+.visit-info .label{color:var(--gold);margin-bottom:.75rem}
+.visit-info h2{color:var(--wht);margin-bottom:1.5rem}
+.visit-rows{display:flex;flex-direction:column;gap:1.25rem}
+.visit-row{display:flex;align-items:flex-start;gap:.75rem;font-size:.9375rem;line-height:1.5}
+.visit-row svg{flex-shrink:0;margin-top:.125rem;color:var(--gold)}
+.visit-row strong{display:block;color:var(--wht);font-weight:500;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.125rem}
+.visit-note{display:inline-flex;align-items:center;gap:.5rem;min-height:44px;padding:.75rem 1.25rem;border:1.5px solid var(--gold);color:var(--gold);font-family:'DM Sans',-apple-system,sans-serif;font-size:.8125rem;font-weight:500;text-decoration:none;border-radius:3px;transition:all .25s;margin-top:.75rem}
+.visit-note:hover{background:var(--gold);color:var(--ink)}
+.visit-note svg{transition:transform .2s}
+.visit-note:hover svg{transform:translateX(3px)}
+.visit-img-wrap{border-radius:5px;overflow:hidden;aspect-ratio:4/3;transition:transform .4s,box-shadow .4s}
+.visit-img-wrap:hover{transform:scale(1.03);box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.visit-img-wrap img{width:100%;height:100%;object-fit:cover}
+
+.foot{padding:3rem 1.25rem;text-align:center;border-top:1px solid var(--line);background:var(--wht)}
+.foot .logo{font:500 1.5rem/1 'Playfair Display',Georgia,serif;color:var(--ink);margin-bottom:.5rem}
+.foot p{font-size:.8125rem;color:var(--stone);margin-bottom:.25rem}
+.foot .tag{font-style:italic;color:var(--blue);margin-top:.5rem;font-size:.8125rem}
+.foot .ukr-flourish{display:inline-block;width:32px;height:3px;background:linear-gradient(90deg,var(--blue),var(--yel));margin:.75rem 0}
+.foot .insta{display:inline-flex;align-items:center;gap:.375rem;color:var(--stone);text-decoration:none;font-size:.8125rem;margin-top:.375rem;min-height:44px;transition:color .2s}
+.foot .insta:hover{color:var(--blue)}
+
+.fade{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
+.fade.in{opacity:1;transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){
+  *,:before,:after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+  html{scroll-behavior:auto}
+  .fade{opacity:1;transform:none}
+  .photo-strip img:hover,.story-img:hover,.impact-img:hover,.visit-img-wrap:hover,.impact-card:hover,.full-photo-wrap img:hover{transform:none!important}
+}
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<nav class="nav" aria-label="Site navigation">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">High Coffee Bar</a>
+    <ul class="nav-links">
+      <li><a href="#story">Our Story</a></li>
+      <li><a href="#sweets">Menu</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero" aria-label="High Coffee Bar hero banner">
+  <img
+    src="assets/503643272_17969227154914986_8484058884501708148_n.jpg"
+    alt="High Coffee Bar storefront in Rufus Court, Chester — a welcoming Ukrainian speciality coffee bar"
+    class="hero-img"
+    width="1600" height="1067">
+  <div class="hero-overlay"></div>
+  <div class="hero-stripe" aria-hidden="true"></div>
+  <div class="hero-body">
+    <div class="hero-inner">
+      <div>
+        <h1><span>A small island of Ukraine</span>High Coffee<br>Bar</h1>
+        <p class="hero-sub">The UK's first Ukrainian speciality coffee bar. Hidden in a Chester courtyard, built with love by a family who found refuge here.</p>
+      </div>
+      <div class="hero-meta">
+        <div class="hero-meta-row">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 00-8 8c0 5.4 8 12 8 12s8-6.6 8-12a8 8 0 00-8-8z"/></svg>
+          <span>9-10 Rufus Court, Chester CH1 2JW</span>
+        </div>
+        <div class="hero-meta-row">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Mon&ndash;Thu 9&ndash;5 &middot; Fri 9&ndash;4 &middot; Sat Closed &middot; Sun 11&ndash;5</span>
+        </div>
+        <div class="hero-rating">
+          <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span class="count">5.0 &middot; 102 reviews &middot; #1 Coffee Shop in Chester</span>
+        </div>
+        <a href="#story" class="hero-cta">
+          Discover Our Story
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14m-7-7l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll" aria-hidden="true">
+    <span>Scroll</span>
+    <svg width="18" height="24" viewBox="0 0 18 24" fill="none"><rect x="1.5" y="1.5" width="15" height="21" rx="7.5" stroke="currentColor" stroke-width="1.2"/><circle cx="9" cy="7" r="2" fill="currentColor"/></svg>
+  </div>
+</section>
+
+<main id="main">
+
+<section class="pad" aria-labelledby="story-h" id="story">
+  <div class="container story-grid">
+    <img
+      src="assets/483798704_17957766785914986_1074401160075432577_n.jpg"
+      alt="Vlad and Albina behind the counter at High Coffee Bar, preparing hand-brewed speciality coffee"
+      class="story-img fade"
+      loading="lazy"
+      width="800" height="1000">
+    <div class="story-text fade">
+      <span class="label">Our Story</span>
+      <h2 id="story-h">From Kyiv to Chester, with a coffee grinder and a dream</h2>
+      <p>When war came to Ukraine, Vlad and Albina left everything behind. They arrived in Chester under the Homes for Ukraine scheme, carrying little more than their love for Ukrainian coffee culture and a determination to build something new.</p>
+      <p>In late 2023, they opened High Coffee Bar in the cobbled quiet of Rufus Court &mdash; a tucked-away courtyard just inside Chester's ancient city walls. Yellow and blue d&eacute;cor. Ukrainian music on the speakers. Hand-brewed speciality coffee served with genuine warmth.</p>
+      <p>A small island of Ukraine in a British city. And you are always welcome.</p>
+      <p class="story-signature">Vlad &amp; Albina</p>
+    </div>
+  </div>
+</section>
+
+<div class="photo-strip" aria-label="Photo gallery of High Coffee Bar">
+  <img src="assets/498180768_17964886505914986_3934134632423514115_n.jpg" alt="Ukrainian sweets and speciality coffee served at High Coffee Bar" loading="lazy" width="600" height="450">
+  <img src="assets/571025145_17982926381914986_5524619989042760630_n.jpg" alt="The warm interior of High Coffee Bar with Ukrainian d&eacute;cor" loading="lazy" width="600" height="450">
+  <img src="assets/580839592_17985296399914986_7221884840318468126_n.jpg" alt="Hand-brewed speciality coffee being prepared at High Coffee Bar" loading="lazy" width="600" height="450">
+</div>
+
+<section class="qsec pad" aria-label="Customer acclaim">
+  <div class="container qblock fade">
+    <div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+    <blockquote>Chester's number one coffee shop &mdash; a hidden gem in Rufus Court bringing a taste of Ukraine to the heart of the city.</blockquote>
+    <cite>&mdash; Nub News, 2025</cite>
+  </div>
+</section>
+
+<div class="full-photo-wrap">
+  <img
+    src="assets/590463673_17987294306914986_3375590945647827198_n.jpg"
+    alt="High Coffee Bar in Rufus Court, Chester — the hidden courtyard setting"
+    loading="lazy"
+    width="1600" height="900">
+</div>
+
+<section class="menu-sec pad" id="sweets" aria-labelledby="menu-h">
+  <div class="container">
+    <div class="menu-head fade">
+      <span class="label">What We Serve</span>
+      <h2 id="menu-h">Ukrainian sweets and speciality coffee</h2>
+      <p>Everything made with care. A taste of Ukraine in every sip and every bite.</p>
+    </div>
+    <div class="menu-grid fade">
+      <div class="menu-row">
+        <div>
+          <h3>Hand-Brewed Speciality Coffee</h3>
+          <p class="desc">Single-origin beans, brewed to order. Espresso, flat white, latte, cappuccino, and filter.</p>
+        </div>
+        <span class="price">from &pound;3.20</span>
+      </div>
+      <div class="menu-row">
+        <div>
+          <h3>Medovyk &mdash; Ukrainian Honey Cake</h3>
+          <p class="desc">Layers of delicate honey sponge with creamy filling. A Ukrainian classic.</p>
+        </div>
+        <span class="price">&pound;4.50</span>
+      </div>
+      <div class="menu-row">
+        <div>
+          <h3>Horishky &mdash; Nuts with Condensed Milk</h3>
+          <p class="desc">Traditional Ukrainian sweet pastries filled with dulce de leche. Irresistible.</p>
+        </div>
+        <span class="price">&pound;3.80</span>
+      </div>
+      <div class="menu-row">
+        <div>
+          <h3>Kyivskyi Tort</h3>
+          <p class="desc">Light hazelnut meringue with buttercream. A taste of the capital.</p>
+        </div>
+        <span class="price">&pound;5.00</span>
+      </div>
+      <div class="menu-row">
+        <div>
+          <h3>Ukrainian Tea Selection</h3>
+          <p class="desc">Herbal and black teas sourced from Ukrainian producers. Served in a pot.</p>
+        </div>
+        <span class="price">&pound;2.80</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pad" aria-labelledby="impact-h">
+  <div class="container impact-grid">
+    <img
+      src="assets/616474676_17992122371914986_8843691603251894300_n.jpg"
+      alt="A welcoming moment at High Coffee Bar — community and connection over coffee"
+      class="impact-img fade"
+      loading="lazy"
+      width="800" height="1067">
+    <div class="impact-text fade">
+      <span class="label">Community</span>
+      <h2 id="impact-h">Coffee that gives back</h2>
+      <p>High Coffee Bar is more than a caf&eacute;. It is a community. Vlad and Albina know what it means to arrive in a new country with nothing &mdash; and they pay that kindness forward every day.</p>
+      <p>Through their <strong>"buy a coffee for someone homeless"</strong> scheme, customers can purchase a drink for someone sleeping rough in Chester. A small act of warmth, no questions asked.</p>
+      <div class="impact-card">
+        <p class="t">Buy a coffee for someone homeless</p>
+        <p class="d">Ask at the counter to add a suspended coffee to the board. Someone who needs it can claim it, no questions asked.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visit-sec pad" aria-labelledby="visit-h" id="visit">
+  <img src="assets/503643272_17969227154914986_8484058884501708148_n.jpg" alt="" class="visit-bg" aria-hidden="true" width="1600" height="1067">
+  <div class="visit-body container">
+    <div class="visit-grid fade">
+      <div class="visit-info">
+        <span class="label">Visit Us</span>
+        <h2 id="visit-h">Find us in Rufus Court</h2>
+        <div class="visit-rows">
+          <div class="visit-row">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 00-8 8c0 5.4 8 12 8 12s8-6.6 8-12a8 8 0 00-8-8z"/></svg>
+            <div><strong>Address</strong>9-10 Rufus Court, Chester CH1 2JW<br>A tucked-away courtyard just inside the city walls, off Northgate Street.</div>
+          </div>
+          <div class="visit-row">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <div><strong>Opening Hours</strong>Monday &ndash; Thursday 9am &ndash; 5pm<br>Friday 9am &ndash; 4pm<br>Saturday Closed<br>Sunday 11am &ndash; 5pm</div>
+          </div>
+          <div class="visit-row">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+            <div><strong>Follow Us</strong>We are on Instagram &mdash; that is our only online home. Come say hello.</div>
+          </div>
+        </div>
+        <a href="https://www.instagram.com/highcoffeebar/" target="_blank" rel="noopener" class="visit-note" aria-label="Visit High Coffee Bar on Instagram">
+          Find us on Instagram
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14m-7-7l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div class="visit-img-wrap">
+        <img
+          src="assets/590463673_17987294306914986_3375590945647827198_n.jpg"
+          alt="Rufus Court courtyard in Chester, home to High Coffee Bar"
+          loading="lazy"
+          width="800" height="600">
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <p class="logo">High Coffee Bar</p>
+  <div class="ukr-flourish" aria-hidden="true"></div>
+  <p>9-10 Rufus Court, Chester CH1 2JW</p>
+  <p>Mon&ndash;Thu 9&ndash;5 &middot; Fri 9&ndash;4 &middot; Sat Closed &middot; Sun 11&ndash;5</p>
+  <p>The UK's first Ukrainian speciality coffee bar &mdash; established 2023</p>
+  <a href="https://www.instagram.com/highcoffeebar/" target="_blank" rel="noopener" class="insta" aria-label="High Coffee Bar on Instagram">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+    @highcoffeebar
+  </a>
+  <p class="tag">A small island of Ukraine in a British city. You are always welcome.</p>
+</footer>
+
+<script>
+(function(){
+  var fades=document.querySelectorAll('.fade');
+  if(fades.length&&'IntersectionObserver' in window){
+    var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){e.target.classList.toggle('in',e.isIntersecting)})},{threshold:0.1});
+    fades.forEach(function(el){obs.observe(el)});
+  }else{for(var i=0;i<fades.length;i++)fades[i].classList.add('in')}
+
+  var nav=document.querySelector('.nav');
+  if(nav){
+    var ticking=false;
+    function onScroll(){
+      if(!ticking){
+        requestAnimationFrame(function(){nav.classList.toggle('scrolled',window.scrollY>60);ticking=false});
+        ticking=true;
+      }
+    }
+    window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  }
+
+  var parallaxImgs=document.querySelectorAll('.full-photo-wrap img');
+  if(parallaxImgs.length){
+    var pTicking=false;
+    function parallaxScroll(){
+      if(!pTicking){
+        requestAnimationFrame(function(){
+          for(var i=0;i<parallaxImgs.length;i++){
+            var rect=parallaxImgs[i].getBoundingClientRect();
+            var offset=(rect.top-window.innerHeight)*0.06;
+            parallaxImgs[i].style.transform='translateY('+offset+'px)';
+          }
+          pTicking=false;
+        });
+        pTicking=true;
+      }
+    }
+    window.addEventListener('scroll',parallaxScroll,{passive:true});
+  }
+})();
+</script>
+
+</body>
+</html>
