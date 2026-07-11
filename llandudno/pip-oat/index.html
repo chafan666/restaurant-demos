@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Pip &amp; Oat — Plant-Powered Cafe, Llandudno</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#F8F5EF;--white:#FFFDFA;--ink:#1C2B1C;--moss:#5A6B5A;
+  --gold:#6B5C20;--leaf:#3D6B4F;--stone:#E8E3D8;--dark:#121A12;
+  --s1:.75rem;--s2:1.25rem;--s3:2rem;--s4:3rem;--s5:5rem;
+  --mw:72rem;--br:1rem;--tr:all .3s ease;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:var(--cream);color:var(--ink);line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img{display:block;max-width:100%;height:auto}
+h1,h2,h3,h4{font-family:'DM Serif Display',Georgia,'Times New Roman',serif;font-weight:400;line-height:1.15}
+a{color:inherit;text-decoration:none}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:.75rem var(--s2);display:flex;justify-content:space-between;align-items:center;
+  transition:background .35s ease,box-shadow .35s ease;
+}
+nav.scrolled{background:rgba(248,245,239,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--stone)}
+nav a{
+  font-size:.8125rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:.625rem 0;min-height:44px;display:inline-flex;align-items:center;
+  transition:opacity .25s;font-weight:600;color:var(--ink);
+}
+nav a:hover,nav a:focus-visible{opacity:.6}
+.nav-brand{font-family:'DM Serif Display',Georgia,serif;font-size:1rem;text-transform:none;letter-spacing:0;font-weight:400}
+
+/* ── HERO ── */
+.hero{
+  position:relative;width:100%;height:100vh;height:100dvh;overflow:hidden;
+  background:var(--dark);
+}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.92)}
+.hero::after{
+  content:'';position:absolute;inset:0;z-index:2;pointer-events:none;
+  background:radial-gradient(ellipse 80% 65% at 50% 52%,transparent 35%,rgba(18,26,18,.28) 100%);
+}
+.hero-content{
+  position:absolute;inset:0;z-index:10;display:flex;
+  flex-direction:column;align-items:center;justify-content:center;
+  color:var(--white);text-align:center;padding:var(--s2);
+}
+.hero-content h1{
+  font-size:clamp(2.75rem,7vw,5.25rem);font-weight:400;letter-spacing:-.005em;
+  line-height:1.08;
+}
+.hero-content h1 i{font-style:italic;opacity:.82}
+.hero-tag{
+  font-size:.8125rem;letter-spacing:.13em;text-transform:uppercase;opacity:.72;
+  font-weight:500;max-width:22rem;line-height:1.55;margin-top:.5rem;
+}
+.hero-scroll{
+  position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);z-index:10;
+  animation:bob 2.4s ease-in-out infinite;
+}
+.hero-scroll svg{width:18px;height:18px;opacity:.42;display:block}
+@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
+
+/* ── SECTIONS ── */
+section{padding:var(--s5) var(--s2);position:relative}
+@media(min-width:768px){section{padding:6rem 2.5rem}}
+.section-label{
+  font-size:.6875rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--leaf);margin-bottom:.5rem;font-weight:600;
+}
+.section-heading{font-size:clamp(1.75rem,4.5vw,3.25rem);color:var(--ink);margin-bottom:1.5rem}
+.section-text{color:var(--moss);line-height:1.75;max-width:34rem;font-size:.95rem}
+.section-text p + p{margin-top:1rem}
+
+/* ── ABOUT ── */
+.about-grid{
+  display:grid;grid-template-columns:1fr;gap:var(--s3);max-width:var(--mw);
+  margin:0 auto;align-items:center;
+}
+@media(min-width:768px){.about-grid{grid-template-columns:1fr 1fr;gap:3.5rem}}
+.about-img{
+  width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--br);
+  transition:transform .5s ease;
+}
+.about-img:hover{transform:scale(1.02)}
+.badge-row{display:flex;flex-wrap:wrap;gap:.625rem;margin-top:1.5rem}
+.badge{
+  display:inline-flex;align-items:center;gap:.5rem;
+  padding:.5rem .875rem;border-radius:100vmax;
+  font-size:.71875rem;font-weight:600;letter-spacing:.03em;text-transform:uppercase;
+  color:var(--leaf);border:1.5px solid color-mix(in srgb,var(--leaf) 40%,transparent);
+  background:color-mix(in srgb,var(--leaf) 6%,transparent);
+  min-height:44px;
+}
+.badge svg{width:15px;height:15px;flex-shrink:0;opacity:.85}
+
+/* ── MENU ── */
+.menu-grid{
+  display:grid;grid-template-columns:1fr;gap:1rem;
+  max-width:var(--mw);margin:2rem auto 0;
+}
+@media(min-width:640px){.menu-grid{grid-template-columns:repeat(3,1fr)}}
+.menu-card{
+  position:relative;padding:1.75rem;border-radius:var(--br);
+  background:var(--white);border:1px solid var(--stone);
+  overflow:hidden;transition:box-shadow .35s ease,transform .35s ease;
+  min-height:200px;display:flex;flex-direction:column;justify-content:flex-end;
+}
+.menu-card:hover{box-shadow:0 6px 28px rgba(18,26,18,.08);transform:translateY(-2px)}
+.menu-card-img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  opacity:.1;transition:opacity .4s;
+}
+.menu-card:hover .menu-card-img{opacity:.16}
+.menu-card h3{font-size:1.15rem;color:var(--ink);position:relative;z-index:1}
+.menu-card .price{
+  font-size:.8125rem;color:var(--leaf);font-weight:600;position:relative;z-index:1;margin-top:.2rem;
+}
+.menu-card .desc{
+  font-size:.8125rem;color:var(--moss);position:relative;z-index:1;margin-top:.45rem;line-height:1.55;
+}
+
+/* ── GALLERY ── */
+.gallery-wrap{background:var(--white);border-top:1px solid var(--stone);border-bottom:1px solid var(--stone)}
+.gallery-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:.5rem;
+  max-width:var(--mw);margin:0 auto;
+}
+@media(min-width:640px){.gallery-grid{grid-template-columns:repeat(3,1fr);gap:.625rem}}
+.gallery-item{
+  position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--stone);
+  opacity:0;transform:translateY(24px);transition:opacity .5s ease,transform .5s ease;
+}
+.gallery-item.visible{opacity:1;transform:translateY(0)}
+.gallery-item img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  transition:transform .5s ease;
+}
+.gallery-item:hover img{transform:scale(1.05)}
+
+/* ── VISIT ── */
+.visit{background:var(--dark);color:var(--cream)}
+.visit .section-label{color:var(--leaf)}
+.visit .section-heading{color:var(--white)}
+.visit-grid{
+  display:grid;grid-template-columns:1fr;gap:2rem;
+  max-width:var(--mw);margin:2rem auto 0;
+}
+@media(min-width:640px){.visit-grid{grid-template-columns:1fr 1fr}}
+.visit-card{
+  display:flex;align-items:flex-start;gap:1rem;
+}
+.visit-card svg{width:20px;height:20px;flex-shrink:0;margin-top:4px;opacity:.65;color:var(--leaf)}
+.visit-card h4{font-size:.95rem;margin-bottom:.2rem;color:var(--white)}
+.visit-card p{font-size:.875rem;line-height:1.6;opacity:.75}
+.award-tag{
+  display:inline-flex;align-items:center;gap:.5rem;
+  padding:.4rem .875rem;border-radius:100vmax;
+  background:rgba(107,92,32,.18);font-size:.71875rem;font-weight:600;
+  letter-spacing:.03em;text-transform:uppercase;color:var(--gold);
+  margin-top:.5rem;
+}
+.award-tag svg{width:14px;height:14px;flex-shrink:0}
+
+/* ── FOOTER ── */
+.foot-line{
+  text-align:center;padding:2.5rem var(--s2);font-size:.6875rem;
+  color:var(--moss);letter-spacing:.04em;max-width:var(--mw);margin:0 auto;
+}
+
+/* ── REDUCED MOTION ── */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .gallery-item{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#hero" class="nav-brand">Pip &amp; Oat</a>
+  <a href="#visit">Visit</a>
+</nav>
+
+<!-- 1. HERO -->
+<section class="hero" id="hero" aria-label="Hero">
+  <img class="hero-img" src="assets/716650783_122225124002047625_3027236963096714855_n.jpg" alt="Bright and airy Pip &amp; Oat cafe space filled with natural light">
+  <div class="hero-content">
+    <h1>Pip <i>&amp;</i> Oat</h1>
+    <p class="hero-tag">Plant-powered cafe &middot; Llandudno, North Wales</p>
+  </div>
+  <div class="hero-scroll" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M7 16l5 5 5-5"/></svg>
+  </div>
+</section>
+
+<!-- 2. ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div>
+      <p class="section-label">Our Story</p>
+      <h2 class="section-heading">Rooted in plants,<br>grown in Wales</h2>
+      <div class="section-text">
+        <p>Opened at 15 Clonmel Street in early 2024, Pip &amp; Oat is the first fully plant-powered cafe in North Wales. Every dish, every pour, every crumb is 100% vegan and 100% nut-free, crafted in a kitchen where colour meets conscience.</p>
+        <p>Awarded Best Cafe in North Wales 2025. Bright, fresh, modern, and proudly ethical. Our smoothie bowls taste like sunshine. Our oat lattes are poured with precision. Our cakes happen to be plant-based, but you would never guess.</p>
+      </div>
+      <div class="badge-row">
+        <span class="badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L15 9H22L16 14L19 21L12 16.5L5 21L8 14L2 9H9L12 2Z"/></svg>
+          Best Cafe 2025
+        </span>
+        <span class="badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12L11 14L15 10"/></svg>
+          100% Vegan
+        </span>
+        <span class="badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 7h8M8 12h8M8 17h5"/></svg>
+          Nut-Free Kitchen
+        </span>
+        <span class="badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+          Dog Friendly
+        </span>
+      </div>
+    </div>
+    <img class="about-img" src="assets/716650783_122225124002047625_3027236963096714855_n.jpg" alt="Bright and airy Pip &amp; Oat cafe space with natural light" loading="lazy">
+  </div>
+</section>
+
+<!-- 3. MENU -->
+<section id="menu">
+  <div style="text-align:center"><p class="section-label">What We Serve</p><h2 class="section-heading">Plant-powered,<br>every plate</h2></div>
+  <div class="menu-grid">
+    <div class="menu-card">
+      <img class="menu-card-img" src="assets/738116913_122227769984047625_4250782640766976860_n.jpg" alt="" loading="lazy" aria-hidden="true">
+      <h3>Smoothie Bowls</h3>
+      <p class="price">From &pound;8.50</p>
+      <p class="desc">Thick, creamy blends topped with fresh fruit, granola, and seeds.</p>
+    </div>
+    <div class="menu-card">
+      <img class="menu-card-img" src="assets/738158403_122227770038047625_497449542840339008_n.jpg" alt="" loading="lazy" aria-hidden="true">
+      <h3>Oat Lattes</h3>
+      <p class="price">From &pound;3.80</p>
+      <p class="desc">Perfectly textured oat milk poured over ethically sourced espresso.</p>
+    </div>
+    <div class="menu-card">
+      <h3>Plant Cakes &amp; More</h3>
+      <p class="price">From &pound;4.50</p>
+      <p class="desc">Baked fresh daily. Rich, moist, entirely plant-based. Gluten-free options always available.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 4. GALLERY -->
+<div class="gallery-wrap" id="gallery" aria-label="Photo gallery">
+<section style="padding:var(--s5) var(--s2);max-width:var(--mw);margin:0 auto">
+  <p class="section-label">A Look Inside</p>
+  <h2 class="section-heading">Fresh, bright &amp; beautiful</h2>
+</section>
+<div class="gallery-grid" style="padding:0 var(--s2) var(--s5)">
+  <div class="gallery-item"><img src="assets/643778912_122216709134047625_2063370632329810064_n.jpg" alt="Vibrant smoothie bowl with fresh fruit topping" loading="lazy"></div>
+  <div class="gallery-item"><img src="assets/651889316_122218084028047625_4790495330234222169_n.jpg" alt="Beautifully poured oat latte with leaf art" loading="lazy"></div>
+  <div class="gallery-item"><img src="assets/659696487_122219640842047625_8772418437442386252_n%20(1).jpg" alt="Plant-based cake slice on ceramic plate" loading="lazy"></div>
+  <div class="gallery-item"><img src="assets/696448785_122223003758047625_7069656329655953806_n.jpg" alt="Fresh colourful ingredients on the prep counter" loading="lazy"></div>
+	  <div class="gallery-item"><img src="assets/738116913_122227769984047625_4250782640766976860_n.jpg" alt="Smoothie bowl close-up" loading="lazy"></div>
+	  <div class="gallery-item"><img src="assets/738158403_122227770038047625_497449542840339008_n.jpg" alt="Oat latte art detail" loading="lazy"></div>
+</div>
+</div>
+
+<!-- 5. VISIT -->
+<section class="visit" id="visit">
+  <div style="max-width:var(--mw);margin:0 auto">
+    <p class="section-label">Find Us</p>
+    <h2 class="section-heading">Come say hello</h2>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;max-width:var(--mw);margin:0 auto">
+    <div style="display:flex;flex-direction:column;justify-content:center">
+      <div class="visit-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 00-8 8c0 6 8 12 8 12s8-6 8-12a8 8 0 00-8-8z"/></svg>
+        <div><h4>15 Clonmel Street</h4><p>Llandudno, Wales<br>LL30 2YP</p></div>
+      </div>
+      <div class="visit-card" style="margin-top:1.5rem">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <div><h4>Opening Hours</h4><p>Mon-Sat 8:30-16:30<br>Sun 9:30-15:00</p></div>
+      </div>
+      <div style="padding-top:1rem"><span class="award-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L15 9H22L16 14L19 21L12 16.5L5 21L8 14L2 9H9L12 2Z"/></svg>Best Cafe in North Wales 2025</span></div>
+    </div>
+    <img src="assets/687689426_122222369450047625_7913021371535923755_n.jpg" alt="Warm cafe interior" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--br);align-self:start" loading="lazy">
+  </div>
+</section>
+
+<!-- FOOTER -->
+<p class="foot-line">15 Clonmel Street, Llandudno &middot; 100% Plant-Powered &middot; Est. 2024</p>
+
+<script>
+(function(){
+'use strict';
+
+var nav=document.getElementById('navbar');
+var items=document.querySelectorAll('.gallery-item');
+
+/* Nav background on scroll */
+var ticking=false;
+window.addEventListener('scroll',function(){
+  if(!ticking){
+    requestAnimationFrame(function(){
+      nav.classList.toggle('scrolled',window.scrollY>60);
+      ticking=false;
+    });
+    ticking=true;
+  }
+},{passive:true});
+
+/* Gallery fade-in */
+var observer=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting)e.target.classList.add('visible');
+  });
+},{threshold:.15,rootMargin:'0px 0px -40px 0px'});
+
+items.forEach(function(item){observer.observe(item);});
+
+})();
+</script>
+</body>
+</html>
