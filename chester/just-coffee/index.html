@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Just Coffee — Speciality Coffee &amp; Coworking, Chester</title>
+<meta name="description" content="A coworking space that happens to serve excellent coffee. Ground-floor cafe with first-floor hot-desking on Commonhall Street, Chester. Opened summer 2024.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+:root{--crm:#FAF6F0;--wht:#FFFCF8;--ink:#1E1810;--brw:#8B5E3C;--amb:#C67E3A;--stn:#6B5D4F;--oat:#F2EBE1;--lin:#E8DFD3}
+*,:before,:after{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;font-size:16px;-webkit-text-size-adjust:100%}
+body{font-family:'DM Sans',-apple-system,sans-serif;font-weight:300;font-size:1rem;line-height:1.65;color:var(--ink);background:var(--crm);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--brw);transition:color .2s}
+a:hover,a:focus-visible{color:var(--amb)}
+:focus-visible{outline:2px solid var(--brw);outline-offset:2px}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif}
+h1{font-size:clamp(2.5rem,6.5vw,4rem);line-height:1.02;font-weight:700}
+h2{font-size:clamp(1.75rem,4vw,2.5rem);line-height:1.12;font-weight:500}
+h3{font-size:clamp(1.1rem,2.5vw,1.35rem);line-height:1.22}
+.label{font-size:.6875rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--brw);display:inline-block}
+.skip-link{position:fixed;top:-100%;left:1rem;z-index:1000;background:var(--ink);color:var(--wht);padding:.75rem 1.25rem;font-size:.875rem;border-radius:0 0 4px 4px;text-decoration:none;transition:top .15s}
+.skip-link:focus{top:0}
+
+.nav{position:fixed;top:0;left:0;right:0;z-index:99;padding:.875rem 1.25rem;transition:background .35s,backdrop-filter .35s,box-shadow .35s}
+.nav.scrolled{background:rgba(250,246,240,.86);backdrop-filter:blur(16px);box-shadow:0 1px 0 var(--lin)}
+.nav-inner{max-width:72rem;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font:500 1.125rem/1 'Playfair Display',Georgia,serif;color:var(--wht);text-decoration:none;letter-spacing:.02em;transition:color .35s}
+.nav.scrolled .nav-logo{color:var(--ink)}
+.nav-links{display:flex;gap:1.5rem;list-style:none;padding:0}
+@media(max-width:47.99rem){.nav-links{gap:.875rem}}
+.nav-links a{color:rgba(255,252,248,.78);text-decoration:none;font-size:.75rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;transition:color .35s}
+.nav.scrolled .nav-links a{color:var(--stn)}
+.nav-links a:hover{color:var(--amb)}
+
+.container{max-width:72rem;margin:0 auto;padding:0 1.25rem}
+@media(min-width:48rem){.container{padding:0 2.5rem}}
+@media(min-width:64rem){.container{padding:0 3rem}}
+.pad{padding:4rem 0}
+@media(min-width:48rem){.pad{padding:6rem 0}}
+@media(min-width:64rem){.pad{padding:7rem 0}}
+
+.hero{position:relative;min-height:100dvh;display:flex;align-items:flex-end;overflow:hidden}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(20,14,8,.9),rgba(20,14,8,.22) 45%,rgba(20,14,8,.04))}
+.hero-body{position:relative;z-index:2;width:100%;padding:0 1.25rem 2.5rem}
+@media(min-width:48rem){.hero-body{padding:0 2.5rem 3.5rem}}
+@media(min-width:64rem){.hero-body{padding:0 3rem 4.5rem}}
+.hero-inner{max-width:72rem;margin:0 auto;display:grid;gap:2rem}
+@media(min-width:48rem){.hero-inner{grid-template-columns:1.1fr .9fr;align-items:end;gap:3rem}}
+.hero h1{color:var(--wht);margin-bottom:.5rem}
+.hero h1 span{display:block;font-size:clamp(.8125rem,1.5vw,.9375rem);font-weight:400;font-family:'DM Sans',-apple-system,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#D4C4B0;margin-bottom:.375rem}
+.hero-sub{font:italic 500 clamp(1rem,2vw,1.25rem)/1.5 'Playfair Display',Georgia,serif;color:rgba(255,252,248,.78);max-width:32rem}
+.hero-meta{display:flex;flex-direction:column;gap:.75rem}
+.hero-meta-row{display:flex;align-items:flex-start;gap:.625rem;font-size:.875rem;color:rgba(255,252,248,.82);line-height:1.45}
+.hero-meta-row svg{flex-shrink:0;margin-top:1px;color:#D4C4B0}
+.hero-badges{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.25rem}
+.hero-badge{display:inline-flex;align-items:center;gap:.375rem;font-size:.75rem;font-weight:500;color:#D4C4B0;border:1px solid rgba(212,196,176,.35);border-radius:100px;padding:.35rem .8rem;letter-spacing:.03em;min-height:32px}
+.hero-badge svg{color:var(--amb);flex-shrink:0}
+.hero-cta{display:inline-flex;align-items:center;gap:.5rem;min-height:44px;padding:.75rem 1.5rem;background:var(--brw);color:var(--wht);font-family:'DM Sans',-apple-system,sans-serif;font-size:.8125rem;font-weight:500;text-decoration:none;border-radius:3px;transition:background .2s,transform .2s,box-shadow .2s;align-self:flex-start;margin-top:.5rem;letter-spacing:.02em}
+.hero-cta:hover{background:var(--amb);transform:translateY(-2px);box-shadow:0 8px 24px rgba(139,94,60,.35);color:var(--wht)}
+
+.story-grid,.work-grid{display:grid;gap:2.5rem;align-items:center}
+@media(min-width:48rem){.story-grid{grid-template-columns:1fr 1fr;gap:3rem}.work-grid{grid-template-columns:1fr 1.2fr;gap:3rem}}
+@media(min-width:64rem){.story-grid,.work-grid{gap:5rem}}
+.story-text .label,.work-text .label{margin-bottom:.625rem}
+.story-text h2,.work-text h2{margin-bottom:1rem;color:var(--ink)}
+.story-text p,.work-text p{font-size:clamp(1rem,1.4vw,1.1rem);color:var(--stn);margin-bottom:1rem;line-height:1.7}
+.story-signature{font:italic 500 1.1rem/1 'Playfair Display',Georgia,serif;color:var(--brw);margin-top:.25rem}
+
+.photo-strip{display:flex;overflow-x:auto;gap:.5rem;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:0 .5rem}
+.photo-strip::-webkit-scrollbar{display:none}
+@media(min-width:48rem){.photo-strip{gap:.75rem;padding:0 1rem}}
+.photo-strip img{flex:0 0 auto;width:82vw;max-width:420px;aspect-ratio:4/3;object-fit:cover;border-radius:5px;scroll-snap-align:start;transition:transform .4s,filter .4s}
+@media(min-width:48rem){.photo-strip img{width:44vw;max-width:500px}}
+@media(min-width:64rem){.photo-strip img{width:30vw;max-width:540px}}
+
+.qsec{background:var(--ink);border-top:3px solid var(--amb);border-bottom:3px solid var(--amb)}
+.qblock{max-width:36rem;margin:0 auto;text-align:center}
+.qblock blockquote{font:italic 500 clamp(1.2rem,2.5vw,1.7rem)/1.5 'Playfair Display',Georgia,serif;color:var(--wht);margin-bottom:.75rem}
+.qblock cite{font-size:.75rem;font-style:normal;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--amb)}
+
+.full-wrap{overflow:hidden}
+.full-wrap img{width:100%;max-height:75vh;object-fit:cover;transition:filter .45s}
+
+.cowork-head,.menu-head{text-align:center;margin-bottom:3rem}
+.cowork-head .label,.menu-head .label{margin-bottom:.5rem}
+.cowork-head h2,.menu-head h2{margin-bottom:.5rem}
+.cowork-head p,.menu-head p{color:var(--stn);font-size:1rem;margin:0 auto}
+.cowork-head p{max-width:30rem}
+.menu-head p{max-width:28rem}
+.cowork-grid{display:grid;gap:1.25rem;max-width:48rem;margin:0 auto}
+@media(min-width:48rem){.cowork-grid{grid-template-columns:1fr 1fr;gap:1.5rem}}
+.cowork-card{background:var(--oat);border-radius:5px;padding:1.5rem;border-left:3px solid var(--amb);transition:transform .3s,box-shadow .3s}
+.cowork-card:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(30,24,16,.07)}
+.cowork-card h3{font-size:1.1rem;color:var(--ink);margin-bottom:.375rem}
+.cowork-card p{font-size:.875rem;color:var(--stn);line-height:1.55}
+.cowork-card svg{color:var(--amb);margin-bottom:.5rem}
+
+.menu-grid{max-width:44rem;margin:0 auto 2.5rem}
+.menu-row{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:.8rem 1rem;border-bottom:1px solid var(--lin);min-height:48px;border-left:3px solid transparent;transition:background .25s,border-color .25s,padding-left .25s;border-radius:0 5px 5px 0}
+.menu-row:last-child{border-bottom:none}
+.menu-row:hover{background:var(--oat);border-left-color:var(--brw);padding-left:1.1rem}
+.menu-row .desc{font-size:.8125rem;color:var(--stn)}
+.menu-row .price{font:500 1.1rem/1 'Playfair Display',Georgia,serif;color:var(--brw);white-space:nowrap;flex-shrink:0;min-width:3.5rem;text-align:right}
+
+
+.visit-sec{background:var(--ink);color:rgba(255,252,248,.7);position:relative;overflow:hidden}
+.visit-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.1}
+.visit-body{position:relative;z-index:1}
+.visit-grid{display:grid;gap:2.5rem;align-items:start}
+@media(min-width:48rem){.visit-grid{grid-template-columns:1fr 1fr;gap:3rem}}
+.visit-info .label{color:var(--amb);margin-bottom:.75rem}
+.visit-info h2{color:var(--wht);margin-bottom:1.5rem}
+.visit-rows{display:flex;flex-direction:column;gap:1.25rem}
+.visit-row{display:flex;align-items:flex-start;gap:.75rem;font-size:.9375rem;line-height:1.5}
+.visit-row svg{flex-shrink:0;margin-top:.125rem;color:var(--amb)}
+.visit-row strong{display:block;color:var(--wht);font-weight:500;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.125rem}
+.visit-note{display:inline-flex;align-items:center;gap:.5rem;min-height:44px;padding:.75rem 1.25rem;border:1.5px solid var(--amb);color:var(--amb);font-family:'DM Sans',-apple-system,sans-serif;font-size:.8125rem;font-weight:500;text-decoration:none;border-radius:3px;transition:all .25s;margin-top:.75rem}
+.visit-note:hover{background:var(--amb);color:var(--ink)}
+.visit-note svg{transition:transform .2s}
+.visit-note:hover svg{transform:translateX(3px)}
+.visit-img-wrap{border-radius:5px;overflow:hidden;aspect-ratio:4/3;transition:transform .4s,box-shadow .4s}
+.visit-img-wrap:hover{transform:scale(1.03);box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.visit-img-wrap img{width:100%;height:100%;object-fit:cover}
+
+.simg{width:100%;object-fit:cover;border-radius:5px;box-shadow:0 2px 18px rgba(30,24,16,.06);transition:transform .5s,filter .5s}
+.simg:hover,.hov:hover{transform:scale(1.03);filter:brightness(1.05)}
+.simg-45{aspect-ratio:4/5}
+.simg-34{aspect-ratio:3/4}
+.menu-img{max-width:44rem;margin:2.5rem auto 0;display:block}
+.divider-img{width:100%;max-height:60vh;object-fit:cover}
+
+.foot{padding:3rem 1.25rem;text-align:center;border-top:1px solid var(--lin);background:var(--wht)}
+.foot .logo{font:500 1.5rem/1 'Playfair Display',Georgia,serif;color:var(--ink);margin-bottom:.5rem}
+.foot p{font-size:.8125rem;color:var(--stn);margin-bottom:.25rem}
+.foot a{color:var(--stn);text-decoration:none;font-size:.8125rem;min-height:44px;transition:color .2s}
+.foot a:hover{color:var(--brw)}
+
+.fade{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
+.fade.in{opacity:1;transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){
+  *,:before,:after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+  html{scroll-behavior:auto}
+  .fade{opacity:1;transform:none}
+  .simg:hover,.photo-strip img:hover,.hov:hover,.visit-img-wrap:hover,.cowork-card:hover,.full-wrap img:hover{transform:none!important}
+}
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<nav class="nav" aria-label="Site navigation">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">Just Coffee</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#cowork">Coworking</a></li>
+      <li><a href="#menu">Coffee</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero" aria-label="Just Coffee hero">
+  <img src="assets/594974133_122172550124384182_7978799006188752964_n.jpg" alt="Just Coffee on Commonhall Street, Chester" class="hero-img" width="1600" height="1067">
+  <div class="hero-overlay"></div>
+  <div class="hero-body">
+    <div class="hero-inner">
+      <div>
+        <h1><span>Speciality coffee &amp; coworking</span>Just Coffee</h1>
+        <p class="hero-sub">A workspace that happens to serve excellent coffee. Ground-floor cafe, first-floor hot-desking, in the heart of Chester.</p>
+      </div>
+      <div class="hero-meta">
+        <div class="hero-meta-row">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 00-8 8c0 5.4 8 12 8 12s8-6.6 8-12a8 8 0 00-8-8z"/></svg>
+          <span>Commonhall Street, Chester CH1 2BJ</span>
+        </div>
+        <div class="hero-meta-row">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Mon&ndash;Fri 7:30&ndash;5:30 &middot; Sat 9&ndash;4 &middot; Sun 10&ndash;3</span>
+        </div>
+        <div class="hero-badges">
+          <span class="hero-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M8.53 16.11a6 6 0 017.95 0"/><circle cx="12" cy="20" r="1"/></svg>Free WiFi</span>
+          <span class="hero-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="15" rx="2"/><path d="M8 21h8"/><path d="M12 18v3"/></svg>Coworking Mon&ndash;Fri</span>
+          <span class="hero-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>Speciality Coffee</span>
+        </div>
+        <a href="#cowork" class="hero-cta">See the space<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14m-7-7l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main id="main">
+
+<section class="pad" aria-labelledby="about-h" id="about">
+  <div class="container story-grid">
+    <img src="assets/482680559_17898193761155012_2020290530643854353_n.jpg" alt="The warm interior of Just Coffee" class="simg simg-45 fade" loading="lazy" width="800" height="1000">
+    <div class="story-text fade">
+      <span class="label">About</span>
+      <h2 id="about-h">A well-designed living room where you can actually get work done</h2>
+      <p>Just Coffee opened in summer 2024 on Commonhall Street, Chester. Most cafes are not built for actual work &mdash; patchy WiFi, uncomfortable chairs, music too loud. So we built the opposite.</p>
+      <p>A ground-floor cafe serving excellent speciality coffee, with a dedicated first-floor hot-desking space designed for focus. Big windows. Morning light. Comfortable seating. Fast, reliable WiFi. The quiet hum of people getting things done.</p>
+      <p class="story-signature">Established summer 2024</p>
+    </div>
+  </div>
+</section>
+
+<div class="photo-strip" aria-label="Photo gallery">
+  <img src="assets/484374166_17899319097155012_3343413265765737685_n.jpg" alt="The cafe counter at Just Coffee" class="hov" loading="lazy" width="600" height="450">
+  <img src="assets/485137186_17899920723155012_4129347040742002801_n.jpg" alt="The coworking space with desks and natural light" class="hov" loading="lazy" width="600" height="450">
+  <img src="assets/553762225_17921960982155012_5876340270399009096_n.jpg" alt="A flat white and pastry at Just Coffee" class="hov" loading="lazy" width="600" height="450">
+</div>
+
+<section class="qsec pad" aria-label="The Just Coffee promise">
+  <div class="container qblock fade">
+    <blockquote>Not a restaurant. Not a bar. A workspace that happens to serve excellent coffee. Come for the WiFi, stay for the flat white.</blockquote>
+    <cite>&mdash; Just Coffee, Chester</cite>
+  </div>
+</section>
+
+<div class="full-wrap">
+  <img src="assets/601802139_122173473056384182_4457726875528512555_n.jpg" alt="Morning light at Just Coffee" class="hov" loading="lazy" width="1600" height="900">
+</div>
+
+<section class="pad" style="background:var(--wht)" id="cowork" aria-labelledby="cowork-h">
+  <div class="container">
+    <div class="cowork-head fade">
+      <span class="label">Coworking</span>
+      <h2 id="cowork-h">A proper workspace, upstairs</h2>
+      <p>The first floor is a dedicated hot-desking space. Not an afterthought &mdash; the whole reason we exist.</p>
+    </div>
+    <div class="cowork-grid fade">
+      <div class="cowork-card">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M8.53 16.11a6 6 0 017.95 0"/><circle cx="12" cy="20" r="1"/></svg>
+        <h3>Fast, reliable WiFi</h3>
+        <p>No patchy connections. Fibre broadband with bandwidth for video calls and streaming.</p>
+      </div>
+      <div class="cowork-card">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="15" rx="2"/><path d="M8 21h8"/><path d="M12 18v3"/></svg>
+        <h3>Hot-desking, Monday to Friday</h3>
+        <p>Open seating on the first floor. No booking required. Find a spot, open your laptop, and work.</p>
+      </div>
+      <div class="cowork-card">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+        <h3>Excellent coffee, downstairs</h3>
+        <p>Speciality-grade beans, properly brewed. Espresso, flat white, latte, filter, and batch brew.</p>
+      </div>
+      <div class="cowork-card">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 00-8 8c0 5.4 8 12 8 12s8-6.6 8-12a8 8 0 00-8-8z"/></svg>
+        <h3>Commonhall Street, central Chester</h3>
+        <p>A short walk from the Cross and the Cathedral, surrounded by independent shops.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pad" aria-labelledby="work-h">
+  <div class="container work-grid">
+    <img src="assets/572168600_17925875046155012_5834359431998912655_n.jpg" alt="People working at Just Coffee" class="simg simg-34 fade" loading="lazy" width="800" height="1067">
+    <div class="work-text fade">
+      <span class="label">Who It Is For</span>
+      <h2 id="work-h">Remote workers, freelancers, and students</h2>
+      <p>You do not need to be a tech founder to use a coworking space. You just need somewhere better than your kitchen table.</p>
+      <p>Just Coffee is for anyone who wants to work somewhere that feels good. Remote workers tired of the spare room. Freelancers needing a change of scene. Students preparing for exams. Anyone who does their best work with a flat white within reach. No time limits. Buy a coffee and stay as long as you need.</p>
+    </div>
+  </div>
+</section>
+
+<section class="pad" style="background:var(--wht)" id="menu" aria-labelledby="menu-h">
+  <div class="container">
+    <div class="menu-head fade">
+      <span class="label">Coffee</span>
+      <h2 id="menu-h">Speciality coffee, properly made</h2>
+      <p>We source our beans from independent roasters. Every cup brewed with care.</p>
+    </div>
+    <div class="menu-grid fade">
+      <div class="menu-row"><div><h3>Espresso</h3><p class="desc">Double shot. Rich, balanced, served with sparkling water.</p></div><span class="price">&pound;2.80</span></div>
+      <div class="menu-row"><div><h3>Flat White</h3><p class="desc">Double espresso with velvety steamed milk. The classic.</p></div><span class="price">&pound;3.40</span></div>
+      <div class="menu-row"><div><h3>Latte / Cappuccino</h3><p class="desc">Latte: creamier. Cappuccino: frothier. You decide.</p></div><span class="price">&pound;3.50</span></div>
+      <div class="menu-row"><div><h3>Batch Brew</h3><p class="desc">Fresh filter coffee, brewed throughout the day. For the all-day workers.</p></div><span class="price">&pound;2.50</span></div>
+      <div class="menu-row"><div><h3>Pour-Over / V60</h3><p class="desc">Single-origin, hand-poured to order. Rotating guest beans from top roasters.</p></div><span class="price">&pound;4.00</span></div>
+      <div class="menu-row"><div><h3>Tea &amp; Pastries</h3><p class="desc">Loose-leaf teas, croissants, locally baked goods. Selection changes daily.</p></div><span class="price">from &pound;2.20</span></div>
+    </div>
+    <img src="assets/616287785_122176115720384182_4497875405481956970_n.jpg" alt="Speciality coffee at Just Coffee" class="simg simg-34 menu-img fade" loading="lazy" width="800" height="1067">
+  </div>
+</section>
+
+<section style="padding:0" aria-label="Interior atmosphere">
+  <img src="assets/619349690_122177343614384182_3354375814319867257_n.jpg" alt="The atmosphere at Just Coffee" class="divider-img hov" loading="lazy" width="1600" height="900">
+</section>
+
+<section class="visit-sec pad" aria-labelledby="visit-h" id="visit">
+  <img src="assets/619271960_122177343524384182_406384452779501689_n.jpg" alt="" class="visit-bg" aria-hidden="true" width="1600" height="1067">
+  <div class="visit-body container">
+    <div class="visit-grid fade">
+      <div class="visit-info">
+        <span class="label">Visit Us</span>
+        <h2 id="visit-h">Commonhall Street, Chester</h2>
+        <div class="visit-rows">
+          <div class="visit-row">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 00-8 8c0 5.4 8 12 8 12s8-6.6 8-12a8 8 0 00-8-8z"/></svg>
+            <div><strong>Address</strong>Commonhall Street, Chester CH1 2BJ<br>A short walk from the Cross and the Cathedral.</div>
+          </div>
+          <div class="visit-row">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <div><strong>Opening Hours</strong>Monday &ndash; Friday 7:30am &ndash; 5:30pm<br>Saturday 9am &ndash; 4pm<br>Sunday 10am &ndash; 3pm</div>
+          </div>
+          <div class="visit-row">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="15" rx="2"/><path d="M8 21h8"/><path d="M12 18v3"/></svg>
+            <div><strong>Coworking</strong>Hot-desking Monday to Friday during opening hours. No booking needed.</div>
+          </div>
+          <div class="visit-row">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M8.53 16.11a6 6 0 017.95 0"/><circle cx="12" cy="20" r="1"/></svg>
+            <div><strong>WiFi</strong>Free, fast, reliable fibre broadband. No password roulette. Just connect and work.</div>
+          </div>
+        </div>
+        <a href="#cowork" class="visit-note" aria-label="Learn more about coworking">Coworking details<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14m-7-7l7 7-7 7"/></svg></a>
+      </div>
+      <div class="visit-img-wrap">
+        <img src="assets/618148367_122177343590384182_1863869543203289704_n.jpg" alt="Just Coffee on Commonhall Street, Chester" loading="lazy" width="800" height="600">
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <p class="logo">Just Coffee</p>
+  <p>Commonhall Street, Chester CH1 2BJ</p>
+  <p>Mon&ndash;Fri 7:30&ndash;5:30 &middot; Sat 9&ndash;4 &middot; Sun 10&ndash;3</p>
+  <p>Speciality coffee &amp; coworking &mdash; established 2024</p>
+</footer>
+
+<script>
+(function(){
+  var f=document.querySelectorAll('.fade');
+  if(f.length&&'IntersectionObserver' in window){var o=new IntersectionObserver(function(e){e.forEach(function(x){x.target.classList.toggle('in',x.isIntersecting)})},{threshold:0.1});f.forEach(function(el){o.observe(el)})}else{for(var i=0;i<f.length;i++)f[i].classList.add('in')}
+  var n=document.querySelector('.nav');
+  if(n){var t=false;function s(){if(!t){requestAnimationFrame(function(){n.classList.toggle('scrolled',window.scrollY>60);t=false});t=true}}window.addEventListener('scroll',s,{passive:true});s()}
+})();
+</script>
+
+</body>
+</html>
