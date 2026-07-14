@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Humble Pie 'n' Mash | Whitby</title>
+<meta name="description" content="Homemade pies in a 16th-century building on Church Street, Whitby. Real open fire, dog-friendly, BYO pint from the pub opposite.">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: { sans: ['DM Sans', 'sans-serif'] },
+      colors: {
+        forest: { DEFAULT: '#4a6741', deep: '#3a5233' },
+        stonebg: '#f5f3ef',
+        ink: '#1d1c19',
+        warmgray: '#706e68',
+        borderclr: '#e4e1db',
+      }
+    }
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400;1,9..40,500&display=swap" rel="stylesheet">
+<style>
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+.transition-soft { transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+
+.hero-fade { animation: fadeUp 0.75s cubic-bezier(0.16,1,0.3,1) both; }
+.hero-fade-2 { animation: fadeUp 0.75s 0.14s cubic-bezier(0.16,1,0.3,1) both; }
+.hero-fade-3 { animation: fadeUp 0.75s 0.28s cubic-bezier(0.16,1,0.3,1) both; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+.reveal-child { opacity: 0; transform: translateY(18px); }
+.reveal-child.visible { opacity: 1; transform: translateY(0); }
+
+.img-zoom { overflow: hidden; }
+.img-zoom img {
+  transition: transform 0.5s cubic-bezier(0.16,1,0.3,1);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .img-zoom:hover img { transform: scale(1.03); }
+}
+
+#navbar {
+  transition: background-color 0.35s ease, box-shadow 0.35s ease;
+}
+#navbar.scrolled {
+  background-color: rgba(245, 243, 239, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.05);
+}
+
+.btn-tactile:active {
+  transform: translateY(1px);
+  transition: transform 0.1s ease;
+}
+
+.btn-tactile {
+  transition: background-color 0.35s cubic-bezier(0.16,1,0.3,1), transform 0.1s ease;
+}
+</style>
+</head>
+<body class="bg-stonebg text-ink font-sans antialiased">
+
+<div id="nav-sentinel" class="absolute top-0 left-0 w-full h-px pointer-events-none" aria-hidden="true"></div>
+
+<nav id="navbar" class="fixed top-0 inset-x-0 z-40">
+  <div class="max-w-7xl mx-auto px-5 h-[64px] flex items-center justify-between">
+    <a href="#" class="text-base font-semibold tracking-tight text-ink">Humble Pie 'n' Mash</a>
+    <a href="#find-us" class="text-sm font-medium text-ink/70 hover:text-ink border border-borderclr hover:border-ink/30 rounded-lg px-3.5 py-1.5 transition-soft">Find us</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- Hero: asymmetric split layout -->
+<section class="min-h-[100dvh] pt-24 pb-16 flex items-center">
+  <div class="max-w-7xl mx-auto px-5 w-full grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+    <div class="lg:col-span-5 space-y-6">
+      <h1 class="hero-fade text-[2.75rem] md:text-[3.5rem] lg:text-[3.75rem] font-bold tracking-tight leading-[1.06] text-ink">
+        Proper pies,<br>open fire, Whitby.
+      </h1>
+      <p class="hero-fade-2 text-base md:text-lg text-warmgray leading-relaxed max-w-[44ch]">
+        Homemade pies in a 16th-century building on Church Street. Bring a pint from the pub opposite.
+      </p>
+      <div class="hero-fade-3 pt-1">
+        <a href="#find-us" class="btn-tactile inline-flex items-center gap-2.5 bg-forest hover:bg-forest-deep text-white font-medium px-6 py-3.5 rounded-lg text-[15px] select-none">
+          Find us
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 8 12 8 12s8-6.6 8-12a8 8 0 0 0-8-8z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="lg:col-span-7">
+      <div class="img-zoom rounded-lg">
+        <img src="assets/480193327_633813992490631_1885206299904263660_n.jpg" alt="Humble Pie 'n' Mash shopfront on Church Street, Whitby" class="rounded-lg w-full h-auto max-h-[75vh] object-cover" loading="eager">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- The Space: vertical stack layout -->
+<section class="py-24 md:py-32">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="reveal max-w-3xl mb-10 md:mb-14">
+      <h2 class="text-3xl md:text-4xl lg:text-[2.75rem] font-bold tracking-tight leading-[1.08]">A 16th-century bakery, brought back to life.</h2>
+      <div class="mt-6 space-y-4 text-warmgray leading-relaxed max-w-[58ch]">
+        <p>This timber-framed building on Church Street was a Victorian bakery long before it was our little pie shop. The original oven is long gone, but the open fire still burns every day we are open. Low beams, stone flags, and the smell of pastry in the air.</p>
+        <p>We opened in July 2022 with a simple idea: three pies, done properly, served with mash and gravy. No website, no social media. Just word of mouth.</p>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-5 reveal">
+    <div class="img-zoom rounded-lg">
+      <img src="assets/485659711_656811936857503_8342072802993306109_n.jpg" alt="The open fire inside Humble Pie 'n' Mash" class="rounded-lg w-full h-auto object-cover" loading="lazy" style="aspect-ratio:16/7;object-position:center 30%">
+    </div>
+  </div>
+</section>
+
+<!-- The Pies: bento grid layout -->
+<section class="py-24 md:py-32 bg-[#edeae4]">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="reveal mb-12 md:mb-16 max-w-2xl">
+      <h2 class="text-3xl md:text-4xl lg:text-[2.75rem] font-bold tracking-tight leading-[1.08]">Three pies, done right.</h2>
+      <p class="text-warmgray text-base md:text-lg leading-relaxed mt-4 max-w-[50ch]">Steak and stout, chicken and cider, vegan mushroom. Each one made from scratch every morning. Served with buttery mash and proper gravy.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
+      <div class="reveal space-y-3 md:row-span-2 flex flex-col">
+        <div class="img-zoom rounded-lg flex-1">
+          <img src="assets/484181584_650686654136698_8731506822675617692_n.jpg" alt="Steak and stout pie with mash and gravy" class="rounded-lg w-full h-full object-cover" loading="lazy" style="min-height:280px">
+        </div>
+        <h3 class="text-xl font-semibold pt-1">Steak &amp; Stout</h3>
+        <p class="text-sm text-warmgray">Rich local beef, dark stout, slow-cooked until tender</p>
+      </div>
+      <div class="reveal space-y-3 flex flex-col">
+        <div class="img-zoom rounded-lg flex-1">
+          <img src="assets/484537726_651274620744568_5730711342124492269_n.jpg" alt="Chicken and cider pie" class="rounded-lg w-full h-full object-cover" loading="lazy" style="min-height:260px">
+        </div>
+        <h3 class="text-xl font-semibold pt-1">Chicken &amp; Cider</h3>
+        <p class="text-sm text-warmgray">Free-range chicken, dry cider, fresh tarragon</p>
+      </div>
+      <div class="reveal rounded-lg bg-[#f7f6f3] p-6 md:p-8 flex flex-col justify-center min-h-[180px]">
+        <h3 class="text-xl font-semibold">Vegan Mushroom</h3>
+        <p class="text-sm text-warmgray mt-2 leading-relaxed">Wild mushrooms, fresh thyme, plant-based, surprisingly hearty. Holds its own against the meat pies.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- The Little Things: 2x2 icon grid layout -->
+<section class="py-24 md:py-32">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="reveal mb-12 md:mb-16 max-w-2xl">
+      <h2 class="text-3xl md:text-4xl lg:text-[2.75rem] font-bold tracking-tight leading-[1.08]">The little things that matter.</h2>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-10 md:gap-x-14 md:gap-y-12">
+      <div class="reveal flex gap-4 md:gap-5">
+        <div class="shrink-0 w-10 h-10 rounded-lg bg-[#e8e5df] flex items-center justify-center text-ink">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.07-2.14-.22-4.97 2-6 .5 1.12 2 2.36 2 4a2.5 2.5 0 0 0 2.5 2.5c1.38 0 3.5-.43 3.5-2 0-1.57-2.5-2.5-2.5-2.5"/><path d="M12 2C8.35 2 5.17 4.33 4.07 7.6c-.6 1.75-.1 3.65.62 5.18C6.23 15.87 8.82 19 12 22c3.18-3 5.77-6.13 7.31-9.22.72-1.53 1.22-3.43.62-5.18C18.83 4.33 15.65 2 12 2z"/></svg>
+        </div>
+        <div>
+          <h3 class="font-semibold text-base tracking-tight">Real open fire</h3>
+          <p class="text-warmgray mt-1.5 leading-relaxed text-sm max-w-[38ch]">Lit every day we are open. Nothing beats a pie by the fire on a wet Whitby afternoon.</p>
+        </div>
+      </div>
+      <div class="reveal flex gap-4 md:gap-5">
+        <div class="shrink-0 w-10 h-10 rounded-lg bg-[#e8e5df] flex items-center justify-center text-ink">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 18.5H19A2 2 0 0 0 21 16.5v-4a8 8 0 0 0-13.5-5.5M5 8v8.5a2.5 2.5 0 0 0 5 0V8"/><line x1="6" y1="3" x2="6" y2="5"/><line x1="10" y1="3" x2="10" y2="5"/></svg>
+        </div>
+        <div>
+          <h3 class="font-semibold text-base tracking-tight">BYO pint</h3>
+          <p class="text-warmgray mt-1.5 leading-relaxed text-sm max-w-[38ch]">We do not sell alcohol, but the pub across Church Street does. Grab a pint and bring it over.</p>
+        </div>
+      </div>
+      <div class="reveal flex gap-4 md:gap-5">
+        <div class="shrink-0 w-10 h-10 rounded-lg bg-[#e8e5df] flex items-center justify-center text-ink">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div>
+          <h3 class="font-semibold text-base tracking-tight">Dog-friendly</h3>
+          <p class="text-warmgray mt-1.5 leading-relaxed text-sm max-w-[38ch]">Well-behaved dogs welcome. Expect a water bowl by the fire and the occasional scrap of pastry.</p>
+        </div>
+      </div>
+      <div class="reveal flex gap-4 md:gap-5">
+        <div class="shrink-0 w-10 h-10 rounded-lg bg-[#e8e5df] flex items-center justify-center text-ink">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div>
+          <h3 class="font-semibold text-base tracking-tight">Opening times</h3>
+          <p class="text-warmgray mt-1.5 leading-relaxed text-sm max-w-[38ch]">Thursday to Sunday, 12:00 till 20:00. Closed Monday to Wednesday. Kitchen closes at 19:30.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Quote: centered editorial layout -->
+<section class="py-24 md:py-32 bg-[#edeae4]">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="reveal mb-12">
+      <div class="img-zoom rounded-lg">
+        <img src="assets/493731746_691564820048881_6575220076443238647_n.jpg" alt="Interior detail at Humble Pie 'n' Mash" class="rounded-lg w-full h-auto object-cover" loading="lazy" style="aspect-ratio:21/9;object-position:center 40%">
+      </div>
+    </div>
+    <div class="reveal max-w-3xl">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" class="mb-6 text-forest/40"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+      <blockquote class="text-2xl md:text-3xl lg:text-[2rem] font-medium leading-[1.25] tracking-tight text-ink max-w-[28ch]">
+        Best pie I have had in years. The open fire, the old building, a pint from across the road. We told everyone about it the moment we got home.
+      </blockquote>
+      <cite class="not-italic block mt-7 text-warmgray text-sm">TripAdvisor review, October 2025</cite>
+    </div>
+  </div>
+</section>
+
+<!-- Find Us: split layout (image left, text right - reverse of hero) -->
+<section id="find-us" class="py-24 md:py-32">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+      <div class="lg:col-span-7 reveal">
+        <div class="img-zoom rounded-lg">
+          <img src="assets/733233405_1020455580493135_2352208674470105098_n.jpg" alt="Church Street, Whitby" class="rounded-lg w-full h-auto object-cover" loading="lazy" style="aspect-ratio:3/2">
+        </div>
+      </div>
+      <div class="lg:col-span-5 reveal">
+        <h2 class="text-3xl md:text-4xl lg:text-[2.75rem] font-bold tracking-tight leading-[1.08] mb-5">Find us on Church Street.</h2>
+        <div class="space-y-3 text-warmgray leading-relaxed max-w-[50ch]">
+          <p>163 Church Street, Whitby, YO22 4AS. A short walk from the harbour, tucked among the old fishing cottages on the east side.</p>
+          <p>Look for the timber-framed building with the black door. If you smell pastry and woodsmoke, you are in the right place.</p>
+        </div>
+        <div class="flex flex-wrap gap-3.5 mt-7">
+          <a href="https://www.tripadvisor.co.uk/Restaurant_Review-g186345-d23859062-Reviews-Humble_Pie_n_Mash-Whitby_Scarborough_District_North_Yorkshire_England.html" target="_blank" rel="noopener" class="btn-tactile inline-flex items-center gap-2.5 bg-forest hover:bg-forest-deep text-white font-medium px-5 py-3 rounded-lg text-[15px] select-none">
+            TripAdvisor
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+          <a href="https://maps.google.com/?q=163+Church+Street+Whitby+YO22+4AS" target="_blank" rel="noopener" class="btn-tactile inline-flex items-center gap-2.5 border border-borderclr hover:border-ink/40 text-ink font-medium px-5 py-3 rounded-lg text-[15px] select-none transition-soft">
+            Open in Google Maps
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 8 12 8 12s8-6.6 8-12a8 8 0 0 0-8-8z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="border-t border-borderclr py-10 md:py-12">
+  <div class="max-w-7xl mx-auto px-5 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+    <div>
+      <p class="font-semibold tracking-tight text-ink">Humble Pie 'n' Mash</p>
+      <p class="text-sm text-warmgray mt-0.5">163 Church Street, Whitby, YO22 4AS</p>
+    </div>
+    <p class="text-sm text-warmgray">Open Thursday to Sunday, 12:00 - 20:00</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Navbar transition via IntersectionObserver sentinel */
+  var navbar = document.getElementById('navbar');
+  var sentinel = document.getElementById('nav-sentinel');
+  var navObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        navbar.classList.remove('scrolled');
+      } else {
+        navbar.classList.add('scrolled');
+      }
+    });
+  }, { threshold: 0 });
+  navObserver.observe(sentinel);
+
+  /* Scroll reveal via IntersectionObserver */
+  if (!reduceMotion) {
+    var revealObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(function(el) {
+      revealObserver.observe(el);
+    });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el) {
+      el.classList.add('visible');
+      el.style.opacity = '1';
+      el.style.transform = 'none';
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
