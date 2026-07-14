@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>River &amp; Roast | All-Day Cafe in Bakewell, Peak District</title>
+<meta name="description" content="All-day breakfast, hearty lunches, and proper coffee upstairs on Market Street in Bakewell. Dog-friendly, family-run cafe in the heart of the Peak District.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com">
+</script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: { sans: ['Outfit', 'sans-serif'] },
+    }
+  }
+}
+</script>
+<style>
+:root {
+  --surface: #FAF8F5;
+  --text-primary: #1C1917;
+  --text-secondary: #6B6560;
+  --accent: #2D5A3D;
+  --accent-hover: #234832;
+  --accent-surface: #EDF4EC;
+  --border: #E8E4DE;
+  --border-strong: #D4CEC5;
+}
+*, ::before, ::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  font-family: 'Outfit', sans-serif;
+  background: var(--surface);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+img { display: block; max-width: 100%; height: auto; }
+a, button { -webkit-tap-highlight-color: transparent; }
+::selection { background: rgba(45,90,61,0.18); color: var(--text-primary); }
+
+/* Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-d1 { transition-delay: 0.05s; }
+.reveal-d2 { transition-delay: 0.1s; }
+.reveal-d3 { transition-delay: 0.15s; }
+.reveal-d4 { transition-delay: 0.2s; }
+.reveal-d5 { transition-delay: 0.25s; }
+
+/* Nav */
+.nav-transparent { background: transparent; }
+.nav-solid { background: var(--surface); box-shadow: 0 1px 0 var(--border); }
+
+/* Image hover */
+.img-hover { transition: transform 0.6s cubic-bezier(0.16,1,0.3,1); }
+.img-hover:hover { transform: scale(1.03); }
+
+/* Button */
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: var(--text-primary); color: #FFFFFF;
+  padding: 0.75rem 1.75rem; border-radius: 8px;
+  font-weight: 500; font-size: 0.9375rem; line-height: 1;
+  transition: background 0.2s ease, transform 0.15s ease;
+  text-decoration: none; border: none; cursor: pointer;
+}
+.btn-primary:hover { background: #33302D; }
+.btn-primary:active { transform: translateY(-1px); }
+.btn-outline {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: transparent; color: var(--text-primary);
+  padding: 0.75rem 1.75rem; border-radius: 8px;
+  font-weight: 500; font-size: 0.9375rem; line-height: 1;
+  border: 1px solid var(--border-strong);
+  transition: border-color 0.2s ease, transform 0.15s ease;
+  text-decoration: none; cursor: pointer;
+}
+.btn-outline:hover { border-color: var(--text-primary); }
+.btn-outline:active { transform: translateY(-1px); }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .img-hover:hover { transform: none; }
+  *, ::before, ::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
+</style>
+</head>
+<body class="antialiased">
+
+<!-- Nav -->
+<header id="nav" class="fixed top-0 left-0 right-0 z-40 nav-transparent" style="transition: background 0.35s ease, box-shadow 0.35s ease;">
+  <div class="mx-auto max-w-7xl px-5 h-16 md:h-18 flex items-center justify-between">
+    <a href="#" class="text-lg font-semibold tracking-tight no-underline" style="color:var(--text-primary)">River &amp; Roast</a>
+    <nav class="hidden md:flex items-center gap-8 text-sm font-medium" aria-label="Main navigation">
+      <a href="#menu" class="no-underline hover:opacity-70 transition-opacity" style="color:var(--text-primary)">Menu</a>
+      <a href="#about" class="no-underline hover:opacity-70 transition-opacity" style="color:var(--text-primary)">About</a>
+      <a href="#visit" class="no-underline hover:opacity-70 transition-opacity" style="color:var(--text-primary)">Visit</a>
+      <a href="#visit" class="btn-primary">Find Us</a>
+    </nav>
+    <button id="mobile-toggle" class="md:hidden flex flex-col gap-1.5 p-1 bg-transparent border-0 cursor-pointer" aria-label="Toggle menu" aria-expanded="false">
+      <span class="block w-5 h-0.5 rounded-full transition-transform origin-center" style="background:var(--text-primary)"></span>
+      <span class="block w-5 h-0.5 rounded-full transition-opacity" style="background:var(--text-primary)"></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 z-30 hidden flex-col justify-center items-center gap-8 text-xl font-medium" style="background:var(--surface)">
+  <a href="#menu" class="no-underline hover:opacity-70 mobile-link" style="color:var(--text-primary)">Menu</a>
+  <a href="#about" class="no-underline hover:opacity-70 mobile-link" style="color:var(--text-primary)">About</a>
+  <a href="#visit" class="no-underline hover:opacity-70 mobile-link" style="color:var(--text-primary)">Visit</a>
+  <a href="#visit" class="btn-primary mobile-link">Find Us</a>
+</div>
+
+<!-- Nav Sentinel -->
+<div id="nav-sentinel" class="absolute top-0 left-0 w-full h-1 pointer-events-none"></div>
+
+<!-- Hero -->
+<section class="relative overflow-hidden" style="min-height:100dvh">
+  <div class="absolute inset-0">
+    <img src="assets/472696583_122134806422503832_8184765344816679479_n.jpg" alt="" class="w-full h-full object-cover" loading="eager" style="opacity:0.92">
+    <div class="absolute inset-0" style="background:linear-gradient(to right,rgba(250,248,245,0.88) 0%,rgba(250,248,245,0.72) 40%,rgba(250,248,245,0.28) 70%,rgba(250,248,245,0.08) 100%)"></div>
+  </div>
+  <div class="relative mx-auto max-w-7xl px-5 flex items-center" style="min-height:100dvh;padding-top:4rem">
+    <div class="max-w-xl pt-24 pb-24 md:pt-24 md:pb-0">
+      <div class="reveal">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.08] mb-5" style="color:var(--text-primary)">Upstairs on<br>Market Street</h1>
+      </div>
+      <div class="reveal reveal-d2">
+        <p class="text-base md:text-lg leading-relaxed mb-8 max-w-[42ch]" style="color:var(--text-secondary)">All-day breakfast, hearty lunches, and proper coffee in the heart of Bakewell. Dog-friendly, family-run, open daily.</p>
+      </div>
+      <div class="reveal reveal-d3 flex flex-wrap gap-3">
+        <a href="#menu" class="btn-primary">See Our Menu</a>
+        <a href="#visit" class="btn-outline">Opening Times</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="py-24 md:py-32">
+  <div class="mx-auto max-w-7xl px-5">
+    <div class="flex flex-col md:flex-row gap-12 md:gap-16 items-center">
+      <div class="w-full md:w-1/2 reveal">
+        <img src="assets/476780119_122141184338503832_7412650936489004826_n.jpg" alt="Interior of River and Roast cafe in Bakewell" class="w-full rounded-lg img-hover" loading="lazy" style="aspect-ratio:4/3;object-fit:cover">
+      </div>
+      <div class="w-full md:w-1/2 reveal reveal-d2">
+        <h2 class="text-3xl md:text-4xl font-semibold tracking-tight leading-[1.12] mb-5">A fresh start for a Bakewell favourite</h2>
+        <p class="text-base leading-relaxed mb-4 max-w-[58ch]" style="color:var(--text-secondary)">River &amp; Roast opened in October 2024, taking over the much-loved Upstairs Cafe space that had served Bakewell for twenty years. After an eighty-thousand-pound renovation, owner Numan Caglar has created a warm, modern all-day cafe that honours the building's history while bringing something new to Market Street.</p>
+        <p class="text-base leading-relaxed mb-6 max-w-[58ch]" style="color:var(--text-secondary)">We hold a five-star food hygiene rating and serve everything from full English breakfasts and eggs benedict to lasagnas, burgers, jacket potatoes, pastas, and grilled dishes. Our specialty coffee and milkshakes keep the locals coming back, and we are proudly dog-friendly with a dedicated kids' menu.</p>
+        <div class="flex items-center gap-3">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium tracking-wide uppercase" style="background:var(--accent-surface);color:var(--accent)">5-star hygiene</span>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium tracking-wide uppercase" style="background:var(--accent-surface);color:var(--accent)">Dog friendly</span>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium tracking-wide uppercase" style="background:var(--accent-surface);color:var(--accent)">Kids menu</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Menu -->
+<section id="menu" class="py-24 md:py-32" style="background:#F6F4F0">
+  <div class="mx-auto max-w-7xl px-5">
+    <div class="mb-12 md:mb-16 reveal">
+      <p class="text-xs font-medium uppercase tracking-[0.18em] mb-3" style="color:var(--accent)">All-Day Dining</p>
+      <h2 class="text-3xl md:text-4xl font-semibold tracking-tight leading-[1.12]">From breakfast to lunch,<br>we have you covered</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
+      <div class="reveal reveal-d2 rounded-lg overflow-hidden" style="background:#FFFFFF;border:1px solid var(--border)">
+        <img src="assets/472624104_122134806020503832_5131576083017106113_n.jpg" alt="" class="w-full img-hover" loading="lazy" style="aspect-ratio:4/3;object-fit:cover">
+        <div class="p-5 md:p-6">
+          <h3 class="text-lg font-semibold mb-2">Full English Breakfast</h3>
+          <p class="text-sm leading-relaxed" style="color:var(--text-secondary)">Served all day with proper butcher's sausages and free-range eggs</p>
+        </div>
+      </div>
+      <div class="reveal reveal-d3 rounded-lg overflow-hidden" style="background:#FFFFFF;border:1px solid var(--border)">
+        <img src="assets/472696583_122134806422503832_8184765344816679479_n.jpg" alt="" class="w-full img-hover" loading="lazy" style="aspect-ratio:4/3;object-fit:cover">
+        <div class="p-5 md:p-6">
+          <h3 class="text-lg font-semibold mb-2">Eggs Benedict</h3>
+          <p class="text-sm leading-relaxed" style="color:var(--text-secondary)">Toasted English muffin, poached eggs, house hollandaise</p>
+        </div>
+      </div>
+      <div class="reveal reveal-d4 rounded-lg overflow-hidden" style="background:#FFFFFF;border:1px solid var(--border)">
+        <img src="assets/472792554_122135385518503832_198217367099586480_n.jpg" alt="" class="w-full img-hover" loading="lazy" style="aspect-ratio:4/3;object-fit:cover">
+        <div class="p-5 md:p-6">
+          <h3 class="text-lg font-semibold mb-2">Grilled Dishes &amp; Pastas</h3>
+          <p class="text-sm leading-relaxed" style="color:var(--text-secondary)">Lasagnas, burgers, jacket potatoes, and grilled plates made to order</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section class="py-24 md:py-32">
+  <div class="mx-auto max-w-7xl px-5">
+    <div class="mb-12 md:mb-16 reveal max-w-2xl">
+      <h2 class="text-3xl md:text-4xl font-semibold tracking-tight leading-[1.12]">Inside River &amp; Roast</h2>
+    </div>
+  </div>
+  <div class="mx-auto max-w-7xl px-5">
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+      <div class="reveal reveal-d1 rounded-lg overflow-hidden" style="aspect-ratio:1/1">
+        <img src="assets/472362915_122134806068503832_1096254174162242176_n.jpg" alt="" class="w-full h-full object-cover img-hover" loading="lazy">
+      </div>
+      <div class="reveal reveal-d2 rounded-lg overflow-hidden" style="aspect-ratio:1/1">
+        <img src="assets/472363764_122134806686503832_129409232168184445_n.jpg" alt="" class="w-full h-full object-cover img-hover" loading="lazy">
+      </div>
+      <div class="reveal reveal-d3 rounded-lg overflow-hidden" style="aspect-ratio:1/1">
+        <img src="assets/477798103_122141184350503832_8020672332865161819_n.jpg" alt="" class="w-full h-full object-cover img-hover" loading="lazy">
+      </div>
+      <div class="reveal reveal-d2 rounded-lg overflow-hidden" style="aspect-ratio:1/1">
+        <img src="assets/476780119_122141184338503832_7412650936489004826_n.jpg" alt="" class="w-full h-full object-cover img-hover" loading="lazy">
+      </div>
+      <div class="reveal reveal-d4 rounded-lg overflow-hidden" style="aspect-ratio:1/1">
+        <img src="assets/472624104_122134806020503832_5131576083017106113_n.jpg" alt="" class="w-full h-full object-cover img-hover" loading="lazy">
+      </div>
+      <div class="reveal reveal-d4 rounded-lg overflow-hidden" style="aspect-ratio:1/1">
+        <img src="assets/472696583_122134806422503832_8184765344816679479_n.jpg" alt="" class="w-full h-full object-cover img-hover" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Visit -->
+<section id="visit" class="py-24 md:py-32" style="background:#F6F4F0">
+  <div class="mx-auto max-w-7xl px-5">
+    <div class="flex flex-col md:flex-row gap-12 md:gap-16">
+      <div class="w-full md:w-1/2 reveal">
+        <h2 class="text-3xl md:text-4xl font-semibold tracking-tight leading-[1.12] mb-8">Come and see us</h2>
+        <div class="space-y-6">
+          <div>
+            <p class="text-xs font-medium uppercase tracking-[0.18em] mb-2" style="color:var(--accent)">Address</p>
+            <p class="text-base leading-relaxed" style="color:var(--text-secondary)">3b Market Street<br>Bakewell<br>Peak District<br>DE45 1HG</p>
+          </div>
+          <div>
+            <p class="text-xs font-medium uppercase tracking-[0.18em] mb-2" style="color:var(--accent)">Opening Hours</p>
+            <p class="text-base leading-relaxed" style="color:var(--text-secondary)">Open daily<br>9am to 3pm</p>
+          </div>
+          <div>
+            <p class="text-xs font-medium uppercase tracking-[0.18em] mb-2" style="color:var(--accent)">Contact</p>
+            <p class="text-base leading-relaxed" style="color:var(--text-secondary)">07593 799673<br>riverandroast-bakewell@outlook.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="w-full md:w-1/2 reveal reveal-d2">
+        <div class="rounded-lg overflow-hidden img-hover" style="aspect-ratio:4/3">
+          <img src="assets/472792554_122135385518503832_198217367099586480_n.jpg" alt="" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        <p class="mt-4 text-sm leading-relaxed max-w-[52ch]" style="color:var(--text-secondary)">Find us upstairs on Market Street, in the centre of Bakewell. We are a short walk from the river and the famous Bakewell Pudding shops. The Peak District is on our doorstep.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-12 md:py-16 border-t" style="border-color:var(--border)">
+  <div class="mx-auto max-w-7xl px-5">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+      <div>
+        <p class="text-lg font-semibold tracking-tight mb-1">River &amp; Roast</p>
+        <p class="text-sm" style="color:var(--text-secondary)">All-day cafe in the heart of Bakewell</p>
+      </div>
+      <div class="flex flex-wrap gap-6 text-sm" style="color:var(--text-secondary)">
+        <a href="#menu" class="no-underline hover:opacity-70 transition-opacity" style="color:inherit">Menu</a>
+        <a href="#about" class="no-underline hover:opacity-70 transition-opacity" style="color:inherit">About</a>
+        <a href="#visit" class="no-underline hover:opacity-70 transition-opacity" style="color:inherit">Visit</a>
+        <a href="mailto:riverandroast-bakewell@outlook.com" class="no-underline hover:opacity-70 transition-opacity" style="color:inherit">Email</a>
+      </div>
+    </div>
+    <div class="mt-8 pt-6 border-t text-xs" style="border-color:var(--border);color:var(--text-secondary)">
+      <p>River &amp; Roast, 3b Market Street, Bakewell, DE45 1HG. Open daily 9am to 3pm.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Nav scroll behaviour via IntersectionObserver */
+  var nav = document.getElementById('nav');
+  var sentinel = document.getElementById('nav-sentinel');
+  if (nav && sentinel) {
+    var navObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          nav.classList.remove('nav-solid');
+          nav.classList.add('nav-transparent');
+        } else {
+          nav.classList.remove('nav-transparent');
+          nav.classList.add('nav-solid');
+        }
+      });
+    }, { threshold: 0 });
+    navObserver.observe(sentinel);
+  }
+
+  /* Mobile menu toggle */
+  var toggle = document.getElementById('mobile-toggle');
+  var menu = document.getElementById('mobile-menu');
+  var mobileLinks = document.querySelectorAll('.mobile-link');
+  if (toggle && menu) {
+    toggle.addEventListener('click', function() {
+      var open = menu.classList.contains('hidden');
+      if (open) {
+        menu.classList.remove('hidden');
+        menu.classList.add('flex');
+        toggle.setAttribute('aria-expanded','true');
+        document.body.style.overflow = 'hidden';
+      } else {
+        menu.classList.add('hidden');
+        menu.classList.remove('flex');
+        toggle.setAttribute('aria-expanded','false');
+        document.body.style.overflow = '';
+      }
+    });
+    mobileLinks.forEach(function(link) {
+      link.addEventListener('click', function() {
+        menu.classList.add('hidden');
+        menu.classList.remove('flex');
+        toggle.setAttribute('aria-expanded','false');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+
+  /* Scroll reveal via IntersectionObserver */
+  if (!reduceMotion) {
+    var reveals = document.querySelectorAll('.reveal');
+    if (reveals.length > 0) {
+      var revealObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
+      reveals.forEach(function(el) { revealObserver.observe(el); });
+    }
+  } else {
+    var allReveals = document.querySelectorAll('.reveal');
+    allReveals.forEach(function(el) { el.classList.add('visible'); });
+  }
+
+})();
+</script>
+
+</body>
+</html>
