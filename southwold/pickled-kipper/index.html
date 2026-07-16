@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Pickled Kipper | Southwold, Suffolk</title>
+<meta name="description" content="The Pickled Kipper is a small independent cafe with a dedicated fish section on Southwold High Street. Open sandwiches, jacket potatoes, puddings, coffee, and takeaway. Opened 2024 by Lucy Jones.">
+
+<!--
+  DESIGN READ: Independent British seaside cafe landing page for locals
+  and holidaymakers, with a bold cold-coast language, leaning toward
+  Tailwind utilities + Playfair Display + DM Sans + cold maritime palette.
+  Zero warm beige/brass. Zero em-dashes. Single-radius system.
+-->
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          display: ['"Playfair Display"', 'Georgia', 'serif'],
+          body: ['"DM Sans"', 'system-ui', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+<style>
+  body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 400; }
+  .font-display { font-family: 'Playfair Display', Georgia, serif; }
+
+  /* Reveal: visible by default for no-JS. JS-enabled hides and animates in. */
+  .reveal {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .js-enabled .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .js-enabled .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Reduced motion: instant reveal, no transforms */
+  @media (prefers-reduced-motion: reduce) {
+    .reveal,
+    .js-enabled .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+</style>
+</head>
+
+<body class="bg-white text-slate-900 antialiased">
+
+<!-- ===== NAVIGATION ===== -->
+<header class="fixed top-0 inset-x-0 z-40 bg-white/95 backdrop-blur-sm border-b border-slate-200">
+  <nav class="max-w-6xl mx-auto px-5 md:px-8 h-16 flex items-center justify-between" aria-label="Main navigation">
+    <a href="#" class="font-display text-xl md:text-2xl font-semibold tracking-tight text-slate-900 hover:text-teal-700 transition-colors">The Pickled Kipper</a>
+    <div class="flex items-center gap-5 md:gap-7 text-sm font-medium text-slate-600">
+      <a href="#menu" class="hover:text-teal-700 transition-colors">Menu</a>
+      <a href="#visit" class="hover:text-teal-700 transition-colors">Visit</a>
+    </div>
+  </nav>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="relative min-h-[100dvh] flex items-end">
+  <img
+    src="assets/470185088_122148710972328461_7640195033221694563_n.jpg"
+    alt="The Pickled Kipper cafe frontage on Southwold High Street"
+    class="absolute inset-0 w-full h-full object-cover"
+  >
+  <div class="absolute inset-0 bg-gradient-to-t from-slate-900/75 via-slate-900/20 to-transparent"></div>
+
+  <div class="relative z-10 w-full max-w-6xl mx-auto px-5 md:px-8 pb-12 md:pb-16 pt-32">
+    <div class="max-w-2xl">
+      <h1 class="font-display text-4xl md:text-6xl lg:text-7xl text-white font-semibold tracking-tight leading-none">
+        The Pickled&nbsp;Kipper
+      </h1>
+      <p class="text-white/80 text-base md:text-lg mt-4 max-w-lg leading-relaxed">
+        Fresh seafood, open sandwiches, jacket potatoes, and proper coffee on Southwold High Street.
+      </p>
+      <p class="text-white/50 text-sm mt-3 tracking-wide">Opened 2024 by Lucy Jones</p>
+      <div class="mt-7 flex flex-wrap gap-3">
+        <a href="#menu" class="inline-block bg-teal-700 text-white px-6 py-3 rounded-xl text-sm font-semibold tracking-wide hover:bg-teal-800 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent" aria-label="View the menu">See the menu</a>
+        <a href="#visit" class="inline-block bg-white/10 backdrop-blur-sm text-white border border-white/30 px-6 py-3 rounded-xl text-sm font-medium tracking-wide hover:bg-white/20 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent" aria-label="Find us on Southwold High Street">Find us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="py-20 md:py-28 px-5 md:px-8 bg-white reveal">
+  <div class="max-w-6xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-10 md:gap-14 items-center">
+      <div>
+        <h2 class="font-display text-3xl md:text-4xl font-semibold tracking-tight text-slate-900 leading-tight">
+          A proper seaside cafe,<br>with a fish counter
+        </h2>
+        <div class="w-12 h-px bg-teal-600 mt-5 mb-5"></div>
+        <div class="space-y-4 text-slate-600 leading-relaxed max-w-lg">
+          <p>
+            Lucy Jones brought over twenty years of hospitality to the High Street when she opened The Pickled Kipper in 2024. A small independent cafe built around a simple idea: the best of the Suffolk coast, served without fuss.
+          </p>
+          <p>
+            Alongside open sandwiches, jacket potatoes, and homemade puddings, the cafe has a dedicated fish section. Fresh catches, smoked kipper, dressed crab, and local seafood sit at the heart of the menu.
+          </p>
+          <p>
+            Coffee is taken seriously. Cakes are baked each morning. Everything is available to eat in or take away.
+          </p>
+        </div>
+      </div>
+      <div class="overflow-hidden rounded-xl">
+        <img
+          src="assets/470177513_122148696128328461_8998447447023398453_n.jpg"
+          alt="Inside The Pickled Kipper, showing the cafe interior and seating"
+          class="w-full h-auto object-cover aspect-[4/5]"
+          loading="lazy"
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MENU ===== -->
+<section id="menu" class="py-20 md:py-28 px-5 md:px-8 bg-slate-50 reveal">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="font-display text-3xl md:text-4xl font-semibold tracking-tight text-slate-900 text-center">
+      What is on the counter
+    </h2>
+    <div class="w-12 h-px bg-teal-600 mx-auto mt-5 mb-12"></div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Fish Counter -->
+      <div class="bg-white rounded-xl p-6 border border-slate-100">
+        <div class="w-9 h-9 flex items-center justify-center rounded-xl bg-teal-50 text-teal-700 mb-3" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c-3.5 3.5-7 9-7 13 0 3.866 3.134 7 7 7s7-3.134 7-7c0-4-3.5-9.5-7-13z"/><circle cx="12" cy="15" r="2"/></svg>
+        </div>
+        <h3 class="font-display text-lg font-semibold text-slate-900 mb-2">Fish Counter</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">Smoked kipper, dressed crab, and fresh local catches from the Suffolk coast, served as open sandwiches or on the plate.</p>
+      </div>
+
+      <!-- Jacket Potatoes -->
+      <div class="bg-white rounded-xl p-6 border border-slate-100">
+        <div class="w-9 h-9 flex items-center justify-center rounded-xl bg-teal-50 text-teal-700 mb-3" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>
+        </div>
+        <h3 class="font-display text-lg font-semibold text-slate-900 mb-2">Jacket Potatoes</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">Properly baked, crisp-skinned, with a choice of fillings from tuna and sweetcorn to prawn mayonnaise.</p>
+      </div>
+
+      <!-- Open Sandwiches -->
+      <div class="bg-white rounded-xl p-6 border border-slate-100">
+        <div class="w-9 h-9 flex items-center justify-center rounded-xl bg-teal-50 text-teal-700 mb-3" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg>
+        </div>
+        <h3 class="font-display text-lg font-semibold text-slate-900 mb-2">Open Sandwiches</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">Thick-cut bread topped with seasonal seafood, smoked salmon, or Suffolk ham with mustard. Simple and generous.</p>
+      </div>
+
+      <!-- Puddings -->
+      <div class="bg-white rounded-xl p-6 border border-slate-100">
+        <div class="w-9 h-9 flex items-center justify-center rounded-xl bg-teal-50 text-teal-700 mb-3" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <h3 class="font-display text-lg font-semibold text-slate-900 mb-2">Puddings</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">Homemade cakes, scones with clotted cream, and a sticky toffee pudding that has earned its own reputation.</p>
+      </div>
+
+      <!-- Coffee -->
+      <div class="bg-white rounded-xl p-6 border border-slate-100">
+        <div class="w-9 h-9 flex items-center justify-center rounded-xl bg-teal-50 text-teal-700 mb-3" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+        </div>
+        <h3 class="font-display text-lg font-semibold text-slate-900 mb-2">Coffee</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">Properly made espresso, flat whites, and loose-leaf tea. Takeaway cups for a stroll along the seafront.</p>
+      </div>
+
+      <!-- Takeaway -->
+      <div class="bg-white rounded-xl p-6 border border-slate-100">
+        <div class="w-9 h-9 flex items-center justify-center rounded-xl bg-teal-50 text-teal-700 mb-3" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5"/><path d="M21 3l-7.5 7.5"/><circle cx="10" cy="14" r="6"/></svg>
+        </div>
+        <h3 class="font-display text-lg font-semibold text-slate-900 mb-2">Takeaway</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">Everything on the menu can be packed to go. Grab a sandwich and a coffee for the beach.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PHOTO STRIP ===== -->
+<section class="w-full reveal">
+  <div class="grid grid-cols-2">
+    <img
+      src="assets/470220764_122148710840328461_1094680594431262123_n.jpg"
+      alt="Food served at The Pickled Kipper"
+      class="w-full h-auto object-cover aspect-[4/5]"
+      loading="lazy"
+    >
+    <img
+      src="assets/470227377_122148710744328461_1117874285945294950_n.jpg"
+      alt="The Pickled Kipper cafe interior and counter display"
+      class="w-full h-auto object-cover aspect-[4/5]"
+      loading="lazy"
+    >
+  </div>
+</section>
+
+<!-- ===== EVENING EVENTS ===== -->
+<section class="py-20 md:py-28 px-5 md:px-8 bg-slate-50 reveal">
+  <div class="max-w-6xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-10 md:gap-14 items-center">
+      <div class="overflow-hidden rounded-xl order-2 md:order-1">
+        <img
+          src="assets/474981211_122154493022328461_7010508842967115289_n.jpg"
+          alt="Seafood and evening dining at The Pickled Kipper"
+          class="w-full h-auto object-cover aspect-[4/5]"
+          loading="lazy"
+        >
+      </div>
+      <div class="order-1 md:order-2">
+        <h2 class="font-display text-3xl md:text-4xl font-semibold tracking-tight text-slate-900 leading-tight">
+          Seafood evenings,<br>coming soon
+        </h2>
+        <div class="w-12 h-px bg-teal-600 mt-5 mb-5"></div>
+        <div class="space-y-4 text-slate-600 leading-relaxed max-w-lg">
+          <p>
+            Lucy is planning a series of seafood evening events at the cafe. The counter stays open after hours, the wine comes out, and the menu shifts to dishes built around the day's best catch.
+          </p>
+          <p>
+            Think dressed crab with soda bread, smoked mackerel pate, and a kipper fillet with brown butter and capers. Small plates, shared tables, and the sort of evening that only a seaside town can do properly.
+          </p>
+          <p class="text-teal-700 font-medium">
+            Pop in or ring to ask about dates. Word of mouth is how it starts.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FULL-WIDTH PHOTO ===== -->
+<section class="w-full reveal">
+  <img
+    src="assets/492708009_122167568540328461_1161634793829748275_n.jpg"
+    alt="The Pickled Kipper, Southwold"
+    class="w-full h-auto max-h-[80vh] object-cover"
+    loading="lazy"
+  >
+</section>
+
+<!-- ===== VISIT ===== -->
+<section id="visit" class="bg-white reveal">
+  <div class="overflow-hidden rounded-xl mx-5 md:mx-8">
+    <img
+      src="assets/494342232_122167697006328461_7833325502012908025_n.jpg"
+      alt="The Pickled Kipper on Southwold High Street"
+      class="w-full h-auto max-h-[60vh] object-cover"
+      loading="lazy"
+    >
+  </div>
+  <div class="max-w-3xl mx-auto px-5 md:px-8 py-16 md:py-24">
+    <h2 class="font-display text-3xl md:text-4xl font-semibold tracking-tight text-slate-900 text-center">
+      Find us on the High Street
+    </h2>
+    <div class="w-12 h-px bg-teal-600 mx-auto mt-5 mb-10"></div>
+
+    <dl class="grid sm:grid-cols-3 gap-8 text-center">
+      <div>
+        <dt class="text-xs font-semibold tracking-[0.15em] uppercase text-slate-400 mb-2">Address</dt>
+        <dd class="text-slate-700 leading-relaxed">The Pickled Kipper<br>High Street<br>Southwold, Suffolk</dd>
+      </div>
+      <div>
+        <dt class="text-xs font-semibold tracking-[0.15em] uppercase text-slate-400 mb-2">Opening Hours</dt>
+        <dd class="text-slate-700 leading-relaxed">Monday to Saturday<br>8:30 to 16:30<br>Sunday 9:30 to 15:30</dd>
+      </div>
+      <div>
+        <dt class="text-xs font-semibold tracking-[0.15em] uppercase text-slate-400 mb-2">Enquiries</dt>
+        <dd class="text-slate-700 leading-relaxed">Ring the cafe during opening hours to ask about the menu, dietary needs, or evening event dates.</dd>
+      </div>
+    </dl>
+
+    <div class="mt-10 text-center">
+      <a href="https://www.openstreetmap.org/search?query=High+Street%2C+Southwold%2C+Suffolk" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-teal-700 text-white px-6 py-3 rounded-xl text-sm font-semibold tracking-wide hover:bg-teal-800 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2" aria-label="View The Pickled Kipper on OpenStreetMap">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="10" r="3"/><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 10-16 0c0 3 2.7 7 8 11.7z"/></svg>
+        View on map
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="py-10 px-5 md:px-8 border-t border-slate-200 bg-white reveal">
+  <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-400">
+    <p class="font-display text-base text-slate-500 font-semibold">The Pickled Kipper</p>
+    <p>High Street, Southwold, Suffolk</p>
+    <p>&copy; 2024 The Pickled Kipper</p>
+  </div>
+</footer>
+
+<!-- ===== INTERSECTION OBSERVER (scroll reveal) ===== -->
+<script>
+(function() {
+  /* Bail out if reduced motion is preferred: leave everything visible. */
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  /* Mark document as JS-enabled so CSS transitions activate. */
+  document.documentElement.classList.add('js-enabled');
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -30px 0px' });
+
+  /* Observe all .reveal elements. Content is already visible;
+     this only adds the polished entrance animation on scroll. */
+  document.querySelectorAll('.reveal').forEach(function(el) {
+    observer.observe(el);
+  });
+})();
+</script>
+
+</body>
+</html>
